@@ -1,6 +1,6 @@
 import { Carousel, Typography} from "@material-tailwind/react";
  
-function CarouselWithContent() {
+function Carouselt() {
   return (
     <Carousel className="xl">
       <div className="relative h-full w-full">
@@ -91,4 +91,4 @@ function CarouselWithContent() {
   );
 }
 
-export default CarouselWithContent;
+export default Carousel;

@@ -43,7 +43,7 @@
   }
 
   .body{
-  background-color: rgba(245, 245, 245, 0.952);
+  background-color: rgba(245, 245, 245, 0.76);
   width: 100vw;
   overflow-y: auto;
   }
@@ -59,7 +59,7 @@
   text-align: center;
   font-family: 'Keystone', serif;
   font-size: 100px;
-  color: rgba(58, 58, 58, 0.699);
+  color: rgba(58, 58, 58, 0.808);
 }
 
 .img {
@@ -112,7 +112,7 @@
  text-align: center;
  opacity: 1;
  bottom: 35%;
- color: rgba(255, 255, 255, 0.603);
+ color: rgba(163, 160, 160, 0.747);
  font-size: 50px;
 }
 

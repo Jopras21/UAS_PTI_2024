@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import CarouselWithContent from './carousel.jsx';
+import Carousel from './carousel.jsx';
 function About() {
   return (
     <div className="root">
@@ -11,9 +11,9 @@ function About() {
         </video>
       </div>
       <div className="body">
-        <div className="carousel">
-        <CarouselWithContent />
-        </div>
+        {/* <div className="carousel">
+        <Carousel />
+        </div> */}
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>
