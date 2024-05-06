@@ -1,8 +1,9 @@
 import React from 'react';
 import './about.css';
+import CarouselWithContent from './carousel.jsx';
 function About() {
   return (
-    <div className="container">
+    <div className="root">
       <div className="title">
         <p className="Judul">About Us</p>
         <video className="vid" controls autoPlay muted loop="20">
@@ -10,6 +11,9 @@ function About() {
         </video>
       </div>
       <div className="body">
+        <div className="carousel">
+        <CarouselWithContent />
+        </div>
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>

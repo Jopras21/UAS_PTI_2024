@@ -2,12 +2,10 @@ import React from 'react';
 import toba from './assets/toba.jpg';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <img src={toba} alt="Toba Lake" />
-    </div>
-  );
+    <h1 className="text-9xl font-bold underline">
+      Hello world!
+    </h1>
+  )
 }
-
-export default App

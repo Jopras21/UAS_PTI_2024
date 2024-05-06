@@ -8,3 +8,8 @@ img {
   padding: 0;
   scroll-behavior: smooth;
 }
+
+.root{
+  margin: 0;
+  padding: 0;
+}
