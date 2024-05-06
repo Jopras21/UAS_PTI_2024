@@ -1,81 +1,239 @@
-.container{
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.477);
-    background-size: auto;
-    overflow-x: hidden;
-}
-
-@font-face {
-    font-family: 'Keystone';
-    src: local('Keystone') url('./fonts/Keystone.ttf') format('truetype');
+  .container{
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.477);
+  background-size: auto;
+  overflow-x: hidden;
   }
-  
+
+  @font-face {
+  font-family: 'Keystone';
+  src: local('Keystone') url('./fonts/Keystone.ttf') format('truetype');
+  }
+
   .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98%;
   }
 
   .Judul{
-      margin: 0 auto;
-      font-size: 100px;
-      color: white;
-      font-family: 'Keystone', serif;
-      text-align: center;
-      height: fit-content;
-      font-weight: 900;
-      width: fit-content;
+  margin: 0 auto;
+  font-size: 150px;
+  color: white;
+  font-family: 'Keystone', serif;
+  text-align: center;
+  height: fit-content;
+  font-weight: 900;
+  width: fit-content;
   }
 
-.vid {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+  .vid {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   }
 
-.body{
-    background-color: rgba(255, 255, 255, 0.311);
-    width: 100vw;
-    overflow-y: auto;
-  }
-  .dom{
-  width: 25%;
-  height: 25%;
+  .body{
+  background-color: rgba(245, 245, 245, 0.952);
+  width: 100vw;
+  overflow-y: auto;
   }
 
-  .hexsel {
-  width: 25%;
-  height: 25%;
-  }
-  
-  .joe {
-   width: 25%;
-  height: 25%;
-  }
-  
-  .jopras {
-   width: 25%;
-  height: 25%;
-  }
+.subTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
 
+.subJudul{
+  text-align: center;
+  font-family: 'Keystone', serif;
+  font-size: 100px;
+  color: rgba(58, 58, 58, 0.699);
+}
   .img{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   }
 
-  .img img{
-    width: 100%;
-    height: 100%;
+  .dom {
+  background: url(assets/dom.jpg);
+  width: 150px;
+  height: 500px;
+  margin:5px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  filter: grayscale(85%);
+  transition:all 1s; 
+  transition-timing-function: ease-in-out;
   }
+
+
+.dom p{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  font-family: 'Keystone', serif;
+  font-size: 20px;
+  text-align: center;
+  transition: all 2.3s;
+  opacity: 0;
+}
+
+ .dom:hover{
+  width: 400px;
+  cursor: pointer;
+  filter: grayscale(0);
+  }
+
+.dom:hover p{
+ text-align: center;
+ opacity: 1;
+ bottom: 35%;
+ color: rgba(255, 255, 255, 0.603);
+ font-size: 50px;
+}
+
+.hexsel {
+  background: url(assets/hexsel.jpg);
+  width: 150px;
+  height: 500px;
+  margin:5px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  filter: grayscale(85%);
+  transition:all 1s; 
+  transition-timing-function: ease-in-out;
+  }
+
+
+.hexsel p{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  font-family: 'Keystone', serif;
+  font-size: 20px;
+  text-align: center;
+  transition: all 2.3s;
+  opacity: 0;
+}
+
+ .hexsel:hover{
+  width: 400px;
+  cursor: pointer;
+  filter: grayscale(0);
+  }
+
+.hexsel:hover p{
+ text-align: center;
+ opacity: 1;
+ bottom: 35%;
+ color: rgba(255, 255, 255, 0.603);
+ font-size: 50px;
+}
+  .joe {
+  background: url(assets/joe.jpg);
+  width: 150px;
+  height: 500px;
+  margin:5px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  filter: grayscale(85%);
+  transition:all 1s; 
+  transition-timing-function: ease-in-out;
+  }
+
+
+.joe p{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  font-family: 'Keystone', serif;
+  font-size: 20px;
+  text-align: center;
+  transition: all 2.3s;
+  opacity: 0;
+}
+
+ .joe:hover{
+  width: 400px;
+  cursor: pointer;
+  filter: grayscale(0);
+  }
+
+.joe:hover p{
+ text-align: center;
+ opacity: 1;
+ bottom: 35%;
+ color: rgba(0, 0, 0, 0.603);
+ font-size: 50px;
+}
+  .jopras {
+  background: url(assets/jopras.png);
+  width: 150px;
+  height: 500px;
+  margin:5px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  filter: grayscale(85%);
+  transition:all 1s; 
+  transition-timing-function: ease-in-out;
+  }
+
+
+.jopras p{
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  font-family: 'Keystone', serif;
+  font-size: 20px;
+  text-align: center;
+  transition: all 2.3s;
+  opacity: 0;
+}
+
+ .jopras:hover{
+  width: 400px;
+  cursor: pointer;
+  filter: grayscale(0);
+  }
+
+.jopras:hover p{
+ text-align: center;
+ opacity: 1;
+ bottom: 35%;
+ color: rgba(0, 0, 0, 0.603);
+ font-size: 50px;
+}

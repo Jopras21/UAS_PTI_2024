@@ -1,9 +1,5 @@
 import React from 'react';
 import './about.css';
-import hexsel from './assets/hexsel.jpg';
-import joe from './assets/joe.jpg';
-import jopras from './assets/jopras.png';
-import dom from './assets/dom.jpg';
 function About() {
   return (
     <div className="container">
@@ -14,19 +10,14 @@ function About() {
         </video>
       </div>
       <div className="body">
+        <div className="subTitle">
+          <p className="subJudul">Meet Our Team</p>
+        </div>
         <div className="img">
-          <div className="dom">
-            <img src={dom} alt="dom" />
-          </div>
-          <div className="hexsel">
-            <img src={hexsel} alt="hexsel" />
-          </div>
-          <div className="joe">
-            <img src={joe} alt="joe" />
-          </div>
-          <div className="jopras">
-            <img src={jopras} alt="jopras" />
-          </div>
+          <div className="dom"><p>Dominico Anthony</p></div>
+          <div className="hexsel"><p>Hexsel Archieles</p></div>
+          <div className="joe"><p>Jonathan Sutandar</p></div>
+          <div className="jopras"><p>Jonathan Prasetyo</p></div>
         </div>
       </div>
     </div>
