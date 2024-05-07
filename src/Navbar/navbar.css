@@ -1,0 +1,15 @@
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.wow {
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+.wow:hover {
+    transform: scale(1.04);
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(5px 8px 12px #ffffff);
+}

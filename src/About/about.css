@@ -16,11 +16,12 @@
     padding: 0px;
   }
   .title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    margin-bottom: 80px;
   }
 
   .Judul{
@@ -63,7 +64,7 @@
   text-align: center;
   font-family: 'Keystone', serif;
   font-size: 100px;
-  color: rgba(58, 58, 58, 0.808);
+  color: rgba(58, 58, 58, 0.844);
 }
 
 .img {
@@ -74,12 +75,12 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 100%; /* Add this line */
+  width: 100; /* Add this line */
   height: auto; /* Add this line */
 }
 
   .dom {
-  background: url(assets/dom.jpg);
+  background: url(../assets/dom.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -87,7 +88,7 @@
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1s; 
+  transition:all 1.5s; 
   transition-timing-function: ease-in-out;
   }
 
@@ -117,11 +118,11 @@
  opacity: 1;
  bottom: 35%;
  color: rgba(163, 160, 160, 0.747);
- font-size: 50px;
+ font-size: 55px;
 }
 
 .hexsel {
-  background: url(assets/hexsel.jpg);
+  background: url(../assets/hexsel.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -129,7 +130,7 @@
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1s; 
+  transition:all 1.5s; 
   transition-timing-function: ease-in-out;
   }
 
@@ -159,10 +160,10 @@
  opacity: 1;
  bottom: 35%;
  color: rgba(255, 255, 255, 0.603);
- font-size: 50px;
+ font-size: 55px;
 }
   .joe {
-  background: url(assets/joe.jpg);
+  background: url(../assets/joe.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -170,8 +171,8 @@
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1s; 
-  transition-timing-function: ease-in-out;
+  transition:all 1.5s; 
+  transition-timing-function: ease-in;
   }
 
 
@@ -179,7 +180,7 @@
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
-  color: white;
+  color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0%;
   font-family: 'Keystone', serif;
@@ -200,10 +201,10 @@
  opacity: 1;
  bottom: 35%;
  color: rgba(0, 0, 0, 0.603);
- font-size: 50px;
+ font-size: 55px;
 }
   .jopras {
-  background: url(assets/jopras.png);
+  background: url(../assets/jopras.png);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -211,7 +212,7 @@
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1s; 
+  transition:all 1.5s; 
   transition-timing-function: ease-in-out;
   }
 
@@ -240,8 +241,8 @@
  text-align: center;
  opacity: 1;
  bottom: 35%;
- color: rgba(0, 0, 0, 0.603);
- font-size: 50px;
+ color: rgba(244, 244, 244, 0.796);
+ font-size: 55px;
 }
 
 .carousel {

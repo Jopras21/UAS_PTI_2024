@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../assets/logo.png';
 function Navbar(){
 return (
 <div className="navbar bg-trans">
@@ -20,7 +21,7 @@ return (
         <li><a>About Us</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost hidden lg:flex text-5xl">Kelompok 3</a>
+    <a className="wow btn-ghost hidden lg:flex round mx-4 rounded-full"><img src={logo} alt = "logo" className="w-36 h-36 object-cover" /></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
