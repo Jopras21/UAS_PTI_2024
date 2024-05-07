@@ -265,7 +265,7 @@
 }
 
   .dom {
-  background: url(assets/dom.jpg);
+  background: url(../assets/dom.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -307,7 +307,7 @@
 }
 
 .hexsel {
-  background: url(assets/hexsel.jpg);
+  background: url(../assets/hexsel.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -348,7 +348,7 @@
  font-size: 55px;
 }
   .joe {
-  background: url(assets/joe.jpg);
+  background: url(../assets/joe.jpg);
   width: 150px;
   height: 500px;
   margin:5px;
@@ -389,7 +389,7 @@
  font-size: 55px;
 }
   .jopras {
-  background: url(assets/jopras.png);
+  background: url(../assets/jopras.png);
   width: 150px;
   height: 500px;
   margin:5px;
