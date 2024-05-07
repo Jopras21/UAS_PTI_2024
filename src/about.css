@@ -25,7 +25,7 @@
 
   .Judul{
   margin: 0 auto;
-  font-size: 150px;
+  font-size: 900%;
   color: white;
   font-family: 'Keystone', serif;
   text-align: center;
@@ -34,6 +34,194 @@
   width: fit-content;
   }
 
+  @media screen and (max-width: 768px) {
+    .body{
+      overflow-x: auto;
+    }
+
+    .img{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+    }
+    
+    .title {
+      font-size: 50%;
+       height: 75vh;
+       margin: 20px;
+     }
+
+    .subTitle{
+      font-size: 20%;
+      height: 50%;
+      margin: 20px;
+    }
+
+     .dom {
+      width: 50px;
+      height: 500px;
+      margin:1px;
+      background-position: center;
+      border-radius: 40px;
+      filter: grayscale(85%);
+      transition:all 1s; 
+      transition-timing-function: ease-in-out;
+      }
+    
+    
+    .dom p{
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      color: white;
+      position: absolute;
+      bottom: 0%;
+      font-family: 'Keystone', serif;
+      font-size: 20px;
+      text-align: center;
+      transition: all 2.3s;
+      opacity: 0;
+    }
+    
+     .dom:hover{
+      width: 250px;
+      cursor: pointer;
+      filter: grayscale(0);
+      }
+    
+    .dom:hover p{
+     text-align: center;
+     opacity: 1;
+     bottom: 35%;
+     color: rgba(163, 160, 160, 0.747);
+     font-size: 50px;
+    }
+    
+    .hexsel {
+      width: 50px;
+      height: 500px;
+      margin:1px;
+      background-position: center;
+      border-radius: 40px;
+      filter: grayscale(85%);
+      transition:all 1s; 
+      transition-timing-function: ease-in-out;
+      }
+    
+    
+    .hexsel p{
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      color: white;
+      position: absolute;
+      bottom: 0%;
+      font-family: 'Keystone', serif;
+      font-size: 20px;
+      text-align: center;
+      transition: all 2.3s;
+      opacity: 0;
+    }
+    
+     .hexsel:hover{
+      width: 250px;
+      cursor: pointer;
+      filter: grayscale(0);
+      }
+    
+    .hexsel:hover p{
+     text-align: center;
+     opacity: 1;
+     bottom: 35%;
+     color: rgba(255, 255, 255, 0.603);
+     font-size: 50px;
+    }
+      .joe {
+        width: 50px;
+        height: 500px;
+        margin:1px;
+        background-position: center;
+        border-radius: 40px;
+        filter: grayscale(85%);
+        transition:all 1s; 
+        transition-timing-function: ease-in-out;
+      }
+    
+    
+    .joe p{
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      color: white;
+      position: absolute;
+      bottom: 0%;
+      font-family: 'Keystone', serif;
+      font-size: 20px;
+      text-align: center;
+      transition: all 2.3s;
+      opacity: 0;
+    }
+    
+     .joe:hover{
+      width: 250px;
+      cursor: pointer;
+      filter: grayscale(0);
+      }
+    
+    .joe:hover p{
+     text-align: center;
+     opacity: 1;
+     bottom: 35%;
+     color: rgba(0, 0, 0, 0.603);
+     font-size: 50px;
+    }
+      .jopras {
+        width: 50px;
+        height: 500px;
+        margin:1px;
+        background-position: center;
+        border-radius: 40px;
+        filter: grayscale(85%);
+        transition:all 1s; 
+        transition-timing-function: ease-in-out;
+      }
+    
+    
+    .jopras p{
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-right: 15px;
+      color: white;
+      position: absolute;
+      bottom: 0%;
+      font-family: 'Keystone', serif;
+      font-size: 20px;
+      text-align: center;
+      transition: all 2.3s;
+      opacity: 0;
+    }
+    
+     .jopras:hover{
+      width: 250px;
+      cursor: pointer;
+      filter: grayscale(0);
+      }
+    
+    .jopras:hover p{
+     text-align: center;
+     opacity: 1;
+     bottom: 35%;
+     color: rgba(0, 0, 0, 0.603);
+     font-size: 50px;
+    }
+   }
+   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title{
+      height: 80vh;
+    }
+  }
   .vid {
   width: 100vw;
   height: 100%;
@@ -67,20 +255,17 @@
 }
 
 .img {
-  margin-top: 80px;
-  margin-left: 50px;
-  margin-right: 50px;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  width: 100%; /* Add this line */
-  height: auto; /* Add this line */
+  width: 100%;
+  height: auto; 
 }
 
   .dom {
   background: url(assets/dom.jpg);
-  width: 150px;
+ width: 150px;
   height: 500px;
   margin:5px;
   background-size: cover;
@@ -107,7 +292,7 @@
 }
 
  .dom:hover{
-  width: 400px;
+  width: 250px;
   cursor: pointer;
   filter: grayscale(0);
   }
@@ -122,7 +307,7 @@
 
 .hexsel {
   background: url(assets/hexsel.jpg);
-  width: 150px;
+ width: 150px;
   height: 500px;
   margin:5px;
   background-size: cover;
@@ -149,7 +334,7 @@
 }
 
  .hexsel:hover{
-  width: 400px;
+  width: 250px;
   cursor: pointer;
   filter: grayscale(0);
   }
@@ -163,7 +348,7 @@
 }
   .joe {
   background: url(assets/joe.jpg);
-  width: 150px;
+ width: 150px;
   height: 500px;
   margin:5px;
   background-size: cover;
@@ -190,7 +375,7 @@
 }
 
  .joe:hover{
-  width: 400px;
+  width: 250px;
   cursor: pointer;
   filter: grayscale(0);
   }
@@ -204,7 +389,7 @@
 }
   .jopras {
   background: url(assets/jopras.png);
-  width: 150px;
+ width: 150px;
   height: 500px;
   margin:5px;
   background-size: cover;
@@ -231,7 +416,7 @@
 }
 
  .jopras:hover{
-  width: 400px;
+  width: 250px;
   cursor: pointer;
   filter: grayscale(0);
   }
