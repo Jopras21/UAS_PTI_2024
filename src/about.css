@@ -11,12 +11,16 @@
   src: local('Keystone') url('./fonts/Keystone.ttf') format('truetype');
   }
 
+  .navbar{
+    margin: 5px;
+    padding: 0px;
+  }
   .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 98%;
+  height: 80%;
   }
 
   .Judul{

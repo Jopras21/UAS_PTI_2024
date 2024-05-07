@@ -1,9 +1,13 @@
 import React from 'react';
 import './about.css';
 import Carousel from './carousel.jsx';
+import Navbar from "./navbar.jsx";
 function About() {
   return (
     <div className="root">
+      <div className = "navbar">
+      <Navbar />
+      </div>
       <div className="title">
         <p className="Judul">About Us</p>
         <video className="vid" controls autoPlay muted loop="20">
@@ -11,6 +15,7 @@ function About() {
         </video>
       </div>
       <div className="body">
+
         {/* <div className="carousel">
         <Carousel />
         </div> */}
