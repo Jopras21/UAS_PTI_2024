@@ -13,7 +13,7 @@ return (
         <li>
           <a>Destination</a>
           <ul className="p-2">
-            <li><a>Wisata</a></li>
+            <li><a href="destination.jsx">Wisata</a></li>
             <li><a>Kuliner</a></li>
           </ul>
         </li>
