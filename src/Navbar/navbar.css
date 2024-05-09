@@ -13,3 +13,7 @@
     transition: all .3s ease-in-out;
     filter: drop-shadow(5px 8px 12px #ffffff);
 }
+
+.navbar {
+    background: linear-gradient(rgba(39, 39, 39, 0.67), transparent);
+}

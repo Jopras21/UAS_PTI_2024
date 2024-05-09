@@ -9,7 +9,6 @@ import { ThemeProvider } from "@material-tailwind/react";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      {/* <Navbar /> */}
       <Destination />
     </ThemeProvider>
   </React.StrictMode>
