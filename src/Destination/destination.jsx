@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/navbar.jsx";
 import Carousel from "../carousel.jsx";
-import Culinary from "./culinary.jsx"
+import Culinary from "./culinary.jsx";
 import Footer from "../Footer/footer.jsx";
 import Pointer from "../assets/pointer.png";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -78,13 +78,13 @@ function Destination() {
     iconSize: [38, 38],
   });
 
-  const createCustomClusterIcon = (cluster) => {
-    return new divIcon({
-      html: `<div class="cluster-icon>${cluster.getChildCount()}</div>`,
-      className: "custom-marker-cluster",
-      iconSize: point(33, 33, true),
-    });
-  };
+  // const createCustomClusterIcon = (cluster) => {
+  //   return new divIcon({
+  //     html: `<div class="cluster-icon>${cluster.getChildCount()}</div>`,
+  //     className: "custom-marker-cluster",
+  //     iconSize: point(33, 33, true),
+  //   });
+  // };
 
   return (
     <>
@@ -93,28 +93,19 @@ function Destination() {
       </div>
       <div className="container">
         <div className="destination">
+          <div className="wisata">
+            <h1 className="title1">Destinasi Wisata</h1>
+          </div>
           <div className="carousel">
             <Carousel />
           </div>
-          <div className="wisata">
-            <h1 className="title1">Tourist Destination</h1>
-          </div>
-          <div className="content">
-            <div className="toba">
-              <img src="" alt="Danau toba" />
-              <p>Danau Toba</p>
-            </div>
-            <div className="samosir">
-              <img src="" alt="Danau toba" />
-              <p>Samosir</p>
-            </div>
-          </div>
+          <div className="content"></div>
           <div id="map">
             <MapContainer center={[2.1154, 99.5451]} zoom={7}>
               <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=ot1stQR4IlixqPHIopnI" />
               <MarkerClusterGroup
-                chunkedLoading
-                iconCreateFunction={createCustomClusterIcon}
+              // chunkedLoading
+              // iconCreateFunction={createCustomClusterIcon}
               >
                 {markers.map((marker) => (
                   <Marker position={marker.geocode} icon={customIcon}>
@@ -125,9 +116,12 @@ function Destination() {
             </MapContainer>
           </div>
         </div>
-            <div className="culinary">
-              <Culinary />
-            </div>
+        <div className="culinary">
+          <Culinary />
+        </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </>
   );

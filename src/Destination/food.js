@@ -1,4 +1,4 @@
-const contacts = [
+const Foods = [
     {
       id: 1,
       icon: "♠️",
@@ -28,4 +28,4 @@ const contacts = [
     },
   ];
 
-export default contacts;
+export default Foods;
