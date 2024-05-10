@@ -1,8 +1,8 @@
 import React from "react";
-import "./destination.css";
+import "./culinary.css";
 function Card(props) {
   return (
-    <div className="container">
+    <div className="card-container">
       <div className="card">
         <div className="top">
           <h1 className="icon">{props.icon}</h1>

@@ -4,11 +4,11 @@ import contacts from "./contacts.js";
 
 function Culinary() {
   return (
-    <div className="">
+    <div className="container">
       <div className="title">
-        <h1 className="">Emojipedia</h1>
+        <h1 className="">Kuliner Khas</h1>
       </div>
-      <div className="container">
+      <div className="card-container">
         {contacts.map(function (contact) {
           return (
             <Card
