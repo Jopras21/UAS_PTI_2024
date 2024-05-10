@@ -1,12 +1,11 @@
 import React from "react";
 import "./about.css";
 import Navbar from "../Navbar/navbar.jsx";
+import Footer from "../Footer/footer.jsx";
 function About() {
   return (
     <div className="root">
-      <div className="navbar">
-        <Navbar />
-      </div>
+      <div className="navbar"><Navbar /></div>
       <div className="title">
         <p className="Judul">About Us</p>
         <video className="vid" controls autoPlay muted loop="20">
@@ -38,6 +37,8 @@ function About() {
           </div>
         </div>
       </div>
+      <div className="footer"><Footer /></div>
+      
     </div>
   );
 }
