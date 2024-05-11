@@ -1,13 +1,9 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.png';
-import Destination from "../Destination/destination.jsx";
-import About from "../About/about.jsx"
-
 
 function Navbar() {
   return (
-    <div className="navbar bg-trans" id="nav">
+    <div className="navbar bg-trans">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,13 +18,31 @@ function Navbar() {
                 <li><NavLink to="/Destination/Kuliner" activeClassName="active">Kuliner</NavLink></li>
               </ul>
             </li>
-            <li><NavLink to="/About" activeClassName="active">Social Media</NavLink></li>
-            <li><NavLink to="/AboutUs" activeClassName="active">About Us</NavLink></li> {/* Changed to /AboutUs to match Route path */}
+            <li><NavLink to="/SocialMedia" activeClassName="active">Social Media</NavLink></li>
+            <li><NavLink to="/AboutUs" activeClassName="active">About Us</NavLink></li>
           </ul>
         </div>
-        <NavLink className="wow btn-ghost hidden lg:flex round mx-4 rounded-full" to="/">
-          <img src={logo} alt = "logo" className="w-36 h-36 object-cover" />
-        </NavLink>
+        <a className="btn btn-ghost hidden lg:flex text-5xl">Kelompok 3</a>
+      </div>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li className="text-2xl"><NavLink to="/" activeClassName="active" className="mx-20">Home</NavLink></li>
+          <li className="text-2xl">
+            <details>
+              <summary>Destination</summary>
+              <ul className="p-2 rounded-box w-44">
+                <li className="text-xl"><NavLink to="/Destination/Wisata" activeClassName="active">Wisata</NavLink></li>
+                <li className="text-xl"><NavLink to="/Destination/Kuliner" activeClassName="active">Kuliner</NavLink></li>
+              </ul>
+            </details>
+          </li>
+          <li className="text-2xl"><NavLink to="/SocialMedia" activeClassName="active">Social Media</NavLink></li>
+        </ul>
+      </div>
+      <div className="navbar-end hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li className="text-2xl"><NavLink to="/AboutUs" activeClassName="active">About Us</NavLink></li>
+        </ul>
       </div>
     </div>
   );
