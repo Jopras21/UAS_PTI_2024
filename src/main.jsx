@@ -1,15 +1,24 @@
+// main.jsx or app.jsx (either one)
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
-import About from "./About/about.jsx";
+import About from "../About/about.jsx";
+import Destination from "../Destination/destination.jsx";
 import Navbar from "./Navbar/navbar.jsx";
-import Destination from "./Destination/destination.jsx";
 import { ThemeProvider } from "@material-tailwind/react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <Destination />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/Destination/*" element={<Destination />} /> {/* Use wildcard for nested routes */}
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
