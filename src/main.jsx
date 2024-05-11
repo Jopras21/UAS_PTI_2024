@@ -11,10 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/Destination/*" element={<Destination />} /> {/* Use wildcard for nested routes */}
-        </Routes>
+          <Destination />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,

@@ -14,9 +14,9 @@ function Culinary() {
           return (
             <Card
               key={Food.id}
-              icon={Food.icon}
+              img={Food.img}
               name={Food.name}
-              meaning={Food.meaning}
+              desc={Food.desc}
             />
           );
         })}

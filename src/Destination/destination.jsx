@@ -91,7 +91,7 @@ function Destination() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="container">
+      <div className="">
         <div className="destination">
           <div className="wisata">
             <h1 className="title1">Destinasi Wisata</h1>

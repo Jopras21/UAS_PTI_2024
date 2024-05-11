@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./culinary.css";
 import {
   motion,
   useMotionTemplate,
@@ -6,10 +7,10 @@ import {
   useSpring,
 } from "framer-motion";
 
-const Card = () => {
+const Card = ({ img, name, desc }) => {
   return (
     <div className="grid w-full place-content-center from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
-      <TiltCard />
+      <TiltCard img={img} name={name} desc={desc} />
     </div>
   );
 };
@@ -17,7 +18,7 @@ const Card = () => {
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const TiltCard = () => {
+const TiltCard = ({ img, name, desc }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -60,11 +61,42 @@ const TiltCard = () => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
     >
       <div
         style={{
-          transform: "translateZ(75px)",
+          transform: "translateZ(84px)",
+          transformStyle: "preserve-3d",
+        }}
+        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+      >
+        <img
+          src={img}
+          style={{
+            transform: "translateZ(50px) border rounded-xl",
+          }}
+          className="text-center text-2xl font-bold"
+        />
+      </div>
+      <div
+        style={{
+          transform: "translateZ(84px)",
+          transformStyle: "preserve-3d",
+        }}
+        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+      >
+        <h2
+          style={{
+            transform: "translateZ(50px)",
+          }}
+          className="text-center text-2xl font-bold"
+        >
+          {name}
+        </h2>
+      </div>
+      <div
+        style={{
+          transform: "translateZ(84px)",
           transformStyle: "preserve-3d",
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
@@ -75,7 +107,7 @@ const TiltCard = () => {
           }}
           className="text-center text-2xl font-bold"
         >
-          HOVER ME
+          {desc}
         </p>
       </div>
     </motion.div>
