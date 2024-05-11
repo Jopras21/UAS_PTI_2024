@@ -1,8 +1,7 @@
-// main.jsx or app.jsx (either one)
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import About from "../About/about.jsx";
+import About from "/src/About/about.jsx";
 import Destination from "../Destination/destination.jsx";
 import Navbar from "./Navbar/navbar.jsx";
 import { ThemeProvider } from "@material-tailwind/react";

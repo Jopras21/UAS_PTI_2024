@@ -1,7 +1,9 @@
-
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import Destination from "../Destination/destination.jsx";
+import About from "../About/about.jsx"
+
 
 function Navbar() {
   return (
