@@ -4,13 +4,13 @@ import "./weather.css";
 
 function Weather() {
   const [data, setData] = useState({});
-  const [Location, setLocation] = useState("");
+  const [location, setLocation] = useState("");
 
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q={location}&appid=ae255f0b32749339de311169c5fba70a";
 
   const searchLocation = () => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       axios.get(url).then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -21,7 +21,7 @@ function Weather() {
 
   return (
     <>
-      <div className="search">
+      <div className="search text-center">
         <input
           value={location}
           onChange={(event) => setLocation(event.target.value)}

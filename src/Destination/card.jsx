@@ -62,7 +62,7 @@ const TiltCard = ({ img, name, desc }) => {
         transform,
         transition: "none",
       }}
-      className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 "
     >
       <div
         style={{
@@ -70,53 +70,54 @@ const TiltCard = ({ img, name, desc }) => {
           transformStyle: "preserve-3d",
         }}
         className="absolute inset-4 grid rounded-xl bg-white shadow-lg"
-      ></div>
-      <div
-        style={{
-          transform: "translateZ(94px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute inset-4 grid rounded-xl shadow-xl"
       >
-        <img
-          src={img}
-          style={{
-            transform: "translateZ(80px) rounded-xl w-40 h-36",
-          }}
-          className="foods-img"
-        />
-      </div>
-      <div
-        style={{
-          transform: "translateZ(76px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute inset-4 grid text-cyan-950 title-food"
-      >
-        <h2
-          style={{
-            transform: "translateZ(60px)",
-          }}
-          className="text-center text-2xl font-bold "
-        >
-          {name}
-        </h2>
-      </div>
-      <div
-        style={{
-          transform: "translateZ(80px)",
-          transformStyle: "preserve-3d",
-        }}
-        className="absolute grid place-content-center rounded-xl shadow-lg"
-      >
-        <p
+        <div
           style={{
             transform: "translateZ(70px)",
+            transformStyle: "preserve-3d",
           }}
-          className="text-center mt-16 mx-2 text-base text-cyan-950 w-full "
+          className="inset-4 grid rounded-xl h-auto"
         >
-          {desc}
-        </p>
+          <img
+            src={img}
+            style={{
+              transform: "translateZ(80px) rounded-xl w-40 h-36",
+            }}
+            className="foods-img"
+          />
+        </div>
+        <div
+          style={{
+            transform: "translateZ(60px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="inset-4 grid text-cyan-950 title-food"
+        >
+          <h2
+            style={{
+              transform: "translateZ(50px)",
+            }}
+            className="text-center text-2xl font-bold "
+          >
+            {name}
+          </h2>
+        </div>
+        <div
+          style={{
+            transform: "translateZ(70px)",
+            transformStyle: "preserve-3d",
+          }}
+          className=" grid place-content-center rounded-xl"
+        >
+          <p
+            style={{
+              transform: "translateZ(60px)",
+            }}
+            className="text-center text-base text-cyan-950 w-full desc"
+          >
+            {desc}
+          </p>
+        </div>
       </div>
     </motion.div>
   );

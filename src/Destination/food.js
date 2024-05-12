@@ -3,14 +3,14 @@ const Foods = [
       id: 1,
       img: "../src/assets/Foods/Arsik.jpg",
       name: "Arsik",
-      desc: "Potongan ikan atau daging dimasak dengan saus pedas yang kaya akan santan, kunyit, dan rempah-rempah aromatik. Masing-masing gigitannya penuh dengan rasa yang menari di lidah, meninggalkan kehangatan yang menyenangkan.",
+      desc: "Potongan ikan atau daging dimasak dengan saus pedas yang kaya akan santan, kunyit, dan rempah-rempah aromatik.",
     },
     {
       id: 2,
       img: "../src/assets/Foods/Bika.jpg",
       name: "Bika Ambon",
       desc:
-        ", kue spons yang berasal dari Sumatra Utara. Teksturnya unik, kombinasi yang lembut dan kenyal, dengan rasa manis yang menyatu di mulut",
+        "kue spons yang berasal dari Sumatra Utara. Teksturnya unik, kombinasi yang lembut dan kenyal, dengan rasa manis yang menyatu di mulut",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const Foods = [
       img: "../src/assets/Foods/Dendeng.jpg",
       name: "Dendeng",
       desc:
-        "Slices tipis daging sapi atau kerbau, marinasi dengan campuran rempah, kemudian dikeringkan atau digoreng hingga sempurna. Dendeng adalah camilan gurih dengan sentuhan manis yang memuaskan.",
+        "Slices tipis daging sapi atau kerbau, marinasi dengan campuran rempah, kemudian dikeringkan atau digoreng hingga sempurna.",
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ const Foods = [
       img: "../src/assets/Foods/Lemang.png",
       name: "Lemang",
       desc:
-        " Beras ketan dicampur dengan santan, dimasukkan ke dalam tabung bambu, dan dimasak perlahan di atas api hingga beras menyerap aroma asap dan mengembangkan lapisan luar yang lengket. Lemang adalah camilan populer yang dinikmati karena rasa dan tekstur uniknya .",
+        " Beras ketan dicampur dengan santan, dimasukkan ke dalam tabung bambu, dan dimasak perlahan di atas api hingga beras menyerap aroma asap dan mengembangkan lapisan luar yang lengket.",
     },
   ];
 

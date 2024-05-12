@@ -1,9 +1,12 @@
 .search {
     display: flex;
-    margin: 1rem;;
+    margin: 1rem;
+    text-align: center;
 }
 
 .search input {
+    width: 100%;
+    display: flex;
     width: auto;
     padding: 1rem;
     border: none;
@@ -11,5 +14,6 @@
     outline: none;
     text-align: center;
     overflow: scroll;
+    justify-content: center;
 }
 

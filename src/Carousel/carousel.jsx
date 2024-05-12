@@ -79,10 +79,9 @@ function Carousel() {
       >
         <Images imgIndex={imgIndex} />
         {isHovered && (
-          <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-t from-blue-500 to-green-500 text-white">
-            <h2 className="text-lg font-bold">Your Title Here</h2>
-            <p className="text-sm">Your description text here</p>
-          </div>
+          <>
+            <TextOverlay imgIndex={imgIndex} />
+          </>
         )}
       </motion.div>
 
@@ -113,6 +112,15 @@ const Images = ({ imgIndex }) => {
         );
       })}
     </>
+  );
+};
+
+const TextOverlay = () => {
+  return (
+    <div className="absolute bottom-3 left-7 p-4 bg-gradient-to-t from-blue-700 to-blue-950 text-white w-full transition-transform">
+      <h2 className="text-lg font-bold">Danau Toba</h2>
+      <p className="text-sm">berada di provinsi Sumatra Utara</p>
+    </div>
   );
 };
 

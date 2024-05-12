@@ -123,7 +123,7 @@ function Destination() {
               </MarkerClusterGroup>
             </MapContainer>
           </div>
-          <div className="persueade"></div>
+          <div className="persue"></div>
         </div>
         <div className="culinary">
           <Culinary />

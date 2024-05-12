@@ -5,7 +5,7 @@ import "./culinary.css";
 
 function Culinary() {
   return (
-    <div className="">
+    <div className="my-16">
       <div className="title">
         <h1 className="">Kuliner Khas</h1>
       </div>
