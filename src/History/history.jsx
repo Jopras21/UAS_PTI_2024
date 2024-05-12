@@ -27,19 +27,19 @@ return (
             <DescAwal />
           </div>
           <div>
-                    <h2>Tempat Bersejarah</h2>
-                    {Location.map(function(Location)
+            <h2>Tempat Bersejarah</h2>
+                {Location.map(function(Location)
                     {
-                        return(
-                            <CardHistory
-                            id={Location.id}
-                            img={Location.img}
-                            name={Location.name}
-                            description={Location.description}
-                            />
-                        )
-                    }   )}
-                </div>
+                    return(
+                        <CardHistory
+                        id={Location.id}
+                        img={Location.img}
+                        name={Location.name}
+                        description={Location.description}
+                        />
+                    )
+            })}
+        </div>
         </div>
       </div>
       <div className="search">
