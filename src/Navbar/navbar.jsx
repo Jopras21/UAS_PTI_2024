@@ -21,7 +21,9 @@ function Navbar() {
                 <li><NavLink to="/Destination/Kuliner" activeClassName="active">Kuliner</NavLink></li>
               </ul>
             </li>
-            <li><NavLink to="/Abou" activeClassName="active">About Us</NavLink></li>
+            <li><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
+            <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
+            <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
           </ul>
         </div>
         <NavLink className="btn btn-ghost hidden lg:flex text-5xl" to="/">
@@ -40,11 +42,13 @@ function Navbar() {
               </ul>
             </details>
           </li>
+          <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
+          <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
+         
         </ul>
       </div>
     </div>

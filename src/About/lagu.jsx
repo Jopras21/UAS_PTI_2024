@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './lagu.css'; // Import CSS file for styling
+import './lagu.css'; 
 
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8';
 const query = 'Lagu daerah Sumatera Utara';
 const maxResults = 10;
 
