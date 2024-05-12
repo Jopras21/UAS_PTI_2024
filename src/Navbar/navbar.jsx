@@ -24,8 +24,8 @@ function Navbar() {
             <li><NavLink to="/Abou" activeClassName="active">About Us</NavLink></li>
           </ul>
         </div>
-        <NavLink className="btn btn-ghost hidden lg:flex text-5xl" to="/">
-          <img src={logo} alt="logo" className="w-52 h-52 object-cover" />
+        <NavLink className="btn-ghost hidden lg:flex text-5xl" to="/">
+          <img src={logo} alt="logo" className="w-36 h-36 mx-8 object-cover" />
         </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">

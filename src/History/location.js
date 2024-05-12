@@ -1,14 +1,14 @@
 const location = [
     {
         id: 1,
-        img: ,
+        img: "",
         name: "Gedung London Sumatera",
-        description: 
+        description: ""
     },
     {
         id: 2,
-        img: ,
-        name: ,
-        description: 
+        img: "",
+        name: "",
+        description: ""
     }
 ]

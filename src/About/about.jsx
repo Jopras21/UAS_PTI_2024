@@ -6,7 +6,9 @@ import Lagu from "./lagu.jsx";
 function About() {
   return (
     <div className="root">
-      <div className="navbar"><Navbar /></div>
+      <div className="navbar">
+        <Navbar />
+      </div>
       <div className="title">
         <p className="Judul">About Us</p>
         <video className="vid" controls autoPlay muted loop="20">
@@ -17,9 +19,6 @@ function About() {
         </video>
       </div>
       <div className="body">
-        {/* <div className="carousel">
-        <Carousel />
-        </div> */}
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>
@@ -41,8 +40,9 @@ function About() {
           <Lagu />
         </div>
       </div>
-      <div className="footer"><Footer /></div>
-      
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

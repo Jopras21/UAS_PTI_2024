@@ -3,56 +3,42 @@ const Foods = [
       id: 1,
       img: "../src/assets/Foods/Arsik.jpg",
       name: "Arsik",
-      desc: "makanan khas daerah sumatra yang satu ini.",
+      desc: "Potongan ikan atau daging dimasak dengan saus pedas yang kaya akan santan, kunyit, dan rempah-rempah aromatik. Masing-masing gigitannya penuh dengan rasa yang menari di lidah, meninggalkan kehangatan yang menyenangkan.",
     },
     {
       id: 2,
       img: "../src/assets/Foods/Bika.jpg",
-      name: "Bika",
+      name: "Bika Ambon",
       desc:
-        "Hearts represent the warmth of spring and summer seasons and the power of light. They are the center of life and the world. In the Tarot, hearts can also symbolize knowledge, love, life from water, and fertility, and in fortune-telling, joy",
+        ", kue spons yang berasal dari Sumatra Utara. Teksturnya unik, kombinasi yang lembut dan kenyal, dengan rasa manis yang menyatu di mulut",
     },
     {
       id: 3,
       img: "../src/assets/Foods/Dali.jpg",
       name: "Dali",
       desc:
-        "Diamonds represent warmth, light, femininity. In the Tarot, they symbolize earthly matter, money, courage, and energy, but fortune-tellers often associate diamonds with spitefulness and annoyance.",
+        "hidangan tradisional yang terbuat dari kacang lentil, dimasak hingga lembut dan disajikan dengan bumbu rempah. Menu ini kaya gizi dan memuaskan.",
     },
     {
       id: 4,
       img: "../src/assets/Foods/Dendeng.jpg",
       name: "Dendeng",
       desc:
-        "Otherwise known as trefoils, clubs represent many things: fall, winter, night, darkness, males, fire, energy, will, wealth, work, luck, and happiness.",
+        "Slices tipis daging sapi atau kerbau, marinasi dengan campuran rempah, kemudian dikeringkan atau digoreng hingga sempurna. Dendeng adalah camilan gurih dengan sentuhan manis yang memuaskan.",
     },
     {
       id: 5,
       img: "../src/assets/Foods/Gomak.jpg",
-      name: "Gomak",
+      name: "Mi Gomak",
       desc:
-        "Otherwise known as trefoils, clubs represent many things: fall, winter, night, darkness, males, fire, energy, will, wealth, work, luck, and happiness.",
+        "hidangan mi yang lezat dengan potongan daging yang lembut, biasanya ayam atau sapi, disajikan dengan kuah kaya rempah. Menu ini dihiasi dengan berbagai topping, menambahkan lapisan tekstur dan rasa.",
     },
     {
       id: 6,
       img: "../src/assets/Foods/Lemang.png",
-      name: "Lemak",
+      name: "Lemang",
       desc:
-        "Otherwise known as trefoils, clubs represent many things: fall, winter, night, darkness, males, fire, energy, will, wealth, work, luck, and happiness.",
-    },
-    {
-      id: 7,
-      img: "../src/assets/Foods/Naniura.jpg",
-      name: "Lemak",
-      desc:
-        "Otherwise known as trefoils, clubs represent many things: fall, winter, night, darkness, males, fire, energy, will, wealth, work, luck, and happiness.",
-    },
-    {
-      id: 8,
-      img: "../src/assets/Foods/Uras.jpg",
-      name: "Lemak",
-      desc:
-        "Otherwise known as trefoils, clubs represent many things: fall, winter, night, darkness, males, fire, energy, will, wealth, work, luck, and happiness.",
+        " Beras ketan dicampur dengan santan, dimasukkan ke dalam tabung bambu, dan dimasak perlahan di atas api hingga beras menyerap aroma asap dan mengembangkan lapisan luar yang lengket. Lemang adalah camilan populer yang dinikmati karena rasa dan tekstur uniknya .",
     },
   ];
 

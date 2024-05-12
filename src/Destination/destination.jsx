@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "../Navbar/navbar.jsx";
-import Carousel from "../carousel.jsx";
+import Carousel from "../Carousel/carousel.jsx";
 import Culinary from "./culinary.jsx";
 import Footer from "../Footer/footer.jsx";
 import Pointer from "../assets/pointer.png";
+import Video from "../assets/Video/destination.mp4"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
@@ -91,7 +92,7 @@ function Destination() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="">
+      <div className="big-container">
         <div className="destination">
           <div className="wisata">
             <h1 className="title1">Destinasi Wisata</h1>
@@ -99,7 +100,14 @@ function Destination() {
           <div className="carousel">
             <Carousel />
           </div>
-          <div className="content"></div>
+          <div className="content">
+            <video className="vid" controls autoPlay muted loop="20">
+              <source
+                src={Video}
+                type="video/mp4"
+              />
+            </video>
+          </div>
           <div id="map">
             <MapContainer center={[2.1154, 99.5451]} zoom={7}>
               <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=ot1stQR4IlixqPHIopnI" />
@@ -115,6 +123,7 @@ function Destination() {
               </MarkerClusterGroup>
             </MapContainer>
           </div>
+          <div className="persueade"></div>
         </div>
         <div className="culinary">
           <Culinary />

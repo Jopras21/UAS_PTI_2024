@@ -10,3 +10,14 @@
 .root{
   width: 100vw;
 }
+
+.aspect-video {
+  filter: blur(0);
+  transition: all .3s ease-in-out;
+}
+
+.aspect-video:hover {
+  opacity: calc(0.7);
+  filter: blur(4px);
+}
+

@@ -6,7 +6,7 @@
 #root {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.648);
+  background-color: rgba(29, 29, 29, 0.758);
   background-size: auto;
   overflow-x: hidden;
 }
@@ -65,7 +65,8 @@ marker:hover {
 
 #map {
   display: flex;
-  margin: 60px 5%;
+  padding: 60px 5%;
+  background-color: rgb(25, 25, 25);
 }
 
 .custom-marker-cluster {
@@ -83,8 +84,4 @@ marker:hover {
   font-weight: bold;
   font-size: 2rem;
   display: block;
-}
-
-.leaflet-marker-icon span {
-  color: rgb(255, 255, 255);
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import About from "/src/About/about.jsx";
+import Home from "/src/Home/home.jsx";
 import Destination from "../src/Destination/destination.jsx";
+import About from "/src/About/about.jsx";
 import { ThemeProvider } from "@material-tailwind/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -11,7 +12,7 @@ ReactDOM.render(
     <ThemeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Home />} />
           <Route path="/Destination/*" element={<Destination />} />
           <Route path="/About/*" element={<About />} />
         </Routes>
