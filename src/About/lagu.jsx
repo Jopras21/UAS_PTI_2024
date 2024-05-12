@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./lagu.css";
+import "./lagu.css"; // Import CSS file for styling
+
+const apiKey = "AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8";
+const query = "Lagu daerah Sumatera Utara";
 // import ReactPlayer from "react-player";
 // <ReactPlayer
 //   url={props.url}
@@ -7,9 +10,6 @@ import "./lagu.css";
 //   width={props.width}
 //   height={props.height}
 // />
-
-const apiKey = "AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8";
-const query = "Lagu daerah Sumatera Utara";
 const maxResults = 10;
 
 function Lagu() {
