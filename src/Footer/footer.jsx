@@ -8,9 +8,9 @@ function Footer() {
   <aside>
   <img src={logo} alt="log0" width="200" height="200" className="inline-block mx-20" />
     <p className="font-bold mx-20">
-      ACME Industries Ltd. <br/>Providing reliable tech since 1992
+      Kelompok 3. <br/>Sumatera Utara
     </p> 
-    <p>Copyright © 2024 - All right reserved</p>
+    <p className="mx-20">Copyright © 2024 - All right reserved</p>
   </aside> 
   <nav>
     <div className="grid grid-flow-col gap-4">

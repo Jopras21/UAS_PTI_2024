@@ -1,12 +1,17 @@
-import React from "react";
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from "../assets/logo.png";
 
-function Navbar() {
-  const location = useLocation();
+const Navbar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+    onSearch(value);
+  };
 
   return (
-    <div className = "navbar bg-trans" id="nav">
+    <div className="navbar bg-trans" id="nav">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,7 +28,6 @@ function Navbar() {
             </li>
             <li><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
             <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
-            <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
           </ul>
         </div>
         <NavLink className="btn-ghost hidden lg:flex text-5xl" to="/">
@@ -47,12 +51,18 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-         
-        </ul>
+        <div className="flex items-center">
+        <input
+            type="text"
+            value={searchTerm}
+            onChange={handleSearch}
+            placeholder="Search..."
+            className="border rounded p-1 mr-2"
+          />
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
