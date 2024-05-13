@@ -31,8 +31,8 @@ const searchEngineId = '81f27819728de437a';
   }, [searchTerm, apiKey, searchEngineId]);
 
   return (
-    <div>
-      <h2>Search Results</h2>
+    <div className="pencarian">
+      <h2 className="searchResult">Hasil Search</h2>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <ul>

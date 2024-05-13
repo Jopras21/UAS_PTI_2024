@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GedungLondon from "../assets/BgSejarah/gedunglondon.jpg";
 import DescAwal from "./descAwal";
 import CardHistory from "./cardHistory";
-import Location from "./location";
+import Location from "./location.js";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer";
 import SearchResults from "../History/search.jsx";
@@ -23,11 +23,10 @@ function History() {
         </div>
         <div className="bodyHistory">
           <div className="description">
-            <h3>Sejarah Singkat Provinsi Sumatera Utara</h3>
             <DescAwal />
           </div>
           <div>
-            <h2>Tempat Bersejarah</h2>
+            
             {Location.map(function (Location) {
               return (
                 <CardHistory

@@ -1,6 +1,5 @@
 .search{
     margin: 30px;
-    width: 100vw;
     text-align: center;
     font-family: 'Keystone', serif;
 }
@@ -8,4 +7,16 @@
 
 .containerHistory{
     margin-top: 60px;
+}
+
+.DescHis{
+    text-align: center;
+    padding: 0 100px;
+}
+
+.JudulHis {
+    font-style: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
 }
