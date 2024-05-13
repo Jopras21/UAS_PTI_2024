@@ -4,15 +4,6 @@ import logo from "../assets/logo.png";
 import './navbar.css'
 
 const Navbar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearch = () => {
-    onSearch(searchTerm);
-  };
-
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
 
   return (
     <div className="navbar bg-trans" id="nav">
@@ -75,16 +66,6 @@ const Navbar = ({ onSearch }) => {
                 Feedback
               </NavLink>
             </li>
-            <li>
-            <input
-            type="text"
-            value={searchTerm}
-            onChange={handleChange}
-            placeholder="Search..."
-            className="border rounded p-1 mr-2"
-          />
-          <button onClick={handleSearch} className="border rounded p-1 bg-neutral text-white">Search</button>
-          </li>
           </ul>
         </div>
         <NavLink className="btn-ghost hidden lg:flex text-5xl rounded-full" to="/">
@@ -133,16 +114,6 @@ const Navbar = ({ onSearch }) => {
         </ul>
       </div>
       <div className="navbar-end hidden mx-10 lg:flex">
-        <div className="flex items-center">
-        <input
-            type="text"
-            value={searchTerm}
-            onChange={handleChange}
-            placeholder="Search..."
-            className="border rounded p-1 mr-2"
-          />
-          <button onClick={handleSearch} className="border rounded p-1 bg-neutral text-white">Search</button>
-        </div>
       </div>
     </div>
   );

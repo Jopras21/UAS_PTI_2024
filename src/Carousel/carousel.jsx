@@ -118,8 +118,8 @@
   const TextOverlay = () => {
     return (
       <div className="absolute bottom-3 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform">
-        <h2 className="text-3xl font-bold my-3 inline-block align-middle">Danau Toba</h2>
-        <p className="text-sm">berada di provinsi Sumatra Utara</p>
+        <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16">Danau Toba</h2>
+        <p className="text-l mx-16">berada di provinsi Sumatra Utara</p>
       </div>
     );
   };

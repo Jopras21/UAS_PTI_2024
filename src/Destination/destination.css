@@ -64,12 +64,11 @@ marker:hover {
 #map {
   display: flex;
   padding: 80px 5%;
-  background: rgb(0, 5, 48);
-  background: radial-gradient(
-    circle,
-    rgba(0, 5, 48, 1) 73%,
-    rgba(0, 27, 101, 0.8688725490196079) 100%
-  );
+background: rgba(207, 207, 207, 0.24);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.1px);
+-webkit-backdrop-filter: blur(7.1px);
+border: 1px solid rgba(207, 207, 207, 0.25);
 }
 
 .custom-marker-cluster {
