@@ -5,10 +5,13 @@ import './navbar.css'
 
 const Navbar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const handleSearch = (e) => {
-    const value = e.target.value;
-    setSearchTerm(value);
-    onSearch(value);
+
+  const handleSearch = () => {
+    onSearch(searchTerm);
+  };
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   return (
@@ -73,13 +76,14 @@ const Navbar = ({ onSearch }) => {
               </NavLink>
             </li>
             <li>
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={handleSearch}
-                  placeholder="Search..."
-                  className="border rounded p-1 mr-2 bg-trans"
-                />
+            <input
+            type="text"
+            value={searchTerm}
+            onChange={handleChange}
+            placeholder="Search..."
+            className="border rounded p-1 mr-2"
+          />
+          <button onClick={handleSearch} className="border rounded p-1 bg-neutral text-white">Search</button>
           </li>
           </ul>
         </div>
@@ -130,13 +134,14 @@ const Navbar = ({ onSearch }) => {
       </div>
       <div className="navbar-end hidden mx-10 lg:flex">
         <div className="flex items-center">
-          <input
+        <input
             type="text"
             value={searchTerm}
-            onChange={handleSearch}
+            onChange={handleChange}
             placeholder="Search..."
             className="border rounded p-1 mr-2"
           />
+          <button onClick={handleSearch} className="border rounded p-1 bg-neutral text-white">Search</button>
         </div>
       </div>
     </div>
