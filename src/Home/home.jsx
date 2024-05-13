@@ -14,6 +14,9 @@ function Home() {
       <div className="nav">
         <Navbar />
       </div>
+    <div className="weather">
+      <Weather />
+    </div>
       <div className="bg-white" id="containerHome">
         <TextParallaxContent
           imgUrl={Toba}
@@ -86,7 +89,7 @@ const StickyImage = ({ imgUrl }) => {
       className="sticky z-0 overflow-hidden rounded-3xl"
     >
       <motion.div
-        className="absolute inset-0 bg-neutral-950/70"
+        className="absolute inset-0 bg-neutral-950/70 -z-50"
         style={{
           opacity,
         }}
@@ -149,7 +152,7 @@ const ExampleContent1 = () => (
 const ExampleContent2 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+      <h2 className="col-span-1 text-7xl font-bold md:col-span-4 text-center inline-block align-middle">
         Wisata
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -172,7 +175,7 @@ const ExampleContent2 = () => (
 const ExampleContent3 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+      <h2 className="col-span-1 text-3xl font-bold md:col-span-4 z-10">
         Makanan
       </h2>
       <div className="col-span-1 md:col-span-8">

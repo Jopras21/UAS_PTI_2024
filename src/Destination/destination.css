@@ -3,14 +3,6 @@
   src: local("Keystone") url("./fonts/Keystone.ttf") format("truetype");
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(29, 29, 29, 0.758);
-  background-size: auto;
-  overflow-x: hidden;
-}
-
 /* .container {
   position: relative;
   width: 100vw;

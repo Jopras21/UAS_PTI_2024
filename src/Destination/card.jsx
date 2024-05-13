@@ -62,7 +62,7 @@ const TiltCard = ({ img, name, desc }) => {
         transform,
         transition: "none",
       }}
-      className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 "
+      className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 hover"
     >
       <div
         style={{

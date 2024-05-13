@@ -2,22 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.root{
+#root {
   width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 22, 22, 0.774);
+  background-size: auto;
+  overflow-x: hidden;
 }
 
 .aspect-video {
   filter: blur(0);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .aspect-video:hover {
   opacity: calc(0.7);
   filter: blur(4px);
 }
-

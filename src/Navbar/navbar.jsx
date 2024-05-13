@@ -48,7 +48,7 @@ const Navbar = ({ onSearch }) => {
               <NavLink to="/Destination" activeClassName="active">
                 Destination
               </NavLink>
-              <ul className="p-2">
+              <ul className="p-2 z-50">
                 <li>
                   <NavLink to="/Destination/Wisata" activeClassName="active">
                     Wisata
@@ -75,7 +75,7 @@ const Navbar = ({ onSearch }) => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className="text-2xl">
-            <NavLink to="/" activeClassName="active" className="mx-20">
+            <NavLink to="/" activeClassName="active" className="mx-2">
               Home
             </NavLink>
           </li>
