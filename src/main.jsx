@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import Home from "../src/Home/home.jsx";
+import Home from "../src/Home/home.jsx";
 import Destination from "../src/Destination/destination.jsx";
 import History from "../src/History/history.jsx";
 import About from "/src/About/about.jsx";
@@ -13,7 +13,7 @@ ReactDOM.render(
     <ThemeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Destination/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/Destination/*" element={<Destination />} />
           <Route path="/About/*" element={<About />} />
           <Route path="/History/*" element={<History />} />

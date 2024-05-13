@@ -48,6 +48,7 @@ const Navbar = ({ onSearch }) => {
           </li>
           <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
           <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
+          <li className="text-2xl"><NavLink to="/Feedback" activeClassName="active">Feedback</NavLink></li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">

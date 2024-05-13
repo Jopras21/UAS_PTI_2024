@@ -91,7 +91,7 @@ const TiltCard = ({ img, name, desc }) => {
             transform: "translateZ(60px)",
             transformStyle: "preserve-3d",
           }}
-          className="inset-4 grid text-cyan-950 title-food"
+          className="inset-4 grid text-cyan-950 title-food h-auto"
         >
           <h2
             style={{

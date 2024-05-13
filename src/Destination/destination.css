@@ -53,6 +53,12 @@ h1 {
   display: none;
 }
 
+span {
+  color: rgb(10, 74, 54);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
 Marker {
   transform: scale(1);
   transition: all 0.3s ease-in-out;
@@ -65,7 +71,7 @@ marker:hover {
 
 #map {
   display: flex;
-  padding: 60px 5%;
+  padding: 80px 5%;
   background: rgb(0, 5, 48);
   background: radial-gradient(
     circle,

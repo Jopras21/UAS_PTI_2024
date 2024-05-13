@@ -29,7 +29,7 @@
 
 .title {
   margin: 0px 0px;
-  color: #0c4949;
+  color: #ffffff;
   text-align: center;
   max-width: fit-content;
   margin-inline: auto;
@@ -42,12 +42,6 @@
   max-width: fit-content;
   margin-inline: auto;
   overflow: hidden;
-  border-radius: 60px;
-  padding: 7px 30px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.784);
-  -moz-box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.81);
-  box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.899);
   animation: colorchange 20s infinite alternate;
 }
 
@@ -87,7 +81,7 @@ h1.icon {
 }
 
 .desc {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .div {

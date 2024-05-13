@@ -1,45 +1,24 @@
-const Foods = [
-    {
-      id: 1,
-      img: "../src/assets/Foods/Arsik.jpg",
-      name: "Arsik",
-      desc: "Potongan ikan atau daging dimasak dengan saus pedas yang kaya akan santan, kunyit, dan rempah-rempah aromatik.",
-    },
-    {
-      id: 2,
-      img: "../src/assets/Foods/Bika.jpg",
-      name: "Bika Ambon",
-      desc:
-        "kue spons yang berasal dari Sumatra Utara. Teksturnya unik, kombinasi yang lembut dan kenyal, dengan rasa manis yang menyatu di mulut",
-    },
-    {
-      id: 3,
-      img: "../src/assets/Foods/Dali.jpg",
-      name: "Dali",
-      desc:
-        "hidangan tradisional yang terbuat dari kacang lentil, dimasak hingga lembut dan disajikan dengan bumbu rempah. Menu ini kaya gizi dan memuaskan.",
-    },
-    {
-      id: 4,
-      img: "../src/assets/Foods/Dendeng.jpg",
-      name: "Dendeng",
-      desc:
-        "Slices tipis daging sapi atau kerbau, marinasi dengan campuran rempah, kemudian dikeringkan atau digoreng hingga sempurna.",
-    },
-    {
-      id: 5,
-      img: "../src/assets/Foods/Gomak.jpg",
-      name: "Mi Gomak",
-      desc:
-        "hidangan mi yang lezat dengan potongan daging yang lembut, biasanya ayam atau sapi, disajikan dengan kuah kaya rempah. Menu ini dihiasi dengan berbagai topping, menambahkan lapisan tekstur dan rasa.",
-    },
-    {
-      id: 6,
-      img: "../src/assets/Foods/Lemang.png",
-      name: "Lemang",
-      desc:
-        " Beras ketan dicampur dengan santan, dimasukkan ke dalam tabung bambu, dan dimasak perlahan di atas api hingga beras menyerap aroma asap dan mengembangkan lapisan luar yang lengket.",
-    },
-  ];
+// food.js
 
-export default Foods;
+// Import Axios library
+import axios from 'axios';
+
+// Function to fetch data using Axios
+async function Foods() {
+    try {
+        // Make a GET request to fetch data
+        const response = await axios.get('https://joerscl.github.io/history2/history2.json');
+
+        // Access the data from the response
+        const data = response.data;
+
+        // Return the data
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return []; // Return an empty array in case of an error
+    }
+}
+
+// Export the Foods function
+export { Foods };

@@ -2,7 +2,6 @@ import React from "react";
 import "./about.css";
 import Navbar from "../Navbar/navbar.jsx";
 import Footer from "../Footer/footer.jsx";
-import Lagu from "./lagu.jsx";
 function About() {
   return (
     <div className="root">
@@ -35,9 +34,6 @@ function About() {
           <div className="jopras">
             <p>Jonathan Prasetyo</p>
           </div>
-        </div>
-        <div className="lagu">
-          <Lagu />
         </div>
       </div>
       <div className="footer">
