@@ -3,14 +3,7 @@ import "./lagu.css"; // Import CSS file for styling
 
 const apiKey = "AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8";
 const query = "Lagu daerah Sumatera Utara";
-// import ReactPlayer from "react-player";
-// <ReactPlayer
-//   url={props.url}
-//   playing={true}
-//   width={props.width}
-//   height={props.height}
-// />
-const maxResults = 10;
+const maxResults = 1;
 
 function Lagu() {
   const [videos, setVideos] = useState([]);
@@ -41,16 +34,15 @@ function Lagu() {
       </div>
       <ul>
         {videos.map((video) => (
-          <li key={video.id.videoId} className="video-container">
-            <iframe
-              width="200px"
-              height="315"
-              src={`https://www.youtube.com/embed/${video.id.videoId}`}
-              title={video.snippet.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <li key={video.id.videoId} className="video-container"><iframe
+          width="200px"
+          height="200px"
+          src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&loop=100`}
+          title={video.snippet.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
           </li>
         ))}
       </ul>

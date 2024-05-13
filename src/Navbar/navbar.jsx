@@ -19,6 +19,7 @@ const Navbar = ({ onSearch }) => {
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1]  shadow  w-52">
             <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+            <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
             <li>
               <NavLink to="/Destination" activeClassName="active">Destination</NavLink>
               <ul className="p-2">
@@ -27,7 +28,6 @@ const Navbar = ({ onSearch }) => {
               </ul>
             </li>
             <li><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
-            <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
           </ul>
         </div>
         <NavLink className="btn-ghost hidden lg:flex text-5xl" to="/">
@@ -37,6 +37,7 @@ const Navbar = ({ onSearch }) => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li className="text-2xl"><NavLink to="/" activeClassName="active" className="mx-20">Home</NavLink></li>
+          <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
           <li className="text-2xl">
             <details>
               <summary>Destination</summary>
@@ -46,7 +47,6 @@ const Navbar = ({ onSearch }) => {
               </ul>
             </details>
           </li>
-          <li className="text-2xl"><NavLink to="/History" activeClassName="active">History</NavLink></li>
           <li className="text-2xl"><NavLink to="/About" activeClassName="active">About Us</NavLink></li>
           <li className="text-2xl"><NavLink to="/Feedback" activeClassName="active">Feedback</NavLink></li>
         </ul>
