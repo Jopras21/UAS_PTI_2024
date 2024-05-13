@@ -39,7 +39,7 @@ const searchEngineId = '81f27819728de437a';
         {searchResults.map((item, index) => (
         <li key={index}>
             <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
-            <p>{item.snippet}</p>
+            
         </li>
         ))}
       </ul>

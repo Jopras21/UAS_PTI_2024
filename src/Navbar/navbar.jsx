@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+import './navbar.css'
 
 const Navbar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -32,7 +33,7 @@ const Navbar = ({ onSearch }) => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1]  shadow  w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52"
           >
             <li>
               <NavLink exact to="/" activeClassName="active">
@@ -66,6 +67,20 @@ const Navbar = ({ onSearch }) => {
                 About Us
               </NavLink>
             </li>
+            <li>
+            <NavLink to="/Feedback" activeClassName="active">
+                Feedback
+              </NavLink>
+            </li>
+            <li>
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  placeholder="Search..."
+                  className="border rounded p-1 mr-2 bg-trans"
+                />
+          </li>
           </ul>
         </div>
         <NavLink className="btn-ghost hidden lg:flex text-5xl" to="/">
@@ -113,7 +128,7 @@ const Navbar = ({ onSearch }) => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end hidden mx-10 lg:flex">
         <div className="flex items-center">
           <input
             type="text"

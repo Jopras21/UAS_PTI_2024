@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./lagu.css"; // Import CSS file for styling
+import "./lagu.css";
 
 const apiKey = "AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8";
-const query = "Lagu daerah Sumatera Utara";
 const maxResults = 1;
 
-function Lagu() {
+
+function Lagu({ query }) {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     fetchVideos();
-  }, []);
+  }, [query]);
 
   const fetchVideos = async () => {
     try {
@@ -29,20 +29,18 @@ function Lagu() {
 
   return (
     <div className="bungkus">
-      <div className="title-daerah">
-        <h1>Lagu Daerah Sumatera Utara</h1>
-      </div>
       <ul>
         {videos.map((video) => (
-          <li key={video.id.videoId} className="video-container"><iframe
-          width="200px"
-          height="200px"
-          src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&loop=100`}
-          title={video.snippet.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+          <li key={video.id.videoId} className="video-container">
+            <iframe
+              width="200px"
+              height="200px"
+              src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&loop=100`}
+              title={video.snippet.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </li>
         ))}
       </ul>

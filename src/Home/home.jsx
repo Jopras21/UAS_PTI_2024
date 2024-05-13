@@ -7,7 +7,7 @@ import './home.css'
 import Toba from "../assets/Landscape/Toba.png"
 import Sipiso from "../assets/Landscape/Sipiso.jpeg"
 import Sibayak from "../assets/Landscape/Sibayak.jpg"
-
+import Lagu from"../Lagu/lagu.jsx"
 function Home() {
   return (
     <>
@@ -36,6 +36,9 @@ function Home() {
         >
           <ExampleContent3 />
         </TextParallaxContent>
+        <div className="lagu">
+        <Lagu query="Siksik sibatumanikam" />
+        </div>
         <Footer />
       </div>
     </>

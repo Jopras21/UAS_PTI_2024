@@ -45,7 +45,7 @@ function History() {
         <SearchResults searchTerm={searchTerm} />
       </div>
       <div className="lagu">
-        <Lagu />
+      <Lagu query="Alu Siau" />
       </div>
       <div className="footer">
         <Footer />
