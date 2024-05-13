@@ -6,21 +6,17 @@
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
+
 }
 
 iframe {
-  width: 100%;
-  height: 100%;
+  border-radius: 30px;
   opacity: 1;
-}
-
-.html5-video-player {
-
 }
 
 .title-daerah {
   font-size: 30px;
-  color: black;
+  color: rgba(0, 0, 0, 0.478);
   font-family: 'Keystone', serif;
   text-align: center;
 }

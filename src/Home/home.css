@@ -1,20 +1,8 @@
 #containerHome{
-    padding-top: 20px;
+    padding-top: 85px;
 }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .button-link:hover {
-    background-color: #45a049;
-  }
-  
+.lagu{
+  z-index: -1;
+  opacity: 1;
+}

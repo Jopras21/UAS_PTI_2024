@@ -10,6 +10,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import { Icon, divIcon, point } from "leaflet";
 import "./destination.css";
+import Lagu from"../Lagu/lagu.jsx"
 
 function Destination() {
   //   var map = L.map("map").setView([51.505, -0.09], 13);
@@ -128,9 +129,13 @@ function Destination() {
         <div className="culinary">
           <Culinary />
         </div>
+        <div className="lagu">
+        <Lagu query="Sinanggar Tulo" />
+        </div>
       </div>
       <div className="footer">
         <Footer />
+        
       </div>
     </>
   );
