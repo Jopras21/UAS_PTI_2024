@@ -7,10 +7,10 @@ function Weather() {
   const [location, setLocation] = useState("");
 
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ae255f0b32749339de311169c5fba70a";
+    "https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=c390140dcbe035259c568a62e06bb77c";
 
   const searchLocation = () => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -54,7 +54,7 @@ function Weather() {
             </div>
             <div className="wind">
               <p>Wind Speed</p>
-              {data.wind ? <p>{data.wind.speed}m/h</p> : null}
+              {data.wind ? <p>{data.wind.speed.toFixed()}mph</p> : null}
             </div>
           </div>
         )}

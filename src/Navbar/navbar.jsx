@@ -40,7 +40,7 @@ const Navbar = ({ onSearch }) => {
                 Home
               </NavLink>
             </li>
-            <li className="text-2xl">
+            <li className="text-xl">
               <NavLink to="/History" activeClassName="active">
                 History
               </NavLink>
@@ -83,23 +83,23 @@ const Navbar = ({ onSearch }) => {
           </li>
           </ul>
         </div>
-        <NavLink className="btn-ghost hidden lg:flex text-5xl" to="/">
-          <img src={logo} alt="logo" className="w-36 h-36 mx-8 object-cover" />
+        <NavLink className="btn-ghost hidden lg:flex text-5xl rounded-full" to="/">
+          <img src={logo} alt="logo" className="w-32 h-32 mx-4 object-cover" />
         </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li className="text-2xl">
+          <li className="text-xl">
             <NavLink to="/" activeClassName="active" className="mx-2">
               Home
             </NavLink>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <NavLink to="/History" activeClassName="active">
               History
             </NavLink>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <details>
               <summary>Destination</summary>
               <ul className="p-2  w-44">
@@ -116,12 +116,12 @@ const Navbar = ({ onSearch }) => {
               </ul>
             </details>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <NavLink to="/About" activeClassName="active">
               About Us
             </NavLink>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl">
             <NavLink to="/Feedback" activeClassName="active">
               Feedback
             </NavLink>

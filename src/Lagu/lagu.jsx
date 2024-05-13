@@ -28,7 +28,7 @@ function Lagu({ query }) {
   };
 
   return (
-    <div className="bungkus">
+    <div className="bungkus h-0">
       <ul>
         {videos.map((video) => (
           <li key={video.id.videoId} className="video-container">
