@@ -4,6 +4,9 @@ import Footer from "../Footer/footer.jsx"
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import './home.css'
+import Toba from "../assets/Landscape/Toba.png"
+import Sipiso from "../assets/Landscape/Sipiso.jpeg"
+import Sibayak from "../assets/Landscape/Sibayak.jpg"
 
 function Home() {
   return (
@@ -13,23 +16,23 @@ function Home() {
       </div>
       <div className="bg-white" id="containerHome">
         <TextParallaxContent
-          imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          subheading="Welcome"
+          imgUrl={Toba}
+          subheading="Selamat datang di"
           heading="Sumatera Utara."
         >
           <ExampleContent1 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          subheading="Quality"
-          heading="Never compromise."
+          imgUrl={Sipiso}
+          subheading="Daerah wisata yang sering dikunjungi"
+          heading="Tempat Wisata."
         >
           <ExampleContent2 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          subheading="Modern"
-          heading="Dress for the best."
+          imgUrl={Sibayak}
+          subheading="Makanan khas Sumatera Utara"
+          heading="Makanan Khas."
         >
           <ExampleContent3 />
         </TextParallaxContent>
@@ -51,7 +54,8 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy heading={heading} subheading={subheading} />
+        {/* Memastikan bahwa properti subheading dan heading diteruskan */}
+        <OverlayCopy subheading={subheading} heading={heading} />
       </div>
       {children}
     </div>
