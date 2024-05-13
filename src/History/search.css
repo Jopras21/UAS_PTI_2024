@@ -1,0 +1,12 @@
+.searchResult{
+    text-align: center;
+    font-size: 80px;
+}
+
+.pencarian {
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    border-radius: 35px;
+}

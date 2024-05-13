@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./lagu.css";
 
-const apiKey = "AIzaSyD0YP8R42hIPyrvNVlUwAMO-UAg6-RN9U8";
+const apiKey = "AIzaSyCsojbbQzwAcbZPl9b4HYgW07UiXzzzm9g";
 const maxResults = 1;
 
 
@@ -33,9 +33,9 @@ function Lagu({ query }) {
         {videos.map((video) => (
           <li key={video.id.videoId} className="video-container">
             <iframe
-              width="200px"
-              height="200px"
-              src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&loop=100`}
+              width="0px"
+              height="0px"
+              src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=0&loop=5`}
               title={video.snippet.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
