@@ -1,88 +1,61 @@
-import React, { useState } from "react";
-import { Col, FloatingLabel, Form, Row } from "react-bootstrap";
-import StarRating from "./starRating";
-import "./styles.scss";
+import React from "react";
+import Navbar from "../Navbar/navbar";
+import "./feedback.css";
 
-export default function Feedback() {
-  const [rtl, setRTL] = useState(bd.helper.getRTL());
-  const [darkMode, setDarkMode] = useState(bd.helper.isDarkMode());
 
-  function changeRTL(value) {
-    setRTL(value);
-    bd.helper.setRTL(value);
-  }
-
-  function changeDarMode(value) {
-    setDarkMode(value);
-    bd.helper.setTheme(value ? "mui-dark" : "mui-light");
-  }
-
-  return (
+function FeedBack(){
+  return(
     <>
-      <bd.Paper className="p-3 my-3 mx-auto" style={{ maxWidth: 600 }}>
-        <Form
-          autoComplete="off"
-          className=""
-          onSubmit="https://sheetdb.io/api/v1/j9oet9nklgy7n"
-        >
-          <div className="text-primary text-center mb-4">
-            <bd.icons.Email style={{ fontSize: 50 }} />
-            <h3 className="mt-3">FEEDBACK FORM</h3>
-            <p className="text-primary-text">
-              This sample uses <b>densed</b> floating labels.
-            </p>
-            <bd.Toggle
-              label="RTL"
-              color="primary"
-              model={rtl}
-              setModel={changeRTL}
-            />
+    <div className="navbar">
+      <Navbar />
+    </div>
+    <div class="containerFeedBack">
+      <div class="row">
+        <div class="col align-self-center">
+          {/* <!-- contact form --> */}
+          <form>
+            {/* <!-- name --> */}
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                name="name"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </div>
 
-            <bd.Switch
-              dense
-              label="Dark"
-              color="primary"
-              model={darkMode}
-              setModel={changeDarMode}
-              labelClassName="d-inline-flex"
-            />
-          </div>
-          <Row>
-            <Col md>
-              <FloatingLabel label="Full Name" className="dense mb-3">
-                <Form.Control
-                  name="fullName"
-                  type="text"
-                  placeholder="FullName"
-                  autoComplete="off"
-                />
-              </FloatingLabel>
-            </Col>
-          </Row>
+            {/* <!-- rating --> */}
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <input
+                type="number"
+                name="rating"
+                class="form-control"
+                id="rating"
+                placeholder="Enter Rating from 1 to 10"
+              />
+            </div>
 
-          <StarRating />
-          <br />
-          <StarRating />
+            <div class="form-group">
+              <label for="feedback">Feedback</label>
+              <textarea
+                class="form-control"
+                id="feedback"
+                rows="5"
+              ></textarea>
+            </div>
 
-          <FloatingLabel label="Message" className="dense mb-3">
-            <Form.Control
-              as="textarea"
-              name="message"
-              placeholder="Message"
-              style={{ height: 100 }}
-            />
-          </FloatingLabel>
-
-          <bd.Button
-            color="primary"
-            size="lg"
-            type="button"
-            className="d-block m-auto w-100"
-          >
-            SEND MESSAGE
-          </bd.Button>
-        </Form>
-      </bd.Paper>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     </>
   );
 }
+
+export default FeedBack;
