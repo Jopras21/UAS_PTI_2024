@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GedungLondon from "../assets/BgSejarah/gedunglondon.jpg";
+import Toba from "../assets/BgSejarah/toba.jpg";
 import DescAwal from "./descAwal";
 import CardHistory from "./cardHistory";
 import Location from "./location.js";
@@ -42,7 +42,7 @@ function History() {
         </div>
         <div className="title">
           <h1>Sejarah</h1>
-          <img src={GedungLondon} alt="gedung london"></img>
+          <img src={Toba} alt=""></img>
         </div>
         <div className="bodyHistory">
           <div className="description">

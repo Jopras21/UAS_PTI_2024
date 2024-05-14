@@ -1,5 +1,9 @@
 import GedungLondon from "../assets/BgSejarah/gedunglondon.jpg";
 import IstanaMaimun from "../assets/BgSejarah/istanamaimun.jpg";
+import MakamDeli from "../assets/BgSejarah/makam.jpg";
+import ArcaRaja from "../assets/BgSejarah/arca.jpeg";
+import MuseumTB from "../assets/BgSejarah/museum.jpeg"
+
 
 const Location = [
   {
@@ -18,21 +22,21 @@ const Location = [
   },
   {
     id: 3,
-    img: IstanaMaimun,
+    img: MakamDeli,
     name: "Makam Raja-raja Deli",
     description:
       "Terletak di daerah Sisingamangaraja, makam ini merupakan tempat peristirahatan terakhir para raja dan kerabat Kesultanan Deli. Makam-makam ini menjadi saksi sejarah penting tentang peradaban Melayu di Sumatra Utara.",
   },
   {
     id: 4,
-    img: IstanaMaimun,
+    img: ArcaRaja,
     name: "Situs Peninggalan Arca Batu Raja",
     description:
       "Terletak di Kabupaten Labuhanbatu, situs ini merupakan kompleks arca batu yang diperkirakan berasal dari abad ke-11 hingga abad ke-13 Masehi. Arca-arca ini memberikan gambaran tentang keberadaan kerajaan Hindu-Buddha di wilayah tersebut.",
   },
   {
     id: 5,
-    img: IstanaMaimun,
+    img: MuseumTB,
     name: "Museum TB Silalahi Center",
     description:
       "Terletak di Tarutung, museum ini didedikasikan untuk mempertahankan dan mempromosikan kebudayaan Batak Toba. Museum ini menampilkan berbagai artefak sejarah, seni, dan budaya Batak.",
