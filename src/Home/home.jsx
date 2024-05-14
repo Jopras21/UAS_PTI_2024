@@ -1,13 +1,13 @@
-import Weather from "../Weather/weather";
-import Navbar from "../Navbar/navbar";
-import Footer from "../Footer/footer.jsx";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import "./home.css";
+import Navbar from "../Navbar/navbar";
+import Footer from "../Footer/footer.jsx";
+import Weather from "../Weather/weather";
 import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
-import Sibayak from "../assets/Landscape/Sibayak.jpg";
+import Arsik from "../assets/Foods/Arsik.jpg"
 import Lagu from "../Lagu/lagu.jsx";
+import "./home.css";
 
 function Home() {
   return (
@@ -34,7 +34,7 @@ function Home() {
           <ExampleContent2 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl={Sibayak}
+          imgUrl={Arsik}
           subheading="Makanan khas Sumatera Utara"
           heading="Makanan Khas."
         >
@@ -52,6 +52,7 @@ function Home() {
 const IMG_PADDING = 12;
 
 const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+  const targetRef = useRef(null);
   return (
     <div
       style={{
@@ -59,20 +60,19 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[150vh]">
-        <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy subheading={subheading} heading={heading} />
+      <div ref={targetRef} className="relative h-[150vh]">
+        <StickyImage imgUrl={imgUrl} targetRef={targetRef} />
+        <OverlayCopy subheading={subheading} heading={heading} targetRef={targetRef} />
       </div>
       {children}
     </div>
   );
 };
 
-const StickyImage = ({ imgUrl }) => {
-  const targetRef = useRef(null);
+const StickyImage = ({ imgUrl, targetRef }) => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end end", "end start"],
+    offset: ["start start", "end start"],
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
@@ -88,8 +88,7 @@ const StickyImage = ({ imgUrl }) => {
         top: IMG_PADDING,
         scale,
       }}
-      ref={targetRef}
-      className="sticky z-0 overflow-hidden "
+      className="sticky z-0 overflow-hidden"
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70 w-full"
@@ -101,15 +100,14 @@ const StickyImage = ({ imgUrl }) => {
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
-  const targetRef = useRef(null);
+const OverlayCopy = ({ subheading, heading, targetRef }) => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.75], [0, 1, 0]);
 
   return (
     <motion.div
@@ -117,13 +115,14 @@ const OverlayCopy = ({ subheading, heading }) => {
         y,
         opacity,
       }}
-      ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white z-50"
     >
-      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl text-neutral-400" style={{ opacity: 0.75 }}>
         {subheading}
       </p>
-      <p className="text-center text-4xl font-bold md:text-5xl">{heading}</p>
+      <p className="text-center text-4xl font-bold md:text-5xl text-neutral-400" style={{ opacity: 0.75 }}>
+        {heading}
+      </p>
     </motion.div>
   );
 };
@@ -159,7 +158,7 @@ const ExampleContent1 = () => (
 const ExampleContent2 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center inline-block align-middle">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Destinasi Wisata
       </h2>
       <div className="col-span-1 md:col-span-8">
