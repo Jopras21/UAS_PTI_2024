@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/navbar";
+import Footer from "../Footer/footer";
 import "./feedback.css";
 
 
@@ -21,6 +22,7 @@ function FeedBack(){
                 class="form-control"
                 id="name"
                 placeholder="Enter your name"
+                required
               />
             </div>
 
@@ -32,6 +34,9 @@ function FeedBack(){
                 class="form-control"
                 id="rating"
                 placeholder="Enter Rating from 1 to 10"
+                min={1}
+                max={10}
+                required
               />
             </div>
 
@@ -42,6 +47,8 @@ function FeedBack(){
                 class="form-control"
                 id="feedback"
                 rows="5"
+                placeholder="Write your feedback here"
+                required
               ></textarea>
             </div>
 
@@ -51,6 +58,9 @@ function FeedBack(){
           </form>
         </div>
       </div>
+    </div>
+    <div className="footer">
+        <Footer />
     </div>
     </>
   );

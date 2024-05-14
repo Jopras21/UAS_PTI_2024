@@ -1,5 +1,6 @@
 .containerFeedBack {
     margin-top: 60px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,4 +10,6 @@
     width: 600px;
     margin-bottom: 10px;
     padding: 6px;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
 }
