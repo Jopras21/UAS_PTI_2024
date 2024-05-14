@@ -19,7 +19,7 @@ const searchEngineId = '81f27819728de437a';
         const response = await axios.get(url);
         setSearchResults(response.data.items);
       } catch (error) {
-        setError('Error fetching data. Please try again later.');
+        setError('');
       } finally {
         setLoading(false);
       }

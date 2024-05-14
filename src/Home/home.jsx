@@ -61,7 +61,6 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
-        {/* Memastikan bahwa properti subheading dan heading diteruskan */}
         <OverlayCopy subheading={subheading} heading={heading} />
       </div>
       {children}
@@ -175,7 +174,7 @@ const ExampleContent2 = () => (
           Berikut Ini adalah beberapa destinasi populer di Sumatera Utara
         </p>
         <a
-          href="/Wisata"
+          href="/Destination"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
           Read More
@@ -202,7 +201,7 @@ const ExampleContent3 = () => (
           Berikut ini adalah beberapa makanan khas Sumatera Utara
         </p>
         <a
-          href="/Wisata"
+          href="/Destination"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
           Read More

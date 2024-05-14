@@ -18,6 +18,9 @@ function About() {
           />
         </video>
       </div>
+      <div className="lagu">
+        <Lagu query="Rambadia Lagu Sumatera Utara" />
+      </div>
       <div className="body">
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
@@ -36,9 +39,6 @@ function About() {
             <p>Jonathan Prasetyo</p>
           </div>
         </div>
-      </div>
-      <div className="lagu">
-        <Lagu query="Rambadia Lagu Sumatera Utara" />
       </div>
       <div className="footer">
         <Footer />

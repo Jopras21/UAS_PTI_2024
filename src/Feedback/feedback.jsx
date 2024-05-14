@@ -12,9 +12,7 @@ function FeedBack(){
     <div class="containerFeedBack">
       <div class="row">
         <div class="col align-self-center">
-          {/* <!-- contact form --> */}
           <form action="https://sheetdb.io/api/v1/j9oet9nklgy7n" method="post" id="sheetdb-form">
-            {/* <!-- name --> */}
             <div class="form-group">
               <label for="name">Name</label>
               <input
@@ -26,7 +24,6 @@ function FeedBack(){
               />
             </div>
 
-            {/* <!-- rating --> */}
             <div class="form-group">
               <label for="rating">Rating</label>
               <input
@@ -48,7 +45,7 @@ function FeedBack(){
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-neutral">
               Submit
             </button>
           </form>
