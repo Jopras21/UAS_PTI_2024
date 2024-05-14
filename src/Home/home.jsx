@@ -61,7 +61,6 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
-        {/* Memastikan bahwa properti subheading dan heading diteruskan */}
         <OverlayCopy subheading={subheading} heading={heading} />
       </div>
       {children}
@@ -132,7 +131,7 @@ const OverlayCopy = ({ subheading, heading }) => {
 const ExampleContent1 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-green-950">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Sumatera Utara
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -148,7 +147,7 @@ const ExampleContent1 = () => (
         </p>
         <a
           href="/History"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
           Read More
         </a>
@@ -175,8 +174,8 @@ const ExampleContent2 = () => (
           Berikut Ini adalah beberapa destinasi populer di Sumatera Utara
         </p>
         <a
-          href="/Wisata"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
+          href="/Destination"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
           Read More
         </a>
@@ -202,7 +201,7 @@ const ExampleContent3 = () => (
           Berikut ini adalah beberapa makanan khas Sumatera Utara
         </p>
         <a
-          href="/Wisata"
+          href="/Destination"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
         >
           Read More

@@ -32,7 +32,7 @@ function DescAwal() {
       <p>
         Pada awal tahun 1949 dilakukan reorganisasi kembali, dengan Keputusan
         Pemerintah Darurat RI Nomor 22/Pem/PDRI pada tanggal 17 Mei 1949,
-        jabatan Gubernu                                                                                                                                                                                             r Sumatera Utara ditiadakan. Selanjutnya dengan Ketetapan
+        jabatan Gubernur Sumatera Utara ditiadakan. Selanjutnya dengan Ketetapan
         Pemerintah Darurat RI pada tanggal 17 Desember 1949, dibentuk Provinsi
         Aceh dan Provinsi Tapanuli/Sumatera Timur. Dengan Peraturan Pemerintah
         Pengganti UU No. 5 Tahun 1950 pada tanggal 14 Agustus 1950, Ketetapan

@@ -12,26 +12,23 @@ function FeedBack(){
     <div class="containerFeedBack">
       <div class="row">
         <div class="col align-self-center">
-          {/* <!-- contact form --> */}
-          <form>
-            {/* <!-- name --> */}
+          <form action="https://sheetdb.io/api/v1/j9oet9nklgy7n" method="post" id="sheetdb-form">
             <div class="form-group">
               <label for="name">Name</label>
               <input
                 type="name"
-                name="name"
+                name="data[name]"
                 class="form-control"
                 id="name"
                 placeholder="Enter your name"
               />
             </div>
 
-            {/* <!-- rating --> */}
             <div class="form-group">
               <label for="rating">Rating</label>
               <input
                 type="number"
-                name="rating"
+                name="data[rating]"
                 class="form-control"
                 id="rating"
                 placeholder="Enter Rating from 1 to 10"
@@ -41,13 +38,14 @@ function FeedBack(){
             <div class="form-group">
               <label for="feedback">Feedback</label>
               <textarea
+                name="data[feedback]"
                 class="form-control"
                 id="feedback"
                 rows="5"
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-neutral">
               Submit
             </button>
           </form>
