@@ -29,21 +29,21 @@ function Weather() {
         />
       </div>
       <div className="container-weather">
-        <div className="location">
-          <p>{data.name}</p>
-        </div>
-        <div className="temp">
-          {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
-        </div>
-        <div className="clouds">
-          {data.weather ? <p>{data.weather[0].main}</p> : null}
-        </div>
         {data.name != undefined && (
           <>
+            <div className="location">
+              <p>{data.name}</p>
+            </div>
+            <div className="temp">
+              {data.main ? <h1>{data.main.temp.toFixed()}°F </h1> : null}
+            </div>
+            <div className="clouds">
+              {data.weather ? <p>{data.weather[0].main}</p> : null}
+            </div>
             <div className="feels">
               <p>Feels Like</p>
               <br></br>
-              {data.main ? <p>{data.main.feels_like}°C</p> : null}
+              {data.main ? <p>{data.main.feels_like}°F</p> : null}
             </div>
             <div className="humidity">
               <p>Humidity</p>

@@ -31,7 +31,7 @@ function History() {
             value={searchTerm}
             onChange={handleChange}
             placeholder="Search..."
-            className="border rounded-full p-2 mb-6 mr-2 searchBar"
+            className="border rounded-full text-center p-4 mb-6 mr-2 searchBar w-64"
           />
           <button
             onClick={handleSearch}
@@ -41,7 +41,7 @@ function History() {
           </button>
         </div>
         <div className="title">
-          <h1>Sejarah</h1>
+          <h1 className="mb-6">Sejarah</h1>
           <img src={Toba} alt=""></img>
         </div>
         <div className="bodyHistory">
