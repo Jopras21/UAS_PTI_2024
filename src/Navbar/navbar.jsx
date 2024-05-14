@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+import Time from "./time.jsx"
 import './navbar.css'
 
 const Navbar = ({ onSearch }) => {
@@ -114,6 +115,7 @@ const Navbar = ({ onSearch }) => {
         </ul>
       </div>
       <div className="navbar-end hidden mx-10 lg:flex">
+        <Time />
       </div>
     </div>
   );
