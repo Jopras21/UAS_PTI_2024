@@ -132,7 +132,7 @@ const OverlayCopy = ({ subheading, heading }) => {
 const ExampleContent1 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-green-950">
         Sumatera Utara
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -148,7 +148,7 @@ const ExampleContent1 = () => (
         </p>
         <a
           href="/History"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
         >
           Read More
         </a>
@@ -176,7 +176,7 @@ const ExampleContent2 = () => (
         </p>
         <a
           href="/Wisata"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
         >
           Read More
         </a>
@@ -203,7 +203,7 @@ const ExampleContent3 = () => (
         </p>
         <a
           href="/Wisata"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
         >
           Read More
         </a>
