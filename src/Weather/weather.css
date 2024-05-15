@@ -111,15 +111,19 @@
   width: 100%;
   display: flex;
   width: auto;
-  padding: 1rem;
-  border: none;
+  padding: 0.8rem;
+  border: 2px solid;
+  border-color: rgb(40, 40, 40);
   border-radius: 2rem;
   outline: none;
   text-align: center;
   overflow: scroll;
   justify-content: center;
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-input {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.search::placeholder {
+  color: rgb(5, 5, 5);
 }
