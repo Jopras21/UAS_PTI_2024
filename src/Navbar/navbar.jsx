@@ -63,9 +63,6 @@ const Navbar = ({ onSearch }) => {
               </NavLink>
             </li>
             <li>
-            <NavLink to="/Feedback" activeClassName="active">
-                Feedback
-              </NavLink>
             </li>
           </ul>
         </div>
@@ -105,11 +102,6 @@ const Navbar = ({ onSearch }) => {
           <li className="text-xl">
             <NavLink to="/About" activeClassName="active">
               About Us
-            </NavLink>
-          </li>
-          <li className="text-xl">
-            <NavLink to="/Feedback" activeClassName="active">
-              Feedback
             </NavLink>
           </li>
         </ul>
