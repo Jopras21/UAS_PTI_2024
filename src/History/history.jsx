@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Toba from "../assets/BgSejarah/toba.jpg";
 import DescAwal from "./descAwal";
-import CardHistory from "./cardHistory";
+import CardHistory from "./cardHis.jsx";
 import Location from "./location.js";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer";

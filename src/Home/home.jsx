@@ -18,7 +18,7 @@ function Home() {
       <div className="weather">
         <Weather />
       </div>
-      <div className="bg-white" id="containerHome">
+      <div className="bg-white" id="containerHome">                                  
         <TextParallaxContent
           imgUrl={Toba}
           subheading="Selamat datang di"
