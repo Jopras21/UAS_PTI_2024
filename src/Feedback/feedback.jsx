@@ -47,49 +47,51 @@ function FeedBack() {
 
   return (
     <div className="feedback-container">
-      <form id="sheetdb-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="data[name]"
-            className="form-control"
-            id="name"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
+      <div className="tulisan">
+        <h2>Feedback</h2>
+      </div>
+      <div className="form-wrapper">
+        <form id="sheetdb-form" onSubmit={handleSubmit}>
+          <div className="formField">
+            <input
+              required
+              type="text"
+              name="data[name]"
+              id="name"
+              className="form-control"
+            />
+            <span>Name</span>
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="rating">Rating</label>
-          <input
-            type="number"
-            name="data[rating]"
-            className="form-control"
-            id="rating"
-            placeholder="Enter Rating from 1 to 10"
-            min={1}
-            max={10}
-            required
-          />
-        </div>
+          <div className="formField">
+            <input
+              required
+              type="number"
+              name="data[rating]"
+              id="rating"
+              className="form-control"
+              min={1}
+              max={10}
+            />
+            <span>Rating (1-10)</span>
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="feedback">Feedback</label>
-          <textarea
-            name="data[feedback]"
-            className="form-control"
-            id="feedback"
-            rows="5"
-            placeholder="Write your feedback here"
-            required
-          ></textarea>
-        </div>
+          <div className="formField">
+            <input
+              required
+              name="data[feedback]"
+              id="feedback"
+              className="form-control"
+              rows="5"
+            ></input>
+            <span>Feedback</span>
+          </div>
 
-        <Button type="submit" variant="gradient">
-          Submit
-        </Button>
-      </form>
+          <Button type="submit" variant="gradient">
+            Submit
+          </Button>
+        </form>
+      </div>
 
       <Dialog open={open} handler={handleOpen}>
         <DialogHeader>
