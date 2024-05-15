@@ -13,7 +13,7 @@
 
 .destination {
   width: 100vw;
-  height: auto;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -34,7 +34,7 @@ h1 {
 
 .leaflet-container {
   height: 450px;
-  width: 450px;
+  width: 470px;
   border: 2px solid;
   border-radius: 10%;
   padding: 20px;

@@ -106,7 +106,7 @@ const Navbar = ({ onSearch }) => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end hidden mx-10 lg:flex">
+      <div className="navbar-end hidden flex justify-center lg:flex w-96 m-8">
         <Time />
       </div>
     </div>

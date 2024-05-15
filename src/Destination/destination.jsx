@@ -95,7 +95,7 @@ function Destination() {
       </div>
       <div className="big-container">
         <div className="destination">
-          <div className="wisata">
+          <div className="text-xl mt-12">
             <h1 className="title1">Destinasi Wisata</h1>
           </div>
           <div className="carousel">

@@ -10,21 +10,70 @@ import Lagu from "../Lagu/lagu.jsx";
 import "./home.css";
 
 function Home() {
+  const SpotlightButton = () => {
+    const btnRef = useRef(null);
+    const spanRef = useRef(null);
+
+    useEffect(() => {
+      const handleMouseMove = (e) => {
+        const { width } = e.target.getBoundingClientRect();
+        const offset = e.offsetX;
+        const left = `${(offset / width) * 100}%`;
+
+        spanRef.current.animate({ left }, { duration: 250, fill: "forwards" });
+      };
+
+      const handleMouseLeave = () => {
+        spanRef.current.animate(
+          { left: "50%" },
+          { duration: 100, fill: "forwards" }
+        );
+      };
+
+      btnRef.current.addEventListener("mousemove", handleMouseMove);
+      btnRef.current.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        btnRef.current.removeEventListener("mousemove", handleMouseMove);
+        btnRef.current.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    }, []);
+
+    return (
+      <motion.button
+        whileTap={{ scale: 0.985 }}
+        ref={btnRef}
+        className="relative w-full max-w-xs overflow-hidden rounded-lg bg-slate-950 px-4 py-3 text-lg font-medium text-white"
+      >
+        <span className="pointer-events-none relative z-10 mix-blend-difference">
+          Hover me
+        </span>
+        <span
+          ref={spanRef}
+          className="pointer-events-none absolute left-[50%] top-[50%] h-32 w-32 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
+        />
+      </motion.button>
+    );
+  };
+
   return (
     <>
       <div className="nav">
         <Navbar />
       </div>
-      <div className="weather">
-        <Weather />
-      </div>
-      <div className="bg-white" id="containerHome">                                  
+      <div className="bg-white m-0 p-0 w-full" id="containerHome">
         <TextParallaxContent
           imgUrl={Toba}
           subheading="Selamat datang di"
           heading="Sumatera Utara."
         >
           <ExampleContent1 />
+          <div className="weather">
+            <h1 className="flex justify-center text-size-64">
+              Cuaca saat ini{" "}
+            </h1>
+            <Weather />
+          </div>
         </TextParallaxContent>
         <TextParallaxContent
           imgUrl={Sipiso}
@@ -62,7 +111,11 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div ref={targetRef} className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} targetRef={targetRef} />
-        <OverlayCopy subheading={subheading} heading={heading} targetRef={targetRef} />
+        <OverlayCopy
+          subheading={subheading}
+          heading={heading}
+          targetRef={targetRef}
+        />
       </div>
       {children}
     </div>
@@ -127,7 +180,7 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
 
 const ExampleContent1 = () => (
   <>
-    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12">
       <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Sumatera Utara
       </h2>
@@ -146,7 +199,7 @@ const ExampleContent1 = () => (
           href="/History"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
-          Read More
+          Read More &#xf101;
         </a>
       </div>
     </div>
@@ -174,7 +227,7 @@ const ExampleContent2 = () => (
           href="/Destination"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
-          Read More
+          Read More &#xf101;
         </a>
       </div>
     </div>
@@ -201,7 +254,7 @@ const ExampleContent3 = () => (
           href="/Destination"
           className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
-          Read More
+          Read More &#xf101;
         </a>
       </div>
     </div>
