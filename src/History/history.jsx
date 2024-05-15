@@ -48,7 +48,7 @@ function History() {
           <div className="description">
             <DescAwal />
           </div>
-          <div>
+          <div className="cardContainer">
             {Location.map(function (Location) {
               return (
                 <CardHistory
