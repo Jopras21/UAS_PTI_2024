@@ -29,16 +29,16 @@ function About() {
         </div>
         <div className="img">
           <div className="dom">
-            <p>Dominico Anthony</p>
+            <p>Dominico Anthony <br/> Role</p>
           </div>
           <div className="hexsel">
-            <p>Hexsel Archieles</p>
+            <p>Hexsel Archieles <br/> Role</p>
           </div>
           <div className="joe">
-            <p>Jonathan Sutandar</p>
+            <p>Jonathan Sutandar <br/> Role </p>
           </div>
           <div className="jopras">
-            <p>Jonathan Prasetyo</p>
+            <p>Jonathan Prasetyo <br/> Role</p>
           </div>
         </div>
         <div className="feedback">

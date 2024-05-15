@@ -110,7 +110,7 @@ function FeedBack() {
               clipRule="evenodd"
             />
           </svg>
-          <Typography color="red" variant="h4">
+          <Typography color="black" variant="h4">
             Terimakasih Atas Masukan dan Sarannya!
           </Typography>
           <Typography className="text-center font-normal">

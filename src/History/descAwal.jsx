@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import './descAwal.css'
 
 function DescAwal() {
+  const [history, setHistory] = useState("");
+
+  useEffect(() => {
+    const fetchHistory = async () => {
+      try {
+        const response = await axios.get(
+          "https://id.wikipedia.org/api/rest_v1/page/summary/Sumatera_Utara"
+        );
+        setHistory(response.data.extract);
+      } catch (error) {
+        console.error("Error fetching history:", error);
+      }
+    };
+
+    fetchHistory();
+  }, []);
+
   return (
-    
     <div className="DescHis">
+      <div className="pengertian">
+        <h1>Sumatera Utara</h1>
+        {history}
+      </div>
       <div className="JudulHis">
-      <h1>Sejarah Singkat Provinsi Sumatera Utara</h1>
+        <h1>Sejarah Singkat Provinsi Sumatera Utara</h1>
       </div>
       <p>
         Saat zaman pemerintahan Belanda, Sumatera Utara merupakan pusat
@@ -45,7 +67,7 @@ function DescAwal() {
         Sumatera Utara terbagi menjadi dua.
       </p>
       <div className="JudulHis">
-      <h1>Tempat Bersejarah</h1>
+        <h1>Tempat Bersejarah</h1>
       </div>
     </div>
   );

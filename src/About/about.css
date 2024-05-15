@@ -1,7 +1,7 @@
 .root{
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.184);
   background-size: auto;
   overflow-x: hidden;
   }
@@ -26,7 +26,7 @@
   .Judul{
   margin: 0 auto;
   font-size: 100px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: 'Keystone', serif;
   text-align: center;
   height: fit-content;
@@ -237,7 +237,7 @@
   }
 
   .body{
-  background-color: rgba(245, 245, 245, 0.76);
+  background-color: rgb(245, 245, 245);
   width: 100vw;
   overflow-y: auto;
   align-items: center;
@@ -262,7 +262,7 @@
   text-align: center;
   font-family: 'Keystone', serif;
   font-size: 100px;
-  color: rgba(58, 58, 58, 0.844);
+  color: rgba(58, 58, 58, 0.966);
 }
 
 .img {
