@@ -5,7 +5,7 @@ import Footer from "../Footer/footer.jsx";
 import Weather from "../Weather/weather";
 import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
-import Arsik from "../assets/Foods/Arsik.jpg"
+import Sibayak from "../assets/Landscape/Sibayak.jpg";
 import Lagu from "../Lagu/lagu.jsx";
 import "./home.css";
 
@@ -34,7 +34,7 @@ function Home() {
           <ExampleContent2 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl={Arsik}
+          imgUrl={Sibayak}
           subheading="Makanan khas Sumatera Utara"
           heading="Makanan Khas."
         >
@@ -107,7 +107,7 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.75, 0.75], [0, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
 
   return (
     <motion.div
@@ -117,12 +117,10 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
       }}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white z-50"
     >
-      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl text-neutral-400" style={{ opacity: 0.75 }}>
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subheading}
       </p>
-      <p className="text-center text-4xl font-bold md:text-5xl text-neutral-400" style={{ opacity: 0.75 }}>
-        {heading}
-      </p>
+      <p className="text-center text-4xl font-bold md:text-5xl">{heading}</p>
     </motion.div>
   );
 };
@@ -130,7 +128,7 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
 const ExampleContent1 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-neutral-950">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Sumatera Utara
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -158,7 +156,7 @@ const ExampleContent1 = () => (
 const ExampleContent2 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center inline-block align-middle text-neutral-950">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Destinasi Wisata
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -186,7 +184,7 @@ const ExampleContent2 = () => (
 const ExampleContent3 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 z-10 text-center text-neutral-950">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 z-10 text-center">
         Makanan Khas
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -201,7 +199,7 @@ const ExampleContent3 = () => (
         </p>
         <a
           href="/Destination"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit rounded-xl"
+          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
         >
           Read More
         </a>

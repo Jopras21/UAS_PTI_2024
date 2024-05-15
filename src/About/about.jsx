@@ -3,6 +3,8 @@ import "./about.css";
 import Navbar from "../Navbar/navbar.jsx";
 import Footer from "../Footer/footer.jsx";
 import Lagu from "../Lagu/lagu.jsx";
+import FeedBack from "../Feedback/feedback.jsx";
+
 function About() {
   return (
     <div className="root">
@@ -38,6 +40,9 @@ function About() {
           <div className="jopras">
             <p>Jonathan Prasetyo</p>
           </div>
+        </div>
+        <div className="feedback">
+          <FeedBack />
         </div>
       </div>
       <div className="footer">
