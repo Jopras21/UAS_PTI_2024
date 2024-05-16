@@ -247,7 +247,6 @@
   .feedback {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     margin-bottom: 20px;
     width: 100vw;
   }
@@ -273,7 +272,6 @@
   align-items: center;
   width: 100%;
   height: auto;
-  margin-bottom: 120px;
 }
 
   .dom {
@@ -449,5 +447,17 @@
 
 .footer{
   margin-top:0px;
+}
+
+.kelompok3{
+  width: 100vw;
+  height: 45vh;
+  text-align: center;
+  font-size: 200%;
+  color: black;
+}
+
+.ourteam{
+  margin-top: 20px;
 }
 

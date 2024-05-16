@@ -184,6 +184,7 @@ const ExampleContent1 = () => (
       <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
         Sumatera Utara
       </h2>
+      
       <div className="col-span-1 md:col-span-8">
         <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
           Sumatera Utara adalah sebuah provinsi di Indonesia yang terletak di

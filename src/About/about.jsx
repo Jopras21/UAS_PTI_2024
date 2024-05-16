@@ -4,6 +4,7 @@ import Navbar from "../Navbar/navbar.jsx";
 import Footer from "../Footer/footer.jsx";
 import Lagu from "../Lagu/lagu.jsx";
 import FeedBack from "../Feedback/feedback.jsx";
+import ShuffleHero from "./ourteam.jsx";
 
 function About() {
   return (
@@ -24,6 +25,9 @@ function About() {
         <Lagu query="Rambadia Lagu Sumatera Utara" />
       </div>
       <div className="body">
+      <div className="ourteam">
+        <ShuffleHero />
+      </div>
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>
@@ -41,14 +45,15 @@ function About() {
             <p>Jonathan Prasetyo <br/> Role</p>
           </div>
         </div>
-        <div className="kelompok3">
+      
+        {/* <div className="kelompok3">
           <h1>Tentang Kelompok Kami</h1>
   <p>
     Kami merupakan Kelompok 3, dab kelompok kami merupakan kelompok yang beranggotakan 4 orang, yang dipersatukan untuk membuat sebuah website bersama sama.<br/> 
     Anggota kelompok kami adalah Dominico, Hexsel, Jonathan Prasety, dan Jonathan Sutandar.
   </p>
-</div>
-<div className="latarbelakang">
+</div> */}
+{/* <div className="latarbelakang">
   <p>
     Sumatera Utara dipilih sebagai fokus kami karena memiliki warisan budaya yang kaya, lanskap alam yang memukau, dan komunitas yang bersemangat. Kami percaya bahwa dengan mengeksplorasi dan memamerkan keindahan Sumatera Utara, kami dapat berkontribusi untuk mempromosikan pariwisata dan melestarikan identitas budayanya.
   </p>
@@ -65,7 +70,7 @@ function About() {
     <li>3. Meningkatkan kesadaran tentang pentingnya konservasi lingkungan dan pelestarian budaya.</li>
     <li>4. Memberikan layanan dan pengalaman yang luar biasa kepada pengunjung, memastikan kepuasan dan loyalitas mereka.</li>
   </ul>
-</div>
+</div> */}
         <div className="feedback">
           <FeedBack />
         </div>
