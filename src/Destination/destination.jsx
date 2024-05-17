@@ -11,9 +11,28 @@ import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import "./destination.css";
 import TopButton from "../Button/topButton.jsx";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 function Destination() {
   const [selectedMarker, setSelectedMarker] = useState(null);
+  const [ref, inView] = useInView({ triggerOnce: true });
 
   const markers = [
     {
@@ -34,35 +53,38 @@ function Destination() {
       img: "../src/assets/Landscape/Lawang.jpg",
       popup: "🏔️ Bukit Lawang (trekking dan pusat orangutan)",
       description: "Bukit Lawang terkenal dengan pusat konservasi orangutan.",
-
     },
     {
       geocode: [2.9165, 98.516],
-      img: "",
+      img: "../src/assets/Landscape/Sipiso.jpeg",
       popup: "💦 Air Terjun Sipiso Piso",
       description:
         "Air Terjun Sipiso Piso adalah salah satu air terjun tertinggi di Indonesia.",
     },
     {
       geocode: [3.1973, 98.541],
+      img: "../src/assets/Landscape/Lumbini.jpg",
       popup: "🌳 Taman Alam Lumbini",
       description:
         "Taman Alam Lumbini adalah tempat suci Buddha dengan pagoda emas.",
     },
     {
       geocode: [0.8667, 104.4167],
+      img: "../src/assets/Landscape/Berhala.jpeg",
       popup: "🏝️ Pulau Berhala",
       description:
         "Pulau Berhala adalah pulau eksotis dengan pantai yang indah.",
     },
     {
       geocode: [3.1696, 98.393],
+      img: "../src/assets/Landscape/Sinabung.jpg",
       popup: "🏔️ Gunung Sinabung",
       description:
         "Gunung Sinabung adalah gunung berapi aktif yang sering meletus.",
     },
     {
       geocode: [2.9526, 99.0594],
+      img: "../src/assets/Landscape/Siantar.jpg",
       popup: "🦚 Taman Hewan Pematang Siantar",
       description:
         "Taman Hewan Pematang Siantar adalah kebun binatang yang terkenal.",
@@ -93,7 +115,14 @@ function Destination() {
               <source src={Video} type="video/mp4" />
             </video>
           </div>
-          <div id="map" className="map-container">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={containerVariants}
+            id="map"
+            className="map-container"
+          >
             <MapContainer center={[2.1154, 99.5451]} zoom={7}>
               <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=ot1stQR4IlixqPHIopnI" />
               <MarkerClusterGroup>
@@ -115,17 +144,24 @@ function Destination() {
             </MapContainer>
             {selectedMarker && (
               <div className="marker-description">
-                <img src={selectedMarker.img} alt={selectedMarker.popup} />
+                <div className="popup-img">
+                  <img src={selectedMarker.img} alt={selectedMarker.popup} />
+                </div>
                 <h2 className="text-3xl">{selectedMarker.popup}</h2>
                 <p>{selectedMarker.description}</p>
               </div>
             )}
-          </div>
+          </motion.div>
           <div className="persue"></div>
         </div>
-        <div className="culinary">
-          <Culinary />
-        </div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="culinary"
+        >
+              <Culinary />
+        </motion.div>
       </div>
       <div className="footer">
         <Footer />

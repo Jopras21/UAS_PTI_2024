@@ -1,12 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useAnimation, useInView } from "framer-motion";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer.jsx";
 import Weather from "../Weather/weather";
 import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
 import Sibayak from "../assets/Landscape/Sibayak.jpg";
-import Lagu from "../Lagu/lagu.jsx";
 import TopButton from "/src/Button/topButton.jsx";
 import Fancy from "/src/Button/fancy.jsx";
 import "./home.css";
@@ -74,9 +73,6 @@ function Home() {
         >
           <ExampleContent3 />
         </TextParallaxContent>
-        {/* <div className="lagu">
-          <Lagu query="Siksik sibatumanikam" />
-        </div> */}
         <Footer />
       </div>
     </>
@@ -164,88 +160,74 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
 };
 
 const ExampleContent1 = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12"
-  >
-    <h2 className="w-full col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900 slideInLeft">
-      Sumatera Utara
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Sumatera Utara adalah sebuah provinsi di Indonesia yang terletak di
-        bagian utara Pulau Sumatera. Ibu kotanya adalah Kota Medan.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Provinsi ini memiliki kekayaan alam dan budaya yang beragam, termasuk
-        Danau Toba yang merupakan danau vulkanik terbesar di dunia. Sumatera
-        Utara juga dikenal dengan keindahan alamnya, seperti pegunungan, pantai,
-        dan hutan tropis.
-      </p>
-      <a href="/History" className="w-full md:w-fit">
-        <Fancy />
-      </a>
-    </div>
-  </motion.div>
+  <ContentSection
+    title="Sumatera Utara"
+    description1="Sumatera Utara adalah sebuah provinsi di Indonesia yang terletak di bagian utara Pulau Sumatera. Ibu kotanya adalah Kota Medan."
+    description2="Provinsi ini memiliki kekayaan alam dan budaya yang beragam, termasuk Danau Toba yang merupakan danau vulkanik terbesar di dunia. Sumatera Utara juga dikenal dengan keindahan alamnya, seperti pegunungan, pantai, dan hutan tropis."
+    link="/History"
+  />
 );
 
 const ExampleContent2 = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12"
-  >
-    <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900">
-      Destinasi Wisata
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Sumatera Utara adalah sebuah provinsi yang kaya akan keindahan alam,
-        warisan budaya, dan situs sejarah yang menarik. Dari danau vulkanik yang
-        megah hingga hutan hujan tropis yang luas, Sumatera Utara menawarkan
-        berbagai tempat wisata yang menakjubkan bagi para pengunjung.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Berikut Ini adalah beberapa destinasi populer di Sumatera Utara
-      </p>
-      <a href="/Destination" className="w-full md:w-fit">
-        <Fancy />
-      </a>
-    </div>
-  </motion.div>
+  <ContentSection
+    title="Destinasi Wisata"
+    description1="Sumatera Utara adalah sebuah provinsi yang kaya akan keindahan alam, warisan budaya, dan situs sejarah yang menarik. Dari danau vulkanik yang megah hingga hutan hujan tropis yang luas, Sumatera Utara menawarkan berbagai tempat wisata yang menakjubkan bagi para pengunjung."
+    description2="Berikut Ini adalah beberapa destinasi populer di Sumatera Utara"
+    link="/Destination"
+  />
 );
 
 const ExampleContent3 = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12"
-  >
-    <h2 className="col-span-1 text-5xl font-bold md:col-span-4 z-10 text-center text-gray-900">
-      Makanan Khas
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Sumatera Utara merupakan sebuah provinsi yang kaya akan keanekaragaman
-        budaya, termasuk dalam hal kuliner. Makanan tradisional dari Sumatera
-        Utara tidak hanya lezat, tetapi juga mencerminkan sejarah, kebudayaan,
-        dan kekayaan alam daerah tersebut.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Berikut ini adalah beberapa makanan khas Sumatera Utara
-      </p>
-      <a href="/Destination" className="w-full px-9 py-4 md:w-fit">
-        <Fancy />
-      </a>
-    </div>
-  </motion.div>
+  <ContentSection
+    title="Makanan Khas"
+    description1="Sumatera Utara merupakan sebuah provinsi yang kaya akan keanekaragaman budaya, termasuk dalam hal kuliner. Makanan tradisional dari Sumatera Utara tidak hanya lezat, tetapi juga mencerminkan sejarah, kebudayaan, dan kekayaan alam daerah tersebut."
+    description2="Berikut ini adalah beberapa makanan khas Sumatera Utara"
+    link="/Destination"
+  />
 );
+
+const ContentSection = ({ title, description1, description2, link }) => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+      }}
+      className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12"
+    >
+      <motion.h2
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+        className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900"
+      >
+        {title}
+      </motion.h2>
+      <motion.div
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+        className="col-span-1 md:col-span-8"
+      >
+        <p className="mb-4 text-xl text-neutral-600 md:text-2xl">{description1}</p>
+        <p className="mb-8 text-xl text-neutral-600 md:text-2xl">{description2}</p>
+        <a href={link} className="w-full md:w-fit">
+          <Fancy />
+        </a>
+      </motion.div>
+    </motion.div>
+  );
+};
 
 export default Home;

@@ -6,7 +6,7 @@ import FeedBack from "../Feedback/feedback.jsx"; // Not used in the current comp
 function Footer() {
   return (
 
-    <footer className="flex flex-col w-full items-center bg-gray-700 text-center text-surface dark:bg-neutral-700 dark:text-white">
+    <footer className="container-footer flex flex-col w-full items-center bg-gray-700 text-center text-surface dark:bg-neutral-700 dark:text-white">
       <div className="btn-ghost logo w-full h-32">
         <img src= {logo} className="w-32 h-32 mx-4 object-cover" />
       </div>
@@ -108,7 +108,7 @@ function Footer() {
           className="text-surface dark:text-neutral-400"
           href="#"
         >
-         Kelompok 3
+         Kelompok 3 all right reserved 
         </a>
       </div>
     </footer>
