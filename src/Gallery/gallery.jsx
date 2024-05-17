@@ -20,12 +20,12 @@ const photos = [
     ],
   },
   {
-    src: "../src/assets/Pakaian/mandailing.jpeg",
+    src: "../src/assets/Pakaian/angkola2.jpeg",
     width: 480,
     height: 360,
     srcSet: [
-      { src: "../src/assets/Pakaian/mandailing.jpeg", width: 240, height: 180 },
-      { src: "../src/assets/Pakaian/mandailing.jpeg", width: 120, height: 90 },
+      { src: "../src/assets/Pakaian/angkola2.jpeg", width: 240, height: 180 },
+      { src: "../src/assets/Pakaian/angkola2.jpeg", width: 120, height: 90 },
     ],
   },
   {
