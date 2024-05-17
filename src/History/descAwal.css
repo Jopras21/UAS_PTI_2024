@@ -21,8 +21,10 @@
     text-align: center;
 }
 
+
 .footerHistory{
-    text-align: end;
+    text-align: justify;
+    padding-left: 50px;
 }
 
 .bungkusGambarHistory img{
@@ -147,7 +149,7 @@
 
 .history-content p{
     font-size: 120%;
-    text-align: left;
+    text-align: justify;
 }
 
 .tempatHis{
