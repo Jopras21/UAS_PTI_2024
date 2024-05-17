@@ -83,3 +83,15 @@ h1.icon {
   height: auto;
   padding: 20px;
 }
+
+.search{
+  display: flex;
+  align-items: center;
+  height: 45px;
+  background-color: #ffffffb6;
+  border: none;
+  border-radius: 50px;
+  font-size: larger;
+
+}
+

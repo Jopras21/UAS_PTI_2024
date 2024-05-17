@@ -6,6 +6,7 @@ import "./culinary.css";
 function Culinary() {
   const [foodsData, setFoodsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,18 +25,17 @@ function Culinary() {
     setSelectedCategory(event.target.value);
   };
 
-  // Filter foods based on selected category
+  // Function to handle search input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
+  // Filter foods based on selected category and search term
   const filteredFoods = foodsData.filter((food) => {
-    if (selectedCategory === "all") {
-      return true; // Menampilkan semua makanan jika kategori yang dipilih adalah "all"
-    } else if (selectedCategory === "manis" && food.id === 1) {
-      return true; // Menampilkan makanan manis
-    } else if (selectedCategory === "asin") {
-      return food.category === "asin"; // Menampilkan makanan asin
-    } else if (selectedCategory === "pedas") {
-      return food.category === "pedas"; // Menampilkan makanan pedas
-    }
+    const categoryMatch =
+      selectedCategory === "all" || food.category === selectedCategory;
+    const nameMatch = food.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return categoryMatch && nameMatch;
   });
 
   return (
@@ -50,6 +50,13 @@ function Culinary() {
           <option value="sweet">Manis</option>
           <option value="spicy">Pedas</option>
         </select>
+        <input
+          type="text"
+          className="search"
+          placeholder="Cari makanan..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
       </div>
       <div className="container">
         {filteredFoods.map((food) => (
