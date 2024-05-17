@@ -48,9 +48,9 @@ function FeedBack() {
   return (
     <div className="feedback-container">
       <div className="tulisan">
-        <h2>Contact Us</h2>
-        <p>IF you think our website stills need an uiimprovement, please leave us a message and feedback by filling this form section <br/>
-        Your feedbackl will be a considered by our team to make this website improve</p>
+      <h2>Contact Us</h2>
+      <p>If you think our website needs improvements, please leave us a message and feedback by filling out this form section. <br/>
+      Your feedback will be carefully considered by our team to help us improve the website.</p>
       </div>
       <div className="form-wrapper">
         <form id="sheetdb-form" onSubmit={handleSubmit}>

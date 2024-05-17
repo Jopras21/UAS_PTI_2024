@@ -17,10 +17,17 @@ function History() {
         <Navbar />
       </div>
       <TopButton />
+      <div className="title">
+        <p className="Judul">History</p>
+        <video className="vid" controls autoPlay muted loop="20">
+          <source
+            src="https://docs.material-tailwind.com/demo.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
       <div className="containerHistory">
         <div className="title">
-          <h1 className="mb-6">Sejarah</h1>
-          {/* <img src={Toba} alt=""></img> */}
         </div>
         <div className="bodyHistory">
           <div className="description">
@@ -66,7 +73,7 @@ function History() {
         </div>
       </div>
       <div className="lagu">
-        <Lagu query="Alu Siau" />
+        
       </div>
       <div className="footer">
         <Footer />

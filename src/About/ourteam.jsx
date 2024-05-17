@@ -12,7 +12,7 @@ const ShuffleHero = () => {
           About Our Team
         </h3>
         <p className="text-base md:text-lg text-black my-4 md:my-6">
-          We are a team that consist of 4 members, our teams is created due to our final exams test, blablabla contoh tex
+        Welcome to our project page! We are a dedicated team of four members brought together by our final exams. Our collaboration stems from a shared passion for learning, innovation, and excellence. Each of us brings unique skills and perspectives to the table, allowing us to create a well-rounded and effective team.
         </p>
       </div>
       <ShuffleGrid />

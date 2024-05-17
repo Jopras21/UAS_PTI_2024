@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './descAwal.css';
 import Toba from "../assets/Landscape/Toba.png";
+import Lagu from "../Lagu/lagu.jsx";
 
 function DescAwal() {
   const [history, setHistory] = useState("");
@@ -24,22 +25,22 @@ function DescAwal() {
   return (
     <div className="DescHis">
       <div className="pengertian">
-        <section className="w-full px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-          <div>
-            <h3 className="text-4xl md:text-6xl text-black font-semibold">
-              Sumatera Utara
-            </h3>
-            <p className="text-base md:text-lg text-black my-4 md:my-6">
-              {history}
-            </p>
+        <div className="bungkusTulisan">
+        <div className="headingHistory">
+          <h1 className="text-black text-center">Sumatera Utara</h1>
+          <div className="footerHistory">
+            {history}
           </div>
-          <div>
-            <img src={Toba} alt="Toba" />
           </div>
-        </section>
+        </div>
+        <div className="bungkusGambarHistory">
+          <img src={Toba} alt="Toba" />
+        </div>
       </div>
+      <div className="bungkusKontenSejarah">
+      <div className="kontenSejarah">
       <div className="JudulHis">
-        <h1 className="text-black">Sejarah Singkat Provinsi Sumatera Utara</h1>
+        <h1 className="text-black">Sejarah Provinsi Sumatera Utara</h1>
       </div>
       <div className="history-content">
         <p>
@@ -63,24 +64,13 @@ function DescAwal() {
           Sumatera Utara, Sumatera Tengah, Sumatera Selatan. Tanggal 15 April 1948
           ditetapkan menjadi hari jadi Provinsi Sumatera Utara.
         </p>
-        <br />
-        <p>
-          Pada awal tahun 1949 dilakukan reorganisasi kembali, dengan Keputusan
-          Pemerintah Darurat RI Nomor 22/Pem/PDRI pada tanggal 17 Mei 1949,
-          jabatan Gubernur Sumatera Utara ditiadakan. Selanjutnya dengan Ketetapan
-          Pemerintah Darurat RI pada tanggal 17 Desember 1949, dibentuk Provinsi
-          Aceh dan Provinsi Tapanuli/Sumatera Timur. Dengan Peraturan Pemerintah
-          Pengganti UU No. 5 Tahun 1950 pada tanggal 14 Agustus 1950, Ketetapan
-          tersebut dicabut dan Provinsi Sumatera Utara dibentuk kembali.
-        </p>
-        <br />
-        <p>
-          Dengan UU RI No. 24 Tahun 1956 yang ditetapkan pada tanggal 7 Desember
-          1956, dibentuk Daerah Otonom Provinsi Aceh sehingga wilayah Provinsi
-          Sumatera Utara terbagi menjadi dua.
-        </p>
       </div>
-      <div className="JudulHis">
+      </div>
+      <div className="gambarKonten">
+      <Lagu query="Wonderful Indonesia North Sumatera" />
+      </div>
+      </div>
+      <div className="tempatHis">
         <h1>Tempat Bersejarah</h1>
       </div>
     </div>
