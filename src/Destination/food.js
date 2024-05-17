@@ -4,7 +4,7 @@ import axios from 'axios';
 async function Foods() {
     try {
         // Make a GET request to fetch data
-        const response = await axios.get('https://joerscl.github.io/history2/history2.json');
+        const response = await axios.get('https://joerscl.github.io/culinary/culinary.json');
 
         // Access the data from the response
         const data = response.data;

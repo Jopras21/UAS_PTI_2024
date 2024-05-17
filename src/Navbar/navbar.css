@@ -43,6 +43,6 @@ Navlink {
 
 #jam:hover {
   color: #ffffff;
-  filter: drop-shadow(4px 9px 21px #ffffff);
+  filter: drop-shadow(8px 9px 18px #ffffff);
   cursor: pointer;
 }

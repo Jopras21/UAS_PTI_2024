@@ -24,18 +24,21 @@ function Destination() {
     },
     {
       geocode: [3.2, 98.5167],
-      img: "",
+      img: "../src/assets/Landscape/Sibayak.jpg",
       popup: "⛰️ Gunung Sibayak",
       description:
         "Gunung Sibayak adalah gunung berapi aktif yang populer untuk hiking.",
     },
     {
       geocode: [3.5435, 98.1324],
+      img: "../src/assets/Landscape/Lawang.jpg",
       popup: "🏔️ Bukit Lawang (trekking dan pusat orangutan)",
       description: "Bukit Lawang terkenal dengan pusat konservasi orangutan.",
+
     },
     {
       geocode: [2.9165, 98.516],
+      img: "",
       popup: "💦 Air Terjun Sipiso Piso",
       description:
         "Air Terjun Sipiso Piso adalah salah satu air terjun tertinggi di Indonesia.",
@@ -113,7 +116,7 @@ function Destination() {
             {selectedMarker && (
               <div className="marker-description">
                 <img src={selectedMarker.img} alt={selectedMarker.popup} />
-                <h2>{selectedMarker.popup}</h2>
+                <h2 className="text-3xl">{selectedMarker.popup}</h2>
                 <p>{selectedMarker.description}</p>
               </div>
             )}

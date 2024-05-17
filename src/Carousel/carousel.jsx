@@ -38,6 +38,16 @@ const imgs = [
     title: "Pematang Siantar",
     description: "Kota di Sumatra Utara",
   },
+  {
+    src: "../src/assets/Landscape/samosir.jpg",
+    title: "Pulau Samosir",
+    description: "Kota di Sumatra Utara",
+  },
+  {
+    src: "../src/assets/Landscape/patungYesus.jpg",
+    title: "Patung Yesus Sibea-bea",
+    description: "Kota di Sumatra Utara",
+  },
 ];
 
 const ONE_SECOND = 1000;
@@ -129,7 +139,7 @@ const TextOverlay = ({ imgIndex }) => {
   const { title, description } = imgs[imgIndex];
   return (
     <div
-      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform"
+      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform "
       id="transisi"
     >
       <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16 text-slate-50	">

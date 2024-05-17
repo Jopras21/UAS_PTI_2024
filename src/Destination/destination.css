@@ -46,7 +46,7 @@ h1 {
 }
 
 span {
-  color: rgb(10, 74, 54);
+  color: rgb(255, 255, 255);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
 }
@@ -86,4 +86,8 @@ border: 1px solid rgba(207, 207, 207, 0.25);
   font-weight: bold;
   font-size: 2rem;
   display: block;
+}
+
+.marker-description {
+  width: 520px;
 }
