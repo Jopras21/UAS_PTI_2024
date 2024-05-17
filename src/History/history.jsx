@@ -1,15 +1,12 @@
 import React from "react";
 import Toba from "../assets/BgSejarah/toba.jpg";
 import DescAwal from "./descAwal";
-import CardHistory from "./cardHis.jsx";
 import CarouselHis from "./carouselHis.jsx";
-import Pakaian from "./pakaian.js";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer";
 import Lagu from "../Lagu/lagu.jsx";
 import TopButton from "../Button/topButton.jsx";
 import "./history.css";
-import PhotoAlbum from "react-photo-album";
 import Gallery from "../Gallery/gallery.jsx";
 
 function History() {
@@ -38,7 +35,7 @@ function History() {
           <div className="carousel">
             <CarouselHis />
           </div>
-          <div>
+          <div className="pakaianAdat">
             <div className="JudulHis">
               <h1>Pakaian Adat Sumatera Utara</h1>
             </div>
