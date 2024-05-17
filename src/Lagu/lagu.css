@@ -1,17 +1,14 @@
-.bungkus {
-  padding: 20px;
-}
 
 .video-container {
+  margin-top: 95px;
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
-
 }
 
 iframe {
   border-radius: 30px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .title-daerah {

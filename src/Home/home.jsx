@@ -74,9 +74,9 @@ function Home() {
         >
           <ExampleContent3 />
         </TextParallaxContent>
-        <div className="lagu">
+        {/* <div className="lagu">
           <Lagu query="Siksik sibatumanikam" />
-        </div>
+        </div> */}
         <Footer />
       </div>
     </>

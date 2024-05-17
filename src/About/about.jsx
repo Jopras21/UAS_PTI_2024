@@ -6,7 +6,6 @@ import Lagu from "../Lagu/lagu.jsx";
 import FeedBack from "../Feedback/feedback.jsx";
 import ShuffleHero from "./ourteam.jsx";
 import Team from "./team.jsx";
-// import Story from "./story.jsx"
 
 function About() {
   return (
@@ -23,33 +22,18 @@ function About() {
           />
         </video>
       </div>
-      <div className="lagu">
+      {/* <div className="lagu">
         <Lagu query="Rambadia Lagu Sumatera Utara" />
-      </div>
+      </div> */}
       <div className="body">
       <div className="ourteam">
         <ShuffleHero />
       </div>
-      {/* <div className="backstory">
-        <Story />
-      </div> */}
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>
         <div className="img">
           <Team/>
-          {/* <div className="dom">
-            <p>Dominico Anthony <br/> Role</p>
-          </div>
-          <div className="hexsel">
-            <p>Hexsel Archieles <br/> Role</p>
-          </div>
-          <div className="joe">
-            <p>Jonathan Sutandar <br/> Role </p>
-          </div>
-          <div className="jopras">
-            <p>Jonathan Prasetyo <br/> Role</p>
-          </div> */}
         </div>
       
         {/* <div className="kelompok3">

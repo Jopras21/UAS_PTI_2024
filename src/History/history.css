@@ -16,7 +16,7 @@
 
 .DescHis{
     text-align: center;
-    padding: 0 100px;
+    margin: 0 100px;
 }
 
 .JudulHis {
@@ -36,4 +36,8 @@ text-align: center;
     display: flex;
     height: 50vh;
     justify-content: center;
+}
+
+.description{
+    width: 100%;
 }

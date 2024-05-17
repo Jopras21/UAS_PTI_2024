@@ -128,9 +128,9 @@ function Destination() {
         <div className="culinary">
           <Culinary />
         </div>
-        <div className="lagu">
+        {/* <div className="lagu">
           <Lagu query="Sinanggar Tulo" />
-        </div>
+        </div> */}
       </div>
       <div className="footer">
         <Footer />
