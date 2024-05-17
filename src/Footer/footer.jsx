@@ -5,7 +5,7 @@ import FeedBack from "../Feedback/feedback.jsx";
 
 function Footer() {
   return (
-<footer className="footer footer-start p-10 bg-neutral-600 text-primary-content">
+<footer className="footer footer-start p-10 bg-neutral text-primary-content">
   <aside>
   <img src={logo} alt="log0" width="200" height="200" className="inline-block mx-20" />
     <p className="font-bold mx-20">
