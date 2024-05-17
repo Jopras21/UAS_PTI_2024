@@ -2,13 +2,15 @@ import React from "react";
 import Toba from "../assets/BgSejarah/toba.jpg";
 import DescAwal from "./descAwal";
 import CardHistory from "./cardHis.jsx";
-import Location from "./location.js";
+import CarouselHis from "./carouselHis.jsx";
 import Pakaian from "./pakaian.js";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer";
 import Lagu from "../Lagu/lagu.jsx";
 import TopButton from "../Button/topButton.jsx";
 import "./history.css";
+import PhotoAlbum from "react-photo-album";
+import Gallery from "../Gallery/gallery.jsx";
 
 function History() {
   return (
@@ -33,17 +35,8 @@ function History() {
           <div className="description">
             <DescAwal />
           </div>
-          <div className="cardContainer">
-            {Location.map(function (Location) {
-              return (
-                <CardHistory
-                  key={Location.id}
-                  img={Location.img}
-                  name={Location.name}
-                  description={Location.description}
-                />
-              );
-            })}
+          <div className="carousel">
+            <CarouselHis />
           </div>
           <div>
             <div className="JudulHis">
@@ -54,20 +47,12 @@ function History() {
                 Sumatera Utara kaya akan keberagaman budaya terutama dalam aspek
                 budaya dan adat istiadat, salah satunya adalah pakaian adat.
                 Berikut merupakan beberapa pakaian adat yang ada di Sumatera
-                Utara yang berasal dari berbagai suku yang berbeda
+                Utara yang berasal dari berbagai suku yang berbeda.
               </p>
             </div>
             <br />
-            <div className="cardContainer">
-              {Pakaian.map(function (Pakaian) {
-                return (
-                  <CardHistory
-                    key={Pakaian.id}
-                    img={Pakaian.img}
-                    name={Pakaian.name}
-                  />
-                );
-              })}
+            <div className="gallery">
+              <Gallery />
             </div>
           </div>
         </div>
