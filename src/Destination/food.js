@@ -1,6 +1,3 @@
-// food.js
-
-// Import Axios library
 import axios from 'axios';
 
 // Function to fetch data using Axios
@@ -16,9 +13,8 @@ async function Foods() {
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
-        return []; // Return an empty array in case of an error
+        return []; 
     }
 }
 
-// Export the Foods function
 export { Foods };

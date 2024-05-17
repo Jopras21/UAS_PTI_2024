@@ -7,7 +7,8 @@ function Weather() {
   const [location, setLocation] = useState("");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=c390140dcbe035259c568a62e06bb77c`;
-  const searchLocation = () => {
+
+  const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
@@ -15,6 +16,31 @@ function Weather() {
       });
       setLocation("");
     }
+  };
+
+  const getWeatherIcon = (main) => {
+    switch (main) {
+      case "Clear":
+        return "☀️";
+      case "Clouds":
+        return "☁️";
+      case "Rain":
+        return "🌧️";
+      case "Snow":
+        return "❄️";
+      case "Thunderstorm":
+        return "⛈️";
+      case "Drizzle":
+        return "🌦️";
+      case "Fog":
+        return "🌫️";
+      default:
+        return "🌡️";
+    }
+  };
+
+  const convertToFahrenheit = (tempF) => {
+    return ((tempF - 32) * 5) / 9;
   };
 
   return (
@@ -29,29 +55,37 @@ function Weather() {
         />
       </div>
       <div className="container-weather">
-        {data.name != undefined && (
+        {data.name && (
           <>
             <div className="location">
-              <p>{data.name}</p>
+              <p className="text-slate-950">{data.name}</p>
             </div>
             <div className="temp">
-              {data.main ? <h1>{data.main.temp.toFixed()}°F </h1> : null}
+              {data.main ? (
+                <h1>{convertToFahrenheit(data.main.temp).toFixed()}°C</h1>
+              ) : null}
             </div>
             <div className="clouds">
-              {data.weather ? <p>{data.weather[0].main}</p> : null}
+              {data.weather ? (
+                <p>
+                  {getWeatherIcon(data.weather[0].main)} {data.weather[0].main}
+                </p>
+              ) : null}
             </div>
             <div className="feels">
               <p>Feels Like</p>
-              <br></br>
-              {data.main ? <p>{data.main.feels_like}°F</p> : null}
+              <br />
+              {data.main ? (
+                <p>{convertToFahrenheit(data.main.feels_like).toFixed()}°C</p>
+              ) : null}
             </div>
             <div className="humidity">
               <p>Humidity</p>
               {data.main ? <p>{data.main.humidity}%</p> : null}
             </div>
             <div className="wind">
-              <p>Wind Speed</p>
-              {data.wind ? <p>{data.wind.speed.toFixed()}mph</p> : null}
+              <p>Wind Speed </p>
+              {data.wind ? <p>{data.wind.speed.toFixed()} mph</p> : null}
             </div>
           </>
         )}

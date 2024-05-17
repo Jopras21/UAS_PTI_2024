@@ -1,46 +1,65 @@
-// culinary.jsx
-
 import React, { useState, useEffect } from "react";
 import Card from "./card";
 import { Foods } from "./food.js";
 import "./culinary.css";
 
 function Culinary() {
-  // State to store food data
   const [foodsData, setFoodsData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
-  // Effect hook to fetch data on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch data using Foods function from food.js
         const data = await Foods();
-        // Update state with fetched data
         setFoodsData(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
-    fetchData(); // Call the fetchData function
-  }, []); // Empty dependency array ensures useEffect runs only once on mount
+    fetchData();
+  }, []);
+
+  // Function to handle category change
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  // Filter foods based on selected category
+
+  const filteredFoods = foodsData.filter((food) => {
+    if (selectedCategory === "all") {
+      return true; // Menampilkan semua makanan jika kategori yang dipilih adalah "all"
+    } else if (selectedCategory === "manis" && food.id === 1) {
+      return true; // Menampilkan makanan manis
+    } else if (selectedCategory === "asin") {
+      return food.category === "asin"; // Menampilkan makanan asin
+    } else if (selectedCategory === "pedas") {
+      return food.category === "pedas"; // Menampilkan makanan pedas
+    }
+  });
 
   return (
     <div className="my-16">
       <div className="title">
         <h1 className="">Kuliner Khas</h1>
       </div>
+      <div className="filters">
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          <option value="all">Semua</option>
+          <option value="salty">Asin</option>
+          <option value="sweet">Manis</option>
+          <option value="spicy">Pedas</option>
+        </select>
+      </div>
       <div className="container">
-        {/* Map through foodsData and render each item using Card component */}
-        {foodsData.map(function (food) {
-          return (
-            <Card
-              key={food.id}
-              img={food.img}
-              name={food.name}
-              desc={food.desc}
-            />
-          );
-        })}
+        {filteredFoods.map((food) => (
+          <Card
+            key={food.id}
+            img={food.img}
+            name={food.name}
+            desc={food.desc}
+          />
+        ))}
       </div>
     </div>
   );

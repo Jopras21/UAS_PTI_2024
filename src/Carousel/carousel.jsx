@@ -1,15 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import './carousel.css';
+import "./carousel.css";
 
 const imgs = [
-  { src: "../src/assets/Landscape/Toba.png", title: "Danau Toba", description: "Berada di provinsi Sumatra Utara" },
-  { src: "../src/assets/Landscape/Sibayak.jpg", title: "Gunung Sibayak", description: "Terletak di Kabupaten Karo" },
-  { src: "../src/assets/Landscape/Lawang.jpg", title: "Lawang Park", description: "Destinasi wisata di Bukittinggi" },
-  { src: "../src/assets/Landscape/Sipiso.jpeg", title: "Air Terjun Sipiso-piso", description: "Di dekat Danau Toba" },
-  { src: "../src/assets/Landscape/Lumbini.jpg", title: "Taman Alam Lumbini", description: "Pagoda emas di Berastagi" },
-  { src: "../src/assets/Landscape/Berhala.jpeg", title: "Pulau Berhala", description: "Pulau kecil di Selat Malaka" },
-  { src: "../src/assets/Landscape/Pematang.jpg", title: "Pematang Siantar", description: "Kota di Sumatra Utara" },
+  {
+    src: "../src/assets/Landscape/Toba.png",
+    title: "Danau Toba",
+    description: "Berada di provinsi Sumatra Utara",
+  },
+  {
+    src: "../src/assets/Landscape/Sibayak.jpg",
+    title: "Gunung Sibayak",
+    description: "Terletak di Kabupaten Karo",
+  },
+  {
+    src: "../src/assets/Landscape/Lawang.jpg",
+    title: "Lawang Park",
+    description: "Destinasi wisata di Bukittinggi",
+  },
+  {
+    src: "../src/assets/Landscape/Sipiso.jpeg",
+    title: "Air Terjun Sipiso-piso",
+    description: "Di dekat Danau Toba",
+  },
+  {
+    src: "../src/assets/Landscape/Lumbini.jpg",
+    title: "Taman Alam Lumbini",
+    description: "Pagoda emas di Berastagi",
+  },
+  {
+    src: "../src/assets/Landscape/Berhala.jpeg",
+    title: "Pulau Berhala",
+    description: "Pulau kecil di Selat Malaka",
+  },
+  {
+    src: "../src/assets/Landscape/Pematang.jpg",
+    title: "Pematang Siantar",
+    description: "Kota di Sumatra Utara",
+  },
 ];
 
 const ONE_SECOND = 1000;
@@ -100,8 +128,13 @@ const Images = ({ imgIndex }) => {
 const TextOverlay = ({ imgIndex }) => {
   const { title, description } = imgs[imgIndex];
   return (
-    <div className="absolute bottom-20 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform" id="transisi">
-      <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16">{title}</h2>
+    <div
+      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform"
+      id="transisi"
+    >
+      <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16 text-slate-50	">
+        {title}
+      </h2>
       <p className="text-l mx-16">{description}</p>
     </div>
   );

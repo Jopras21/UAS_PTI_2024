@@ -7,6 +7,8 @@ import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
 import Sibayak from "../assets/Landscape/Sibayak.jpg";
 import Lagu from "../Lagu/lagu.jsx";
+import TopButton from "/src/Button/topButton.jsx";
+import Fancy from "/src/Button/fancy.jsx";
 import "./home.css";
 
 function Home() {
@@ -38,22 +40,6 @@ function Home() {
         btnRef.current.removeEventListener("mouseleave", handleMouseLeave);
       };
     }, []);
-
-    return (
-      <motion.button
-        whileTap={{ scale: 0.985 }}
-        ref={btnRef}
-        className="relative w-full max-w-xs overflow-hidden rounded-lg bg-slate-950 px-4 py-3 text-lg font-medium text-white"
-      >
-        <span className="pointer-events-none relative z-10 mix-blend-difference">
-          Hover me
-        </span>
-        <span
-          ref={spanRef}
-          className="pointer-events-none absolute left-[50%] top-[50%] h-32 w-32 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
-        />
-      </motion.button>
-    );
   };
 
   return (
@@ -61,6 +47,7 @@ function Home() {
       <div className="nav">
         <Navbar />
       </div>
+      <TopButton />
       <div className="bg-white m-0 p-0 w-full" id="containerHome">
         <TextParallaxContent
           imgUrl={Toba}
@@ -69,9 +56,7 @@ function Home() {
         >
           <ExampleContent1 />
           <div className="weather">
-            <h1 className="flex justify-center text-size-64">
-              Cuaca saat ini{" "}
-            </h1>
+            <h1 className="flex justify-center text-xl">Cuaca saat ini</h1>
             <Weather />
           </div>
         </TextParallaxContent>
@@ -181,7 +166,7 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
 const ExampleContent1 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
+      <h2 className="w-full col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900 slideInLeft">
         Sumatera Utara
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -195,11 +180,8 @@ const ExampleContent1 = () => (
           Utara juga dikenal dengan keindahan alamnya, seperti pegunungan,
           pantai, dan hutan tropis.
         </p>
-        <a
-          href="/History"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
-        >
-          Read More &#xf101;
+        <a href="/History" className="w-full md:w-fit">
+          <Fancy />
         </a>
       </div>
     </div>
@@ -209,7 +191,7 @@ const ExampleContent1 = () => (
 const ExampleContent2 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900">
         Destinasi Wisata
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -225,9 +207,9 @@ const ExampleContent2 = () => (
         </p>
         <a
           href="/Destination"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="w-full md:w-fit "
         >
-          Read More &#xf101;
+          <Fancy />
         </a>
       </div>
     </div>
@@ -237,7 +219,7 @@ const ExampleContent2 = () => (
 const ExampleContent3 = () => (
   <>
     <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 z-10 text-center">
+      <h2 className="col-span-1 text-5xl font-bold md:col-span-4 z-10 text-center text-gray-900">
         Makanan Khas
       </h2>
       <div className="col-span-1 md:col-span-8">
@@ -252,9 +234,9 @@ const ExampleContent3 = () => (
         </p>
         <a
           href="/Destination"
-          className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="w-full px-9 py-4 md:w-fit"
         >
-          Read More &#xf101;
+          <Fancy />
         </a>
       </div>
     </div>

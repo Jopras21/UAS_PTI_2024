@@ -116,7 +116,8 @@ function FeedBack() {
             Terimakasih Atas Masukan dan Sarannya!
           </Typography>
           <Typography className="text-center font-normal">
-            Masukan dan Saran anda telah berhasil diInput, terimakasih atas masukan dan sarannya!
+            Masukan dan Saran anda telah berhasil diInput, terimakasih atas
+            masukan dan sarannya!
           </Typography>
         </DialogBody>
         <DialogFooter className="space-x-2">

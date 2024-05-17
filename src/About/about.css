@@ -1,230 +1,226 @@
-.root{
+.root {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.184);
   background-size: auto;
   overflow-x: hidden;
-  }
+}
 
-  @font-face {
-  font-family: 'Keystone';
-  src: local('Keystone') url('./fonts/Keystone.ttf') format('truetype');
-  }
+@font-face {
+  font-family: "Keystone";
+  src: local("Keystone") url("./fonts/Keystone.ttf") format("truetype");
+}
 
-  .navbar{
-    padding: 0px;
-  }
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 59%;
-    margin-bottom: 80px;
-  }
+.navbar {
+  padding: 0px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 59%;
+  margin-bottom: 80px;
+}
 
-  .Judul{
+.Judul {
   margin: 0 auto;
   font-size: 100px;
   color: rgb(255, 255, 255);
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   text-align: center;
   height: fit-content;
   font-weight: 900;
   width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    overflow-x: auto;
   }
 
-  @media screen and (max-width: 768px) {
-    .body{
-      overflow-x: auto;
-    }
-
-    .img{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      text-align: center;
-    }
-    
-    .title {
-      margin: 0 auto;
-      font-size: 100%;
-      text-align: center;
-      font-weight: 900;
-      height: 70%;
-     }
-
-    .subTitle{
-      font-size: 20%;
-      height: 50%;
-      margin: 20px;
-    }
-
-     .dom {
-      width: 50px;
-      height: 500px;
-      margin:1px;
-      background-position: center;
-      border-radius: 40px;
-      filter: grayscale(85%);
-      transition:all 1s; 
-      transition-timing-function: ease-in-out;
-      }
-    
-    
-    .dom p{
-      margin-bottom: 20px;
-      margin-left: 15px;
-      margin-right: 15px;
-      color: white;
-      position: absolute;
-      bottom: 0%;
-      font-family: 'Keystone', serif;
-      font-size: 20px;
-      text-align: center;
-      transition: all 2.3s;
-      opacity: 0;
-    }
-    
-     .dom:hover{
-      width: 250px;
-      cursor: pointer;
-      filter: grayscale(0);
-      }
-    
-    .dom:hover p{
-     text-align: center;
-     opacity: 1;
-     bottom: 35%;
-     color: rgba(163, 160, 160, 0.747);
-     font-size: 50px;
-    }
-    
-    .hexsel {
-      width: 50px;
-      height: 500px;
-      margin:1px;
-      background-position: center;
-      border-radius: 40px;
-      filter: grayscale(85%);
-      transition:all 1s; 
-      transition-timing-function: ease-in-out;
-      }
-    
-    
-    .hexsel p{
-      margin-bottom: 20px;
-      margin-left: 15px;
-      margin-right: 15px;
-      color: white;
-      position: absolute;
-      bottom: 0%;
-      font-family: 'Keystone', serif;
-      font-size: 20px;
-      text-align: center;
-      transition: all 2.3s;
-      opacity: 0;
-    }
-    
-     .hexsel:hover{
-      width: 250px;
-      cursor: pointer;
-      filter: grayscale(0);
-      }
-    
-    .hexsel:hover p{
-     text-align: center;
-     opacity: 1;
-     bottom: 35%;
-     color: rgba(255, 255, 255, 0.603);
-     font-size: 50px;
-    }
-      .joe {
-        width: 50px;
-        height: 500px;
-        margin:1px;
-        background-position: center;
-        border-radius: 40px;
-        filter: grayscale(85%);
-        transition:all 1s; 
-        transition-timing-function: ease-in-out;
-      }
-    
-    
-    .joe p{
-      margin-bottom: 20px;
-      margin-left: 15px;
-      margin-right: 15px;
-      color: white;
-      position: absolute;
-      bottom: 0%;
-      font-family: 'Keystone', serif;
-      font-size: 20px;
-      text-align: center;
-      transition: all 2.3s;
-      opacity: 0;
-    }
-    
-     .joe:hover{
-      width: 250px;
-      cursor: pointer;
-      filter: grayscale(0);
-      }
-    
-    .joe:hover p{
-     text-align: center;
-     opacity: 1;
-     bottom: 35%;
-     color: rgba(0, 0, 0, 0.603);
-     font-size: 50px;
-    }
-      .jopras {
-        width: 50px;
-        height: 500px;
-        margin:1px;
-        background-position: center;
-        border-radius: 40px;
-        filter: grayscale(85%);
-        transition:all 1s; 
-        transition-timing-function: ease-in-out;
-      }
-    
-    
-    .jopras p{
-      margin-bottom: 20px;
-      margin-left: 15px;
-      margin-right: 15px;
-      color: white;
-      position: absolute;
-      bottom: 0%;
-      font-family: 'Keystone', serif;
-      font-size: 20px;
-      text-align: center;
-      transition: all 2.3s;
-      opacity: 0;
-    }
-    
-     .jopras:hover{
-      width: 250px;
-      cursor: pointer;
-      filter: grayscale(0);
-      }
-    
-    .jopras:hover p{
-     text-align: center;
-     opacity: 1;
-     bottom: 35%;
-     color: rgba(0, 0, 0, 0.603);
-     font-size: 50px;
-    }
-   }
-   @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .title{
-      height: 70%;
-    }
+  .img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
   }
-  .vid {
+
+  .title {
+    margin: 0 auto;
+    font-size: 100%;
+    text-align: center;
+    font-weight: 900;
+    height: 70%;
+  }
+
+  .subTitle {
+    font-size: 20%;
+    height: 50%;
+    margin: 20px;
+  }
+
+  .dom {
+    width: 50px;
+    height: 500px;
+    margin: 1px;
+    background-position: center;
+    border-radius: 40px;
+    filter: grayscale(85%);
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .dom p {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    font-family: "Keystone", serif;
+    font-size: 20px;
+    text-align: center;
+    transition: all 2.3s;
+    opacity: 0;
+  }
+
+  .dom:hover {
+    width: 250px;
+    cursor: pointer;
+    filter: grayscale(0);
+  }
+
+  .dom:hover p {
+    text-align: center;
+    opacity: 1;
+    bottom: 35%;
+    color: rgba(163, 160, 160, 0.747);
+    font-size: 50px;
+  }
+
+  .hexsel {
+    width: 50px;
+    height: 500px;
+    margin: 1px;
+    background-position: center;
+    border-radius: 40px;
+    filter: grayscale(85%);
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .hexsel p {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    font-family: "Keystone", serif;
+    font-size: 20px;
+    text-align: center;
+    transition: all 2.3s;
+    opacity: 0;
+  }
+
+  .hexsel:hover {
+    width: 250px;
+    cursor: pointer;
+    filter: grayscale(0);
+  }
+
+  .hexsel:hover p {
+    text-align: center;
+    opacity: 1;
+    bottom: 35%;
+    color: rgba(255, 255, 255, 0.603);
+    font-size: 50px;
+  }
+  .joe {
+    width: 50px;
+    height: 500px;
+    margin: 1px;
+    background-position: center;
+    border-radius: 40px;
+    filter: grayscale(85%);
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .joe p {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    font-family: "Keystone", serif;
+    font-size: 20px;
+    text-align: center;
+    transition: all 2.3s;
+    opacity: 0;
+  }
+
+  .joe:hover {
+    width: 250px;
+    cursor: pointer;
+    filter: grayscale(0);
+  }
+
+  .joe:hover p {
+    text-align: center;
+    opacity: 1;
+    bottom: 35%;
+    color: rgba(0, 0, 0, 0.603);
+    font-size: 50px;
+  }
+  .jopras {
+    width: 50px;
+    height: 500px;
+    margin: 1px;
+    background-position: center;
+    border-radius: 40px;
+    filter: grayscale(85%);
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .jopras p {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    font-family: "Keystone", serif;
+    font-size: 20px;
+    text-align: center;
+    transition: all 2.3s;
+    opacity: 0;
+  }
+
+  .jopras:hover {
+    width: 250px;
+    cursor: pointer;
+    filter: grayscale(0);
+  }
+
+  .jopras:hover p {
+    text-align: center;
+    opacity: 1;
+    bottom: 35%;
+    color: rgba(0, 0, 0, 0.603);
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    height: 70%;
+  }
+}
+.vid {
   width: 100vw;
   height: 100%;
   object-fit: cover;
@@ -234,34 +230,34 @@
   top: 0;
   bottom: 0;
   z-index: -1;
-  }
+}
 
-  .body{
+.body {
   background-color: rgb(245, 245, 245);
   width: 100vw;
   overflow-y: auto;
   align-items: center;
   justify-content: center;
-  }
+}
 
-  .feedback {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100vw;
-  }
+.feedback {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
 
-.subTitle{
+.subTitle {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
 }
 
-.subJudul{
+.subJudul {
   text-align: center;
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   font-size: 100px;
   color: rgba(58, 58, 58, 0.966);
 }
@@ -276,170 +272,166 @@
   margin-bottom: 120px;
 }
 
-  .dom {
+.dom {
   background: url(../assets/dom.jpg);
   width: 150px;
   height: 500px;
-  margin:5px;
+  margin: 5px;
   background-size: cover;
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1.5s; 
+  transition: all 1.5s;
   transition-timing-function: ease-in-out;
-  }
+}
 
-
-.dom p{
+.dom p {
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
   color: white;
   position: absolute;
   bottom: 0%;
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   font-size: 20px;
   text-align: center;
   transition: all 2.3s;
   opacity: 0;
 }
 
- .dom:hover{
+.dom:hover {
   width: 250px;
   cursor: pointer;
   filter: grayscale(0);
-  }
+}
 
-.dom:hover p{
- text-align: center;
- opacity: 1;
- bottom: 35%;
- color: rgba(163, 160, 160, 0.747);
- font-size: 50px;
+.dom:hover p {
+  text-align: center;
+  opacity: 1;
+  bottom: 35%;
+  color: rgba(163, 160, 160, 0.747);
+  font-size: 50px;
 }
 
 .hexsel {
   background: url(../assets/hexsel.jpg);
   width: 150px;
   height: 500px;
-  margin:5px;
+  margin: 5px;
   background-size: cover;
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1.5s; 
+  transition: all 1.5s;
   transition-timing-function: ease-in-out;
-  }
+}
 
-
-.hexsel p{
+.hexsel p {
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
   color: white;
   position: absolute;
   bottom: 0%;
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   font-size: 20px;
   text-align: center;
   transition: all 2.3s;
   opacity: 0;
 }
 
- .hexsel:hover{
+.hexsel:hover {
   width: 250px;
   cursor: pointer;
   filter: grayscale(0);
-  }
-
-.hexsel:hover p{
- text-align: center;
- opacity: 1;
- bottom: 35%;
- color: rgba(255, 255, 255, 0.603);
- font-size: 50px;
 }
-  .joe {
+
+.hexsel:hover p {
+  text-align: center;
+  opacity: 1;
+  bottom: 35%;
+  color: rgba(255, 255, 255, 0.603);
+  font-size: 50px;
+}
+.joe {
   background: url(../assets/joe.jpg);
   width: 150px;
   height: 500px;
-  margin:5px;
+  margin: 5px;
   background-size: cover;
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1.5s; 
+  transition: all 1.5s;
   transition-timing-function: ease-in;
-  }
+}
 
-
-.joe p{
+.joe p {
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
   color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0%;
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   font-size: 20px;
   text-align: center;
   transition: all 2.3s;
   opacity: 0;
 }
 
- .joe:hover{
+.joe:hover {
   width: 250px;
   cursor: pointer;
   filter: grayscale(0);
-  }
-
-.joe:hover p{
- text-align: center;
- opacity: 1;
- bottom: 35%;
- color: rgba(0, 0, 0, 0.603);
- font-size: 50px;
 }
-  .jopras {
+
+.joe:hover p {
+  text-align: center;
+  opacity: 1;
+  bottom: 35%;
+  color: rgba(0, 0, 0, 0.603);
+  font-size: 50px;
+}
+.jopras {
   background: url(../assets/jopras.png);
   width: 150px;
   height: 500px;
-  margin:5px;
+  margin: 5px;
   background-size: cover;
   background-position: center;
   border-radius: 40px;
   filter: grayscale(85%);
-  transition:all 1.5s; 
+  transition: all 1.5s;
   transition-timing-function: ease-in-out;
-  }
+}
 
-
-.jopras p{
+.jopras p {
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
   color: white;
   position: absolute;
   bottom: 0%;
-  font-family: 'Keystone', serif;
+  font-family: "Keystone", serif;
   font-size: 10px;
   text-align: center;
   transition: all 2.3s;
   opacity: 0;
 }
 
- .jopras:hover{
+.jopras:hover {
   width: 250px;
   cursor: pointer;
   filter: grayscale(0);
-  }
+}
 
-.jopras:hover p{
- text-align: center;
- opacity: 1;
- bottom: 35%;
- color: rgba(244, 244, 244, 0.796);
- font-size: 50px;
+.jopras:hover p {
+  text-align: center;
+  opacity: 1;
+  bottom: 35%;
+  color: rgba(244, 244, 244, 0.796);
+  font-size: 50px;
 }
 
 .carousel {
@@ -447,7 +439,6 @@
   width: 100%;
 }
 
-.footer{
-  margin-top:0px;
+.footer {
+  margin-top: 0px;
 }
-

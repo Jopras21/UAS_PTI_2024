@@ -9,14 +9,30 @@
 }
 
 .btn-ghost img:hover {
-  transform: scale(1.04);
+  transform: scale(1.06);
   transition: all 0.3s ease-in-out;
   filter: drop-shadow(5px 8px 12px #ffffff);
+}
+
+.active {
+  font-weight: bold;
+}
+
+Navlink {
+  font-size: 20px;
 }
 
 #nav {
   background: linear-gradient(rgba(39, 39, 39, 0.67), transparent);
   z-index: 3;
+  transform: translateY(-30px);
+  transition: all 0.6s ease-in-out;
+  opacity: calc(0);
+}
+
+#nav.visible {
+  opacity: calc(1);
+  transform: translateY(0);
 }
 
 #jam {

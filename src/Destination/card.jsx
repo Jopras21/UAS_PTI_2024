@@ -113,7 +113,7 @@ const TiltCard = ({ img, name, desc }) => {
             style={{
               transform: "translateZ(60px)",
             }}
-            className="text-center text-base text-cyan-950 w-full desc"
+            className="text-center text-base text-cyan-950 w-full desc px-4"
           >
             {desc}
           </p>

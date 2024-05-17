@@ -4,13 +4,14 @@ import Carousel from "../Carousel/carousel.jsx";
 import Culinary from "./culinary.jsx";
 import Footer from "../Footer/footer.jsx";
 import Pointer from "../assets/pointer.png";
-import Video from "../assets/Video/destination.mp4"
+import Video from "../assets/Video/destination.mp4";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import { Icon, divIcon, point } from "leaflet";
 import "./destination.css";
-import Lagu from"../Lagu/lagu.jsx"
+import Lagu from "../Lagu/lagu.jsx";
+import TopButton from "../Button/topButton.jsx";
 
 function Destination() {
   //   var map = L.map("map").setView([51.505, -0.09], 13);
@@ -93,6 +94,7 @@ function Destination() {
       <div className="navbar">
         <Navbar />
       </div>
+      <TopButton />
       <div className="big-container">
         <div className="destination">
           <div className="text-xl mt-12">
@@ -103,10 +105,7 @@ function Destination() {
           </div>
           <div className="content">
             <video className="vid" controls autoPlay muted loop="20">
-              <source
-                src={Video}
-                type="video/mp4"
-              />
+              <source src={Video} type="video/mp4" />
             </video>
           </div>
           <div id="map">
@@ -130,12 +129,11 @@ function Destination() {
           <Culinary />
         </div>
         <div className="lagu">
-        <Lagu query="Sinanggar Tulo" />
+          <Lagu query="Sinanggar Tulo" />
         </div>
       </div>
       <div className="footer">
         <Footer />
-        
       </div>
     </>
   );

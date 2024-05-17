@@ -77,3 +77,9 @@ h1.icon {
   -moz-box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.81);
   box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.899);
 }
+
+.filter {
+  width: 2rem;
+  height: auto;
+  padding: 20px;
+}
