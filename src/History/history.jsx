@@ -18,7 +18,7 @@ function History() {
       <div className="containerHistory">
         <div className="title">
           <h1 className="mb-6">Sejarah</h1>
-          <img src={Toba} alt=""></img>
+          {/* <img src={Toba} alt=""></img> */}
         </div>
         <div className="bodyHistory">
           <div className="description">

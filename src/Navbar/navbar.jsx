@@ -46,12 +46,12 @@ const Navbar = ({ onSearch }) => {
               </NavLink>
               <ul className="p-2 z-50">
                 <li>
-                  <NavLink to="/Destination/Wisata" activeClassName="active">
+                  <NavLink to="/Destination/*" activeClassName="active">
                     Wisata
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/Destination/Kuliner" activeClassName="active">
+                  <NavLink to="/Destination/Kuliner/*" activeClassName="active">
                     Kuliner
                   </NavLink>
                 </li>
@@ -87,12 +87,12 @@ const Navbar = ({ onSearch }) => {
               <summary>Destination</summary>
               <ul className="p-2  w-44">
                 <li className="text-xl">
-                  <NavLink to="/Destination/Wisata" activeClassName="active">
+                  <NavLink to="/Destination/*" activeClassName="active">
                     Wisata
                   </NavLink>
                 </li>
                 <li className="text-xl">
-                  <NavLink to="/Destination/Kuliner" activeClassName="active">
+                  <NavLink to="/Destination/Kuliner/*" activeClassName="active">
                     Kuliner
                   </NavLink>
                 </li>

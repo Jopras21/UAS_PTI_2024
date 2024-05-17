@@ -5,6 +5,8 @@ import Footer from "../Footer/footer.jsx";
 import Lagu from "../Lagu/lagu.jsx";
 import FeedBack from "../Feedback/feedback.jsx";
 import ShuffleHero from "./ourteam.jsx";
+import Team from "./team.jsx";
+// import Story from "./story.jsx"
 
 function About() {
   return (
@@ -28,11 +30,15 @@ function About() {
       <div className="ourteam">
         <ShuffleHero />
       </div>
+      {/* <div className="backstory">
+        <Story />
+      </div> */}
         <div className="subTitle">
           <p className="subJudul">Meet Our Team</p>
         </div>
         <div className="img">
-          <div className="dom">
+          <Team/>
+          {/* <div className="dom">
             <p>Dominico Anthony <br/> Role</p>
           </div>
           <div className="hexsel">
@@ -43,7 +49,7 @@ function About() {
           </div>
           <div className="jopras">
             <p>Jonathan Prasetyo <br/> Role</p>
-          </div>
+          </div> */}
         </div>
       
         {/* <div className="kelompok3">

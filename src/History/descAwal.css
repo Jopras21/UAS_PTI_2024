@@ -4,14 +4,16 @@
 
 .pengertian {
     font-size: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .JudulHis{
     margin-top: 150px;
     margin-bottom: 50px;
+    color: #000;
 }
 
 .DescHis p{
     font-size: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-align: left;
 }

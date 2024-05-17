@@ -8,10 +8,10 @@ const ShuffleHero = () => {
         <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
           kelompok 3
         </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
+        <h3 className="text-4xl md:text-6xl text-black font-semibold">
           About Our Team
         </h3>
-        <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
+        <p className="text-base md:text-lg text-black my-4 md:my-6">
           We are a team that consist of 4 members, our teams is created due to our final exams test, blablabla contoh tex
         </p>
       </div>
