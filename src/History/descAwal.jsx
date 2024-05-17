@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './descAwal.css';
+import Video from "../assets/Video/destination.mp4";  
 import Toba from "../assets/Landscape/Toba.png";
 import Lagu from "../Lagu/lagu.jsx";
 
@@ -67,6 +68,7 @@ function DescAwal() {
       </div>
       </div>
       <div className="gambarKonten">
+        <video src={Video} autoPlay loop muted />
       <Lagu query="Wonderful Indonesia North Sumatera" />
       </div>
       </div>
