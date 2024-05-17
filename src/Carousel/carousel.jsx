@@ -81,7 +81,7 @@ function Carousel() {
 
   return (
     <div
-      className="relative overflow-hidden bg-neutral-900 pb-4"
+      className="relative overflow-hidden bg-neutral-900 py-6"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
