@@ -67,7 +67,7 @@ function DescAwal() {
       </div>
       </div>
       <div className="gambarKonten">
-      {/* <Lagu query="Wonderful Indonesia North Sumatera" /> */}
+      <Lagu query="Wonderful Indonesia North Sumatera" />
       </div>
       </div>
       <div className="tempatHis">
