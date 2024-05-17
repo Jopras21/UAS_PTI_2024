@@ -41,7 +41,7 @@ function DescAwal() {
       <div className="bungkusKontenSejarah">
       <div className="kontenSejarah">
       <div className="JudulHis">
-        <h1 className="text-black">Sejarah Provinsi Sumatera Utara</h1>
+        <h1 className="text-black">Sejarah Sumatera Utara</h1>
       </div>
       <div className="history-content">
         <p>
@@ -72,9 +72,7 @@ function DescAwal() {
       <Lagu query="Wonderful Indonesia North Sumatera" />
       </div>
       </div>
-      <div className="tempatHis">
-        <h1>Tempat Bersejarah</h1>
-      </div>
+      
     </div>
   );
 }

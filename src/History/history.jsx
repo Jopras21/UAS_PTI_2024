@@ -32,6 +32,9 @@ function History() {
           <div className="description">
             <DescAwal />
           </div>
+          <div className="tempatHis">
+            <h1>Tempat Bersejarah</h1>
+          </div>
           <div className="carousel">
             <CarouselHis />
           </div>
