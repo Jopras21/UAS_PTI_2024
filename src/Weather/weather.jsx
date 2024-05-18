@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import sun from "../assets/Weather/sun.png";
+import clouds from "../assets/Weather/clouds.png";
+import rain from "../assets/Weather/rain.png";
+import snow from "../assets/Weather/snowy.png";
+import storm from "../assets/Weather/storm.png";
+import drizzle from "../assets/Weather/drizzle.png";
+import fog from "../assets/Weather/fog.png";
 import "./weather.css";
 
 function Weather() {
@@ -21,19 +28,19 @@ function Weather() {
   const getWeatherIcon = (main) => {
     switch (main) {
       case "Clear":
-        return "☀️";
+        return sun;
       case "Clouds":
-        return "☁️";
+        return clouds;
       case "Rain":
-        return "🌧️";
+        return rain;
       case "Snow":
-        return "❄️";
+        return snow;
       case "Thunderstorm":
-        return "⛈️";
+        return storm;
       case "Drizzle":
-        return "🌦️";
-      case "Fog":
-        return "🌫️";
+        return drizzle;
+      case "Mist":
+        return fog;
       default:
         return "🌡️";
     }
@@ -64,13 +71,18 @@ function Weather() {
               {data.main ? (
                 <h1>{convertToFahrenheit(data.main.temp).toFixed()}°C</h1>
               ) : null}
-            </div>
+            </div>{" "}
             <div className="clouds">
-              {data.weather ? (
+              {data.weather && (
                 <p>
-                  {getWeatherIcon(data.weather[0].main)} {data.weather[0].main}
+                  <img
+                    src={getWeatherIcon(data.weather[0].main)}
+                    alt="Weather icon"
+                    className="weather-icon w-32"
+                  />
+                  {data.weather[0].main}
                 </p>
-              ) : null}
+              )}
             </div>
             <div className="feels">
               <p>Feels Like</p>

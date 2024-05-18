@@ -75,7 +75,7 @@ function DescAwal() {
           <motion.div variants={fadeInVariants} className="JudulHis">
             <h1 className="text-black">Sejarah Sumatera Utara</h1>
           </motion.div>
-          <video src={Video} autoPlay loop muted />
+          <motion.video src={Video} autoPlay loop className="my-6" />
           <motion.div variants={fadeInVariants} className="history-content">
             <p>
               Saat zaman pemerintahan Belanda, Sumatera Utara merupakan pusat
@@ -102,10 +102,6 @@ function DescAwal() {
             </p>
           </motion.div>
         </motion.div>
-        <div className="gambarKonten">
-          <video src={Video} autoPlay loop muted />
-          <Lagu query="Wonderful Indonesia North Sumatera" />
-        </div>
       </motion.div>
     </motion.div>
   );

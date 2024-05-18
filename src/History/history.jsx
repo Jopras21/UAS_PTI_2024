@@ -45,21 +45,19 @@ function History() {
       <TopButton />
       <div className="titleHistory">
         <p className="Judul">History</p>
-        <motion.video
+        <video
           className="vid"
           controls
           autoPlay
           muted
           loop="20"
           initial="hidden"
-          animate={controls}
-          variants={fadeInVariants}
         >
           <source
             src="https://docs.material-tailwind.com/demo.mp4"
             type="video/mp4"
           />
-        </motion.video>
+        </video>
       </div>
       <div
         className="containerHistory"
