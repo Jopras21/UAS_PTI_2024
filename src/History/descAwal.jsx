@@ -38,11 +38,13 @@ function DescAwal() {
           <img src={Toba} alt="Toba" />
         </div>
       </div>
-      <div className="bungkusKontenSejarah">
-      <div className="kontenSejarah">
+      <div className="gambarKonten">
       <div className="JudulHis">
         <h1 className="text-black">Sejarah Sumatera Utara</h1>
       </div>
+        <video src={Video} autoPlay loop muted/>
+      </div>
+      <div className="kontenSejarah">
       <div className="history-content">
         <p>
           Saat zaman pemerintahan Belanda, Sumatera Utara merupakan pusat
@@ -67,13 +69,8 @@ function DescAwal() {
         </p>
       </div>
       </div>
-      <div className="gambarKonten">
-        <video src={Video} autoPlay loop muted />
-      <Lagu query="Wonderful Indonesia North Sumatera" />
-      </div>
-      </div>
-      
     </div>
+      
   );
 }
 
