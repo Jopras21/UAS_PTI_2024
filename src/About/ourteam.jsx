@@ -58,7 +58,7 @@ const squareData = [
   },
   {
     id: 5,
-    src: "../src/assets/Member/joe-tidur.jpeg",
+    src: "../src/assets/Member/joe-tidur.jpg",
   },
   {
     id: 6,
