@@ -1,6 +1,21 @@
-
 import React, { useRef } from "react";
 import { FiMousePointer } from "react-icons/fi";
+import domi1 from "../assets/Member/domi2.jpg"
+import domi2 from "../assets/Member/domi.jpg"
+import jopras1 from "../assets/Member/jopras-stress.jpg"
+import jopras2 from "../assets/Member/jopras-stress2.jpg"
+import jopras3 from "../assets/Member/jopras-stress3.jpg"
+import jopras4 from "../assets/Member/jopras-stress4.jpg"
+import hexsel1 from "../assets/Member/hexsel1.jpg"
+import hexsel2 from "../assets/Member/hexsel-di-cf.jpg"
+import hexsel3 from "../assets/Member/hexsel-di-cf2.jpg"
+import hexsel4 from "../assets/Member/hexsel-ama-cosplayer.jpg"
+import hexsel5 from "../assets/Member/hexsel-ama-cosplayer2.jpg"
+import bareng from "../assets/Member/jopras-dkk.jpg"
+import bareng2 from "../assets/Member/joe-tidur.jpeg"
+import joe1 from "../assets/Member/joe-dkk.jpeg"
+import joe2 from "../assets/Member/ngantuk.jpg"
+import joe3 from "../assets/Member/ugpl.jpg"
 
 export const Trail = () => {
   return (
@@ -8,22 +23,22 @@ export const Trail = () => {
       renderImageBuffer={50}
       rotationRange={25}
       images={[
-        "/imgs/active/1.jpg",
-        "/imgs/active/2.jpg",
-        "/imgs/active/3.jpg",
-        "/imgs/active/4.jpg",
-        "/imgs/active/5.jpg",
-        "/imgs/active/6.jpg",
-        "/imgs/active/7.jpg",
-        "/imgs/active/8.jpg",
-        "/imgs/active/9.jpg",
-        "/imgs/active/10.jpg",
-        "/imgs/active/11.jpg",
-        "/imgs/active/12.jpg",
-        "/imgs/active/13.jpg",
-        "/imgs/active/14.jpg",
-        "/imgs/active/15.jpg",
-        "/imgs/active/16.jpg",
+        {domi1},
+        {domi2},
+        {jopras1},
+        {jopras2},
+        {jopras3},
+        {jopras4},
+        {hexsel1},
+        {hexsel2},
+        {hexsel3},
+        {hexsel4},
+        {hexsel5},
+        {joe1},
+        {joe2},
+        {joe3},
+        {bareng},
+        {bareng2},
       ]}
     >
       <section className="grid h-screen w-full place-content-center bg-white">

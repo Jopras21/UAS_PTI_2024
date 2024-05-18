@@ -1,8 +1,8 @@
 import React from "react";
-import Jopras from "../assets/jopras.png";
-import Dom from "../assets/dom.jpg";
-import Joe from "../assets/joe.jpg";
-import Hexsel from "../assets/hexsel.jpg"
+import Jopras from "../assets/Member/jopras.png";
+import Dom from "../assets/Member/dom.jpg";
+import Joe from "../assets/Member/joe.jpg";
+import Hexsel from "../assets/Member/hexsel.jpg"
 
 import './team.css';
 

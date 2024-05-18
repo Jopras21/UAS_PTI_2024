@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+
+
 const ShuffleHero = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
@@ -40,67 +42,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "../src/assets/Drive/hexsel-di-cf.jpg",
+    src: "../src/assets/Member/hexsel-di-cf.jpg",
   },
   {
     id: 2,
-    src: "../src/assets/Drive/jopras-stress.jpg",
+    src: "../src/assets/Member/jopras-stress.jpg",
   },
   {
     id: 3,
-    src: "../src/assets/Drive/joe-dkk.jpeg",
+    src: "../src/assets/Member/joe-dkk.jpeg",
   },
   {
     id: 4,
-    src: "../src/assets/Drive/domi.jpg",
+    src: "../src/assets/Member/domi.jpg",
   },
   {
     id: 5,
-    src: "../src/assets/Drive/joe-tidur.jpeg",
+    src: "../src/assets/Member/joe-tidur.jpeg",
   },
   {
     id: 6,
-    src: "../src/assets/Drive/jopras-stress2.jpg",
+    src: "../src/assets/Member/jopras-stress2.jpg",
   },
   {
     id: 7,
-    src: "../src/assets/Drive/domi2.jpg",
+    src: "../src/assets/Member/domi2.jpg",
   },
   {
     id: 8,
-    src: "../src/assets/Drive/hexsel-di-cf2.jpg",
+    src: "../src/assets/Member/hexsel-di-cf2.jpg",
   },
   {
     id: 9,
-    src: "../src/assets/Drive/jopras-stress3.jpg",
+    src: "../src/assets/Member/jopras-stress3.jpg",
   },
   {
     id: 10,
-    src: "../src/assets/Drive/ugpl.jpg",
+    src: "../src/assets/Member/ugpl.jpg",
   },
   {
     id: 11,
-    src: "../src/assets/Drive/jopras-stress4.jpg",
+    src: "../src/assets/Member/jopras-stress4.jpg",
   },
   {
     id: 12,
-    src: "../src/assets/Drive/ngantuk.jpg",
+    src: "../src/assets/Member/ngantuk.jpg",
   },
   {
     id: 13,
-    src: "../src/assets/Drive/jopras-dkk.jpg",
+    src: "../src/assets/Member/jopras-dkk.jpg",
   },
   {
     id: 14,
-    src: "../src/assets/Drive/hexsel1.jpg",
+    src: "../src/assets/Member/hexsel1.jpg",
   },
   {
     id: 15,
-    src: "../src/assets/Drive/hexsel-ama-cosplayer.jpg",
+    src: "../src/assets/Member/hexsel-ama-cosplayer.jpg",
   },
   {
     id: 16,
-    src: "../src/assets/Drive/hexsel-ama-cosplayer2.jpg",
+    src: "../src/assets/Member/hexsel-ama-cosplayer2.jpg",
   },
 ];
 
