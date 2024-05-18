@@ -147,7 +147,7 @@ function Destination() {
                 <div className="popup-img">
                   <img src={selectedMarker.img} alt={selectedMarker.popup} />
                 </div>
-                <h2 className="text-3xl">{selectedMarker.popup}</h2>
+                <h2 className="text-3xl mt-5">{selectedMarker.popup}</h2>
                 <p>{selectedMarker.description}</p>
               </div>
             )}
