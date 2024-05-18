@@ -11,13 +11,11 @@ function Footer() {
         <img src= {logo} className="w-32 h-32 mx-4 object-cover" />
       </div>
       <div className="container pt-9 bg-white-50">
-      {/* <div className="divbaru">
-          <img src={logo} alt="Logo" className="mx-auto h-16 w-16" />
-      </div> */}
         {/* Social media icons container */}
         <div className="mb-6 flex justify-center space-x-2">
           <a
-            href="#!"
+            href="https://www.instagram.com/dominicma33"
+            target="_blank"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           >
@@ -33,7 +31,8 @@ function Footer() {
           </a>
 
           <a
-            href="#!"
+            href="https://www.instagram.com/hexselav"
+            target="_blank"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           >
@@ -50,6 +49,7 @@ function Footer() {
 
           <a
           href="https://github.com"
+          target="_blank"
           type="button"
           className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
         >
@@ -69,7 +69,8 @@ function Footer() {
         </a>
 
           <a
-            href="#!"
+            href="https://www.instagram.com/jonathansutandar"
+            target="_blank"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           >
@@ -85,7 +86,8 @@ function Footer() {
           </a>
 
           <a
-            href="#!"
+            href="https://www.instagram.com/jonathan.pras"
+            target="_blank"
             type="button"
             className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           >
@@ -107,6 +109,7 @@ function Footer() {
         <a
           className="text-surface dark:text-neutral-400"
           href="#"
+          target="_blank"
         >
          Kelompok 3 all right reserved 
         </a>

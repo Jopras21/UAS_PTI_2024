@@ -33,9 +33,9 @@ function Lagu({ query }) {
         {videos.map((video) => (
           <li key={video.id.videoId} className="video-container">
             <iframe
-              width="100%"
-              height="500px"
-              src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=0&loop=5`}
+              width="0px"
+              height="0px"
+              src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&loop=5`}
               title={video.snippet.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
