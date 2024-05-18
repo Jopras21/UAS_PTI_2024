@@ -1,5 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform, useAnimation, useInView } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 import Navbar from "../Navbar/navbar";
 import Footer from "../Footer/footer.jsx";
 import Weather from "../Weather/weather";
@@ -79,15 +85,13 @@ function Home() {
   );
 }
 
-const IMG_PADDING = 12;
+const IMG_PADDING = 0;
 
 const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   const targetRef = useRef(null);
   return (
     <div
       style={{
-        paddingLeft: IMG_PADDING,
-        paddingRight: IMG_PADDING,
       }}
     >
       <div ref={targetRef} className="relative h-[150vh]">
@@ -118,6 +122,7 @@ const StickyImage = ({ imgUrl, targetRef }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        width: "100%", 
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
@@ -220,8 +225,12 @@ const ContentSection = ({ title, description1, description2, link }) => {
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         className="col-span-1 md:col-span-8"
       >
-        <p className="mb-4 text-xl text-neutral-600 md:text-2xl">{description1}</p>
-        <p className="mb-8 text-xl text-neutral-600 md:text-2xl">{description2}</p>
+        <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+          {description1}
+        </p>
+        <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+          {description2}
+        </p>
         <a href={link} className="w-full md:w-fit">
           <Fancy />
         </a>

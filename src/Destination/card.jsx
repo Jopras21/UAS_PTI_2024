@@ -64,7 +64,7 @@ const TiltCard = ({ img, name, desc }) => {
       }}
       className="relative h-96 w-80 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 hover"
     >
-      <div
+      <motion.div
         style={{
           transform: "translateZ(64px)",
           transformStyle: "preserve-3d",
@@ -118,7 +118,7 @@ const TiltCard = ({ img, name, desc }) => {
             {desc}
           </p>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

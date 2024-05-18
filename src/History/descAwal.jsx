@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './descAwal.css';
-import Video from "../assets/Video/destination.mp4";  
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import "./descAwal.css";
+import Video from "../assets/Video/destination.mp4";
 import Toba from "../assets/Landscape/Toba.png";
 import Lagu from "../Lagu/lagu.jsx";
 
@@ -23,57 +25,88 @@ function DescAwal() {
     fetchHistory();
   }, []);
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const parallaxVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1.5 } },
+  };
+
   return (
-    <div className="DescHis">
-      <div className="pengertian">
-        <div className="bungkusTulisan">
-        <div className="headingHistory">
-          <h1 className="text-black text-center">Sumatera Utara</h1>
-          <div className="footerHistory">
-            {history}
-          </div>
-          </div>
-        </div>
-        <div className="bungkusGambarHistory">
+    <motion.div
+      initial="hidden"
+      animate={controls}
+      className="DescHis"
+      ref={ref}
+    >
+      <motion.div variants={parallaxVariants} className="pengertian">
+        <motion.div className="bungkusTulisan">
+          <motion.div variants={fadeInVariants} className="headingHistory">
+            <h1 className="text-black text-center">Sumatera Utara</h1>
+            <div className="footerHistory">{history}</div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          variants={parallaxVariants}
+          className="bungkusGambarHistory"
+        >
           <img src={Toba} alt="Toba" />
+        </motion.div>
+      </motion.div>
+      <motion.div variants={parallaxVariants} className="bungkusKontenSejarah">
+        <motion.div className="kontenSejarah">
+          <motion.div variants={fadeInVariants} className="JudulHis">
+            <h1 className="text-black">Sejarah Sumatera Utara</h1>
+          </motion.div>
+          <motion.div variants={fadeInVariants} className="history-content">
+            <p>
+              Saat zaman pemerintahan Belanda, Sumatera Utara merupakan pusat
+              pemerintahan dari seluruh pulau Sumatera bernama Gouvernement van
+              Sumatera dipimpin oleh seorang Gubernur di Kota Medan.
+            </p>
+            <br />
+            <p>
+              Setelah kemerdekaan, dalam sidang pertama Komite Nasional Daerah,
+              Provinsi Sumatera dibagi menjadi tiga Provinsi yakni Sumatera
+              Utara, Sumatera Tengah, dan Sumatera Selatan. Sumatera Utara
+              sendiri pun juga merupakan penggabungan antara tiga daerah
+              administratif yakni Keresidenan Aceh, Keresidenan Sumatera Timur,
+              dan Keresidenan Tapanuli.
+            </p>
+            <br />
+            <p>
+              Saat Undang-Undang Republik Indonesia No. 10 Tahun 1948
+              diterbitkan pada tanggal 15 April 1948, ditetapkan bahwa wilayah
+              Sumatera dibagi menjadi tiga Provinsi yang mengatur dan mengurus
+              wilayahnya masing-masing: Sumatera Utara, Sumatera Tengah,
+              Sumatera Selatan. Tanggal 15 April 1948 ditetapkan menjadi hari
+              jadi Provinsi Sumatera Utara.
+            </p>
+          </motion.div>
+        </motion.div>
+        <div className="gambarKonten">
+          <video src={Video} autoPlay loop muted />
+          <Lagu query="Wonderful Indonesia North Sumatera" />
         </div>
-      </div>
-      <div className="bungkusKontenSejarah">
-      <div className="kontenSejarah">
-      <div className="JudulHis">
-        <h1 className="text-black">Sejarah Sumatera Utara</h1>
-      </div>
-      <div className="history-content">
-        <p>
-          Saat zaman pemerintahan Belanda, Sumatera Utara merupakan pusat
-          pemerintahan dari seluruh pulau Sumatera bernama Gouvernement van
-          Sumatera dipimpin oleh seorang Gubernur di Kota Medan.
-        </p>
-        <br />
-        <p>
-          Setelah kemerdekaan, dalam sidang pertama Komite Nasional Daerah,
-          Provinsi Sumatera dibagi menjadi tiga Provinsi yakni Sumatera Utara,
-          Sumatera Tengah, dan Sumatera Selatan. Sumatera Utara sendiri pun juga
-          merupakan penggabungan antara tiga daerah administratif yakni
-          Keresidenan Aceh, Keresidenan Sumatera Timur, dan Keresidenan Tapanuli.
-        </p>
-        <br />
-        <p>
-          Saat Undang-Undang Republik Indonesia No. 10 Tahun 1948 diterbitkan pada
-          tanggal 15 April 1948, ditetapkan bahwa wilayah Sumatera dibagi menjadi
-          tiga Provinsi yang mengatur dan mengurus wilayahnya masing-masing:
-          Sumatera Utara, Sumatera Tengah, Sumatera Selatan. Tanggal 15 April 1948
-          ditetapkan menjadi hari jadi Provinsi Sumatera Utara.
-        </p>
-      </div>
-      </div>
-      <div className="gambarKonten">
-        <video src={Video} autoPlay loop muted />
-      <Lagu query="Wonderful Indonesia North Sumatera" />
-      </div>
-      </div>
-      
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

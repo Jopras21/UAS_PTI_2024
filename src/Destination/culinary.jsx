@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Card from "./card";
 import { Foods } from "./food.js";
+import { TweenMax } from "gsap";
 import "./culinary.css";
 
 function Culinary() {
   const [foodsData, setFoodsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const cardsRef = useRef([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,17 +22,31 @@ function Culinary() {
     fetchData();
   }, []);
 
-  // Function to handle category change
+  useEffect(() => {
+    const handleScroll = () => {
+      cardsRef.current.forEach((card, index) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (cardTop < windowHeight) {
+          TweenMax.to(card, 0.5, { opacity: 1, y: 0, delay: index * 0.2 });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [foodsData]);
+
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
 
-  // Function to handle search input change
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  // Filter foods based on selected category and search term
   const filteredFoods = foodsData.filter((food) => {
     const categoryMatch =
       selectedCategory === "all" || food.category === selectedCategory;
@@ -59,9 +75,10 @@ function Culinary() {
         />
       </div>
       <div className="container">
-        {filteredFoods.map((food) => (
+        {filteredFoods.map((food, index) => (
           <Card
             key={food.id}
+            ref={(el) => (cardsRef.current[index] = el)}
             img={food.img}
             name={food.name}
             desc={food.desc}
