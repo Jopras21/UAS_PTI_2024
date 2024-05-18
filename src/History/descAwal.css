@@ -22,7 +22,7 @@
 }
 
 .footerHistory{
-    text-align: end;
+    text-align: justify;
     
 }
 
@@ -47,7 +47,7 @@
 .DescHis p{
     font-size: 20px;
     color: rgb(0, 0, 0);
-    text-align: left;
+    text-align:  center;
 }
 .Toba{
     width: 100%;
@@ -122,7 +122,7 @@
     
     .footerHistory{
         font-size: 20px;
-        text-align: center;
+        text-align: justify;
     }
     .bungkusGambarHistory{
         width: 100%;
@@ -163,7 +163,12 @@
     
     .history-content p{
         font-size: 120%;
-        text-align: center;
+        text-align: justify;
+    }
+    .DescHis p{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-align:  justify;
     }
     
 }
