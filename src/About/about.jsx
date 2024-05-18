@@ -6,6 +6,7 @@ import Lagu from "../Lagu/lagu.jsx";
 import FeedBack from "../Feedback/feedback.jsx";
 import ShuffleHero from "./ourteam.jsx";
 import Team from "./team.jsx";
+import Video from "../assets/Video/destination.mp4";  
 import { Trail } from "./trail.jsx";
 
 function About() {
@@ -16,16 +17,12 @@ function About() {
       </div>
       <div className="title">
         <p className="Judul">About Us</p>
-        <video className="vid" controls autoPlay muted loop="20">
-          <source
-            src="https://docs.material-tailwind.com/demo.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <video className="vid" 
+        src={ Video } autoPlay loop muted/>
       </div>
-      {/* <div className="lagu">
+      <div className="lagu">
         <Lagu query="Rambadia Lagu Sumatera Utara" />
-      </div> */}
+      </div>
       <div className="body">
         <div className="ourteam">
           <ShuffleHero />

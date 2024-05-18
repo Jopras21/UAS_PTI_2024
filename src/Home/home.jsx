@@ -5,7 +5,7 @@ import Footer from "../Footer/footer.jsx";
 import Weather from "../Weather/weather";
 import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
-import Sibayak from "../assets/Landscape/Sibayak.jpg";
+import Naniura from "../assets/Foods/Naniura.jpg";
 import TopButton from "/src/Button/topButton.jsx";
 import Fancy from "/src/Button/fancy.jsx";
 import Lagu from "../Lagu/lagu.jsx";
@@ -68,7 +68,7 @@ function Home() {
           <ExampleContent2 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl={Sibayak}
+          imgUrl={Naniura}
           subheading="Makanan khas Sumatera Utara"
           heading="Makanan Khas."
         >

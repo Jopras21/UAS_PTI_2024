@@ -8,6 +8,7 @@ import Lagu from "../Lagu/lagu.jsx";
 import TopButton from "../Button/topButton.jsx";
 import "./history.css";
 import Gallery from "../Gallery/gallery.jsx";
+import Sunset from "../assets/sunset.jpg"
 
 function History() {
   return (
@@ -18,12 +19,8 @@ function History() {
       <TopButton />
       <div className="titleHistory">
         <p className="Judul">History</p>
-        <video className="vid" controls autoPlay muted loop="20">
-          <source
-            src="https://docs.material-tailwind.com/demo.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <img className="foto"
+        src= {Sunset}/>
       </div>
       <div className="containerHistory">
         <div className="title">
