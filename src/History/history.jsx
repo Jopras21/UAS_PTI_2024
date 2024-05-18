@@ -16,7 +16,7 @@ function History() {
         <Navbar />
       </div>
       <TopButton />
-      <div className="title">
+      <div className="titleHistory">
         <p className="Judul">History</p>
         <video className="vid" controls autoPlay muted loop="20">
           <source
