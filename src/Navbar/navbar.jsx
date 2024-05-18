@@ -43,7 +43,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52 box-shadow: 0px 0px 27px 23px #f7fafc"
             >
               <li>
-                <NavLink exact to="/Home" activeClassName="active">
+                <NavLink exact to="/" activeClassName="active">
                   Home
                 </NavLink>
               </li>
@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
           <NavLink
             className="btn-ghost hidden lg:flex text-5xl rounded-full"
-            to="/Home"
+            to="/"
           >
             <img
               src={logo}
@@ -91,7 +91,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li className="text-xl">
-              <NavLink to="/Home" activeClassName="active" className="mx-4 px-4">
+              <NavLink to="/" activeClassName="active" className="mx-4 px-4">
                 Home
               </NavLink>
             </li>
