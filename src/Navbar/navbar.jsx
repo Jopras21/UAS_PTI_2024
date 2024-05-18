@@ -11,8 +11,6 @@ const Navbar = () => {
     const navElement = document.getElementById("nav");
     if (navElement) {
       navElement.classList.remove("visible");
-
-      // Ensure the animation re-runs by delaying the addition of 'visible'
       setTimeout(() => {
         navElement.classList.add("visible");
       }, 1);
@@ -45,7 +43,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52 box-shadow: 0px 0px 27px 23px #f7fafc"
             >
               <li>
-                <NavLink exact to="/" activeClassName="active" className="">
+                <NavLink exact to="/" activeClassName="active">
                   Home
                 </NavLink>
               </li>

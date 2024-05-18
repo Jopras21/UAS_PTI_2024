@@ -1,5 +1,8 @@
 .headingHistory h1 {
     font-size: 70px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    font-weight: 450;
+    text-align: end;
 }
 
 .pengertian {
@@ -8,6 +11,8 @@
     width: 100%;
     height: max-content;
     font-size: 20px;
+    justify-content: space-between;
+    gap: 20px;
     color: rgb(0, 0, 0);
 }
 
@@ -18,7 +23,7 @@
 
 .footerHistory{
     text-align: justify;
-    padding-left: 50px;
+    
 }
 
 .bungkusGambarHistory img{
@@ -30,16 +35,58 @@
 .JudulHis{
     color: #000;
     text-align: center;
+
 }
 
 .JudulHis h1{
     font-size: 50px;
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    font-weight: 450;
 }
 
 .DescHis p{
     font-size: 20px;
     color: rgb(0, 0, 0);
-    text-align: left;
+    text-align:  center;
+}
+.Toba{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.gambarKonten video{
+    border-radius: 35px;
+    object-fit: cover;
+    width: 60%;
+}
+
+
+.kontenSejarah{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.gambarKonten{
+    width: 100%;
+    margin-top: 180px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.history-content p{
+    font-size: 120%;
+    text-align: center;
+}
+
+.tempatHis{
+    margin-top: 190px;
+    color: #000;
+    font-size: 50px;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,7 +122,7 @@
     
     .footerHistory{
         font-size: 20px;
-        text-align: center;
+        text-align: justify;
     }
     .bungkusGambarHistory{
         width: 100%;
@@ -85,89 +132,43 @@
     .bungkusGambarHistory img{
         width: 100%;
         height: 100%;
-        border-radius: 0px;
+        border-radius: 35px;
     }
     .JudulHis h1{
         text-align: center;
         font-size: 40px;
     }
 
-    .bungkusKontenSejarah{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
     .kontenSejarah{
-        font-size: 150%;
+        font-size: 20px;
         text-align: center;
     }
     
     .gambarKonten{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        color: rgb(0, 0, 0);
+    }
+
+    .gambarKonten video{
+        border-radius: 35px;
+        object-fit: cover;
         width: 100%;
         height: 100%;
-        border-radius: 35px;
     }
     
     .history-content p{
-        font-size: 10%;
-        text-align: center;
+        font-size: 120%;
+        text-align: justify;
+    }
+    .DescHis p{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-align:  justify;
     }
     
-    .tempatHis{
-        margin-top: 150px;
-        color: #000;
-        font-size: 50px;
-    }
-    
-}
-
-.Toba{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.bungkusKontenSejarah{
-    display: flex;
-    margin-top: 150px;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.bungkusKontenSejarah video{
-    border-radius: 35px;
-    margin: auto;
-    width: 100%;
-    height: max-content;
-}
-
-
-.kontenSejarah{
-    width: 120%;
-}
-
-.gambarKonten{
-    width: 100%;
-    height: 1000px;
-    padding: 0px 0px 0px 100px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-.history-content p{
-    font-size: 120%;
-    text-align: justify;
-}
-
-.tempatHis{
-    color: #000;
-    font-size: 50px;
-    text-align: center;
 }

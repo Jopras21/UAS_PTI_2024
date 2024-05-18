@@ -10,6 +10,7 @@ import Lagu from "../Lagu/lagu.jsx";
 import TopButton from "../Button/topButton.jsx";
 import "./history.css";
 import Gallery from "../Gallery/gallery.jsx";
+import Sunset from "../assets/sunset.jpg";
 
 function History() {
   const controls = useAnimation();
@@ -42,7 +43,7 @@ function History() {
         <Navbar />
       </motion.div>
       <TopButton />
-      <div className="title">
+      <div className="titleHistory">
         <p className="Judul">History</p>
         <motion.video
           className="vid"
@@ -54,10 +55,18 @@ function History() {
           animate={controls}
           variants={fadeInVariants}
         >
-          <source src="https://docs.material-tailwind.com/demo.mp4" type="video/mp4" />
+          <source
+            src="https://docs.material-tailwind.com/demo.mp4"
+            type="video/mp4"
+          />
         </motion.video>
       </div>
-      <div className="containerHistory" ref={ref} initial="hidden" animate={controls}>
+      <div
+        className="containerHistory"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+      >
         <div className="title"></div>
         <div className="bodyHistory">
           <div className="description" variants={parallaxVariants}>
@@ -71,7 +80,9 @@ function History() {
           </div>
           <div className="pakaianAdat">
             <div className="JudulHis">
-              <motion.h1 variants={parallaxVariants}>Pakaian Adat Sumatera Utara</motion.h1>
+              <motion.h1 variants={parallaxVariants}>
+                Pakaian Adat Sumatera Utara
+              </motion.h1>
             </div>
             <motion.div className="DescHis" variants={parallaxVariants}>
               <p>

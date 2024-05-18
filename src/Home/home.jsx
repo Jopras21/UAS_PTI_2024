@@ -11,9 +11,10 @@ import Footer from "../Footer/footer.jsx";
 import Weather from "../Weather/weather";
 import Toba from "../assets/Landscape/Toba.png";
 import Sipiso from "../assets/Landscape/Sipiso.jpeg";
-import Sibayak from "../assets/Landscape/Sibayak.jpg";
+import Naniura from "../assets/Foods/Naniura.jpg";
 import TopButton from "/src/Button/topButton.jsx";
 import Fancy from "/src/Button/fancy.jsx";
+import Lagu from "../Lagu/lagu.jsx";
 import "./home.css";
 
 function Home() {
@@ -56,8 +57,8 @@ function Home() {
       <div className="bg-white m-0 p-0 w-full" id="containerHome">
         <TextParallaxContent
           imgUrl={Toba}
-          subheading="Selamat datang di"
-          heading="Sumatera Utara."
+          subheading="Horas, Manatong di poropinsi Sumatera Utara."
+          heading="ᯂᯬᯒᯘ᯲ᯘ᯲, ᯔᯔᯖ᯲ᯗ᯲ᯖ᯲ ᯑ᯲ ᯇᯬᯑᯉ᯲ᯖ᯲ ᯘᯘᯒ᯲ᯘᯖ ᯙᯖᯒ᯲ᯘᯒ᯲ ᯙᯗ᯲ᯖ."
         >
           <ExampleContent1 />
           <div className="weather">
@@ -73,7 +74,7 @@ function Home() {
           <ExampleContent2 />
         </TextParallaxContent>
         <TextParallaxContent
-          imgUrl={Sibayak}
+          imgUrl={Naniura}
           subheading="Makanan khas Sumatera Utara"
           heading="Makanan Khas."
         >
