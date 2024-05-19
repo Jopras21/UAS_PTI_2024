@@ -62,15 +62,18 @@
 }
 
 .gambarKonten video{
-    border-radius: 35px;
+    border-radius: 55px;
     object-fit: cover;
-    width: 60%;
+    width: 100%;
 }
 
 
 .kontenSejarah{
     margin-top: 50px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .gambarKonten{

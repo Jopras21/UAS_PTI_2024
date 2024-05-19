@@ -102,6 +102,10 @@ marker:hover {
     border-radius: 40px;
   }
 
+  .title1{
+    font-size: 40px;
+  }
+
   .popup-img img {
     width: 100%;
     height: 300px;
