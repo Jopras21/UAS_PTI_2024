@@ -1,3 +1,13 @@
 #transisi {
     transition: all 2s ease-in-out;
 }
+
+@media screen and (max-width:768px){
+ #namaTempat{
+     font-size: 30px;
+ }
+
+ #penjelasanTempat{
+     font-size: 12px;
+ }
+}
