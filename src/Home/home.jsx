@@ -57,8 +57,8 @@ function Home() {
       <div className="bg-white m-0 p-0 w-full" id="containerHome">
         <TextParallaxContent
           imgUrl={Toba}
-          subheading="Horas, Manatong di poropinsi Sumatera Utara."
-          heading="ᯂᯬᯒᯘ᯲ᯘ᯲, ᯔᯔᯖ᯲ᯗ᯲ᯖ᯲ ᯑ᯲ ᯇᯬᯑᯉ᯲ᯖ᯲ ᯘᯘᯒ᯲ᯘᯖ ᯙᯖᯒ᯲ᯘᯒ᯲ ᯙᯗ᯲ᯖ."
+          subheading="Horas, Selamat datang di Provinsi Sumatera Utara."
+          heading="ᯂᯬᯒᯘ᯲"
         >
           <ExampleContent1 />
           <div className="weather">
