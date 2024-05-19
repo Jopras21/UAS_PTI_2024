@@ -62,7 +62,9 @@ function Home() {
         >
           <ExampleContent1 />
           <div className="weather">
-            <h1 className="flex justify-center text-xl">Cuaca saat ini</h1>
+            <h1 className="flex justify-center text-8xl text-gray-950 mb-10">
+              Cuaca saat ini
+            </h1>
             <Weather />
           </div>
         </TextParallaxContent>
@@ -81,8 +83,8 @@ function Home() {
           <ExampleContent3 />
         </TextParallaxContent>
         <div className="lagu">
-        <Lagu query="Alusi Au" />
-      </div>
+          <Lagu query="Alusi Au" />
+        </div>
         <Footer />
       </div>
     </>
@@ -94,10 +96,7 @@ const IMG_PADDING = 0;
 const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
   const targetRef = useRef(null);
   return (
-    <div
-      style={{
-      }}
-    >
+    <div style={{}}>
       <div ref={targetRef} className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} targetRef={targetRef} />
         <OverlayCopy
@@ -126,7 +125,7 @@ const StickyImage = ({ imgUrl, targetRef }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "100%", 
+        width: "100%",
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
@@ -156,7 +155,7 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
     <motion.div
       style={{
         y,
-        color: 'white',
+        color: "white",
       }}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center z-50"
     >

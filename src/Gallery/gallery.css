@@ -1,0 +1,35 @@
+.gallery-container img {
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+
+.gallery-container {
+  overflow: hidden;
+}
+
+.gallery-container .photo:hover .overlay {
+  opacity: 1;
+}
+
+.photo .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5em;
+}

@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import PhotoAlbum from "react-photo-album";
-
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-
-//plugins buat lightbox
-import { Captions, Fullscreen, Thumbnails } from "yet-another-react-lightbox/plugins";
+import {
+  Captions,
+  Fullscreen,
+  Thumbnails,
+} from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "./gallery.css";
+import { motion, useAnimation } from "framer-motion";
 
 const photos = [
   {
@@ -20,7 +23,7 @@ const photos = [
       { src: "../src/assets/Pakaian/bataktoba.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Batak Toba",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/karo.jpeg",
@@ -31,7 +34,7 @@ const photos = [
       { src: "../src/assets/Pakaian/karo.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Karo",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/angkola2.jpeg",
@@ -42,7 +45,7 @@ const photos = [
       { src: "../src/assets/Pakaian/angkola2.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Angkola",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/nias.jpeg",
@@ -53,7 +56,7 @@ const photos = [
       { src: "../src/assets/Pakaian/nias.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Nias",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/pakpak.jpeg",
@@ -64,7 +67,7 @@ const photos = [
       { src: "../src/assets/Pakaian/pakpak.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Pakpak",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/angkola.jpeg",
@@ -75,7 +78,7 @@ const photos = [
       { src: "../src/assets/Pakaian/angkola.jpeg", width: 120, height: 90 },
     ],
     title: "Pakaian Adat Angkola",
-    description: "Source: detik.com/sumut"
+    description: "Source: detik.com/sumut",
   },
   {
     src: "../src/assets/Pakaian/melayu.jpg",
@@ -86,7 +89,7 @@ const photos = [
       { src: "../src/assets/Pakaian/melayu.jpg", width: 86, height: 128 },
     ],
     title: "Pakaian Adat Melayu",
-    description: "Source: gramedia.com"
+    description: "Source: gramedia.com",
   },
   {
     src: "../src/assets/Pakaian/sibolga.jpg",
@@ -97,7 +100,7 @@ const photos = [
       { src: "../src/assets/Pakaian/sibolga.jpg", width: 100, height: 125 },
     ],
     title: "Pakaian Adat Sibolga",
-    description: "Source: orami.co.id"
+    description: "Source: orami.co.id",
   },
   {
     src: "../src/assets/Pakaian/karo2.jpg",
@@ -108,7 +111,7 @@ const photos = [
       { src: "../src/assets/Pakaian/karo2.jpg", width: 81, height: 128 },
     ],
     title: "Pakaian Adat Karo",
-    description: "Source: pinterest.com"
+    description: "Source: pinterest.com",
   },
   {
     src: "../src/assets/Pakaian/simalungun.jpg",
@@ -119,7 +122,7 @@ const photos = [
       { src: "../src/assets/Pakaian/simalungun.jpg", width: 150, height: 188 },
     ],
     title: "Pakaian Adat Simalungun",
-    description: "Source: rukita.co"
+    description: "Source: rukita.co",
   },
   {
     src: "../src/assets/Pakaian/mandailing.jpg",
@@ -130,7 +133,7 @@ const photos = [
       { src: "../src/assets/Pakaian/mandailing.jpg", width: 266, height: 339 },
     ],
     title: "Pakaian Adat Mandailing",
-    description: "Source: rimbakita.com"
+    description: "Source: rimbakita.com",
   },
   {
     src: "../src/assets/Pakaian/nias2.png",
@@ -141,26 +144,59 @@ const photos = [
       { src: "../src/assets/Pakaian/nias2.png", width: 236, height: 170 },
     ],
     title: "Pakaian Adat Nias",
-    description: "Source: wartanias.com"
+    description: "Source: wartanias.com",
   },
 ];
 
 export default function Gallery() {
   const [index, setIndex] = useState(-1);
+  const galleryRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start({
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 },
+          });
+        } else {
+          controls.start({ opacity: 0, y: 50 });
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (galleryRef.current) {
+      observer.observe(galleryRef.current);
+    }
+
+    return () => {
+      if (galleryRef.current) {
+        observer.unobserve(galleryRef.current);
+      }
+    };
+  }, [controls]);
 
   return (
-    <>
-      <PhotoAlbum layout="rows" photos={photos} onClick={({ index }) => setIndex(index)} />
-
+    <div ref={galleryRef} className="gallery-container p-8">
+      <motion.div initial={{ opacity: 0, y: 50 }} animate={controls}>
+        <PhotoAlbum
+          layout="rows"
+          photos={photos}
+          onClick={({ index }) => setIndex(index)}
+        />
+      </motion.div>
       <Lightbox
         slides={photos}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
-        // enable optional lightbox plugins
         plugins={[Fullscreen, Captions, Thumbnails]}
-        captions={{showToggle: true}}
+        captions={{ showToggle: true }}
       />
-    </>
+    </div>
   );
 }

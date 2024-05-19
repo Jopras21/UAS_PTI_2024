@@ -9,6 +9,7 @@ import FeedBack from "../Feedback/feedback.jsx";
 import ShuffleHero from "./ourteam.jsx";
 import Team from "./team.jsx";
 import Video from "../assets/Video/destination.mp4";
+import TopButton from "../Button/topButton.jsx";
 
 const fadeIn = {
   hidden: { opacity: 0, x: -100 },
@@ -22,6 +23,7 @@ function About() {
         <div className="navbar">
           <Navbar />
         </div>
+        <TopButton />
         <div
           className="title"
           initial="hidden"
@@ -71,3 +73,5 @@ function About() {
 }
 
 export default About;
+
+

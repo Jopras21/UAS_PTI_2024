@@ -60,7 +60,7 @@ function Culinary() {
       <div className="title">
         <h1 className="">Kuliner Khas</h1>
       </div>
-      <div className="filters">
+      <div className="filter-conteainer">
         <select
           value={selectedCategory}
           onChange={handleCategoryChange}
@@ -71,19 +71,15 @@ function Culinary() {
           <option value="sweet">Manis</option>
           <option value="spicy">Pedas</option>
         </select>
-        <input
-          type="text"
-          className="search"
-          placeholder="Cari makanan..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-        <select value={selectedCategory} onChange={handleCategoryChange}>
-          <option value="all">Semua</option>
-          <option value="salty">Asin</option>
-          <option value="sweet">Manis</option>
-          <option value="spicy">Pedas</option>
-        </select>
+        <div class="container-search text-center right-0">
+          <input
+            type="text"
+            placeholder="Cari makanan..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+          <div class="search"></div>
+        </div>
       </div>
       <div className="container">
         {filteredFoods.map((food, index) => (

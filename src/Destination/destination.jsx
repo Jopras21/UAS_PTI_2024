@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/navbar.jsx";
 import Carousel from "../Carousel/carousel.jsx";
 import Culinary from "./culinary.jsx";
@@ -13,7 +13,7 @@ import "./destination.css";
 import TopButton from "../Button/topButton.jsx";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Lagu from "../Lagu/lagu.jsx"
+import Lagu from "../Lagu/lagu.jsx";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -34,6 +34,7 @@ const itemVariants = {
 function Destination() {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [ref, inView] = useInView({ triggerOnce: true });
+  const [initialPopupShown, setInitialPopupShown] = useState(false);
 
   const markers = [
     {
@@ -98,6 +99,12 @@ function Destination() {
     iconUrl: Pointer,
     iconSize: [38, 38],
   });
+
+  useEffect(() => {
+    if (!initialPopupShown && inView) {
+      setInitialPopupShown(true);
+    }
+  }, [initialPopupShown, inView]);
 
   return (
     <>
