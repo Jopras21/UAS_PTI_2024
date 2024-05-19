@@ -3,6 +3,11 @@
   opacity: 1;
 }
 
+@media screen and (max-width:719px) {
+#containerHome{
+  text-align: center;
+}
+}
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
