@@ -43,14 +43,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] bg-neutral rounded-box shadow mx-10 py-5 w-52 box-shadow: 0px 0px 27px 23px #f7fafc"
             >
               <li>
-                <NavLink exact to="/" activeClassName="active">
-                  Home
-                </NavLink>
+              <NavLink to="/" activeClassName="active" className="mx-4 px-4">
+                Home
+              </NavLink>
               </li>
               <li className="text-xl">
-                <NavLink to="/History" activeClassName="active">
-                  History
-                </NavLink>
+              <NavLink
+                to="/History"
+                activeClassName="active"
+                className="mx-4 px-4"
+              >
+                History
+              </NavLink>
               </li>
               <li>
                 <NavLink to="/Destination" activeClassName="active">
@@ -58,21 +62,33 @@ const Navbar = () => {
                 </NavLink>
                 <ul className="p-2 z-50">
                   <li>
-                    <NavLink to="/Destination/Wisata" activeClassName="active">
+                  <NavLink
+                      to="/Destination/Wisata"
+                      activeClassName="active"
+                      className="mx-4"
+                    >
                       Wisata
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/Destination/Kuliner" activeClassName="active">
+                  <NavLink
+                      to="/Destination/Kuliner"
+                      activeClassName="active"
+                      className="mx-4 px-4"
+                    >
                       Kuliner
                     </NavLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <NavLink to="/About" activeClassName="active">
-                  About Us
-                </NavLink>
+              <NavLink
+                to="/About"
+                activeClassName="active"
+                className="mx-4 px-4"
+              >
+                About Us
+              </NavLink>
               </li>
               <li></li>
             </ul>

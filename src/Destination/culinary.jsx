@@ -78,7 +78,11 @@ function Culinary() {
         <h1 className="">Kuliner Khas</h1>
       </div>
       <div className="filters">
-        <select value={selectedCategory} onChange={handleCategoryChange} className="filter-button">
+        <select
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          className="filter-button"
+        >
           <option value="all">Semua</option>
           <option value="salty">Asin</option>
           <option value="sweet">Manis</option>
@@ -91,6 +95,12 @@ function Culinary() {
           value={searchTerm}
           onChange={handleSearchChange}
         />
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          <option value="all">Semua</option>
+          <option value="salty">Asin</option>
+          <option value="sweet">Manis</option>
+          <option value="spicy">Pedas</option>
+        </select>
       </div>
       <div className="container">
         {filteredFoods.map((food, index) => (

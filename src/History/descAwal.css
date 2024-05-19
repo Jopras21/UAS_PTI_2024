@@ -22,7 +22,7 @@
 }
 
 .footerHistory{
-    text-align: justify;
+    text-align: end;
     
 }
 
@@ -88,6 +88,44 @@
     font-size: 50px;
     text-align: center;
 }
+
+@media screen and (min-width: 769px) and (max-width: 1164px) {
+    .pengertian {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+        color: rgb(0, 0, 0);
+    }
+
+    .bungkusGambarHistory{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .bungkusGambarHistory img{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .bungkusTulisan{
+        width: 100%;
+        font-size:20px;
+        text-align: center;
+    }
+
+    .bungkusTulisan h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .footerHistory{
+        text-align: center;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .footerHistory p{
