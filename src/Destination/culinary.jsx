@@ -64,7 +64,7 @@ function Culinary() {
         <select
           value={selectedCategory}
           onChange={handleCategoryChange}
-          className="filter-button"
+          className="filter-button rounded-xl"
         >
           <option value="all">Semua</option>
           <option value="salty">Asin</option>

@@ -8,7 +8,7 @@ function Footer() {
 
     <footer className="container-footer flex flex-col w-full items-center bg-gray-700 text-center text-surface dark:bg-neutral-700 dark:text-white">
       <div className="btn-ghost logo w-full h-32">
-        <img src= {logo} className="w-32 h-32 mx-4 object-cover" />
+        <img src= {logo} className="w-32 h-32 mx-4 object-cover rounded-full" />
       </div>
       <div className="container pt-9 bg-white-50">
         {/* Social media icons container */}
