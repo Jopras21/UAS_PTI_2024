@@ -23,9 +23,10 @@ h1 {
 }
 
 .title1 {
-  font-size: 45px;
-  font-weight: bold;
+  font-size: 65px;
+  font-weight: 900;
   text-align: center;
+  color: white;
 }
 
 .navbar {
