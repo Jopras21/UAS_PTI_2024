@@ -8,7 +8,7 @@ const imgs = [
     src: "../src/assets/BgSejarah/gedunglondon.jpg",
     title: "Gedung London Sumatera",
     description:
-      "Dibangun pada tahun 1909 dan menjadi gedung kantor milik Harrisons & Crossfield Plc, sebuah perusahaan perkebunan dan perdagangan berbasis di London. Beberapa kali gedung ini sempat berpindah tangan dan sekarang dimiliki oleh PT PP London Sumatera. Sampai sekarang gedung ini masih digunakan sebagai gedung kantor untuk perusahaan agrikultur.",
+      "Dibangun pada tahun 1909 oleh sebuah perusahaan perkebunan dan perdagangan berbasis di London. Gedung ini sempat berpindah tangan dan sekarang dimiliki oleh PT PP London Sumatera. Sampai sekarang gedung ini digunakan sebagai kantor untuk perusahaan agrikultur.",
   },
   {
     src: "../src/assets/BgSejarah/istanamaimun.jpg",
@@ -26,7 +26,7 @@ const imgs = [
     src: "../src/assets/BgSejarah/arca.jpeg",
     title: "Situs Peninggalan Arca Batu Raja",
     description:
-      "Terletak di Kabupaten Labuhanbatu, situs ini merupakan kompleks arca batu yang diperkirakan berasal dari abad ke-11 hingga abad ke-13 Masehi. Arca-arca ini memberikan gambaran tentang keberadaan kerajaan Hindu-Buddha di wilayah tersebut.",
+      "Terletak di Kabupaten Labuhanbatu, situs ini merupakan kompleks arca batu yang diperkirakan berasal dari abad ke-11 hingga abad ke-13 Masehi. Arca ini memberikan gambaran keberadaan kerajaan Hindu-Buddha di wilayah tersebut.",
   },
   {
     src: "../src/assets/BgSejarah/museum.jpeg",
@@ -125,13 +125,13 @@ const TextOverlay = ({ imgIndex }) => {
   const { title, description } = imgs[imgIndex];
   return (
     <div
-      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform"
+      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-gray-900 to-gray-950 text-white w-full transition-transform"
       id="transisi"
     >
-      <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16 text-slate-50	">
+      <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16 text-slate-50" id="namaTempat">
         {title}
       </h2>
-      <p className="text-l mx-16">{description}</p>
+      <p className="text-l mx-16" id="penjelasanTempat">{description}</p>
     </div>
   );
 };
