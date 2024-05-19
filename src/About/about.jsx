@@ -18,60 +18,40 @@ const fadeIn = {
 
 function About() {
   return (
-    <Parallax pages={3}>
-      <div className="root">
-        <div className="navbar">
-          <Navbar />
-        </div>
-        <TopButton />
-        <div
-          className="title"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={fadeIn}
-        >
-          <motion.p className="Judul">About Us</motion.p>
-          <video className="vid" src={Video} autoPlay loop muted />
-        </div>
-        <div className="lagu">
-          <Lagu query="Rambadia Lagu Sumatera Utara" />
-        </div>
-        <div className="body">
-          <motion.div
-            className="ourteam"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={fadeIn}
-          >
-            <ShuffleHero />
-          </motion.div>
-          <div className="trail"></div>
-          <div className="subTitle">
-            <p className="subJudul">Meet Our Team</p>
-          </div>
-          <motion.div
-            className="img"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={fadeIn}
-          >
-            <Team />
-          </motion.div>
-          <motion.div className="feedback">
-            <FeedBack />
-          </motion.div>
-        </div>
-        <div className="footer">
-          <Footer />
-        </div>
+    <div className="root">
+      <div className="navbar">
+        <Navbar />
       </div>
-    </Parallax>
+      <div className="title" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={fadeIn}>
+        <motion.p className="Judul">About Us</motion.p>
+        <video className="vid" src={Video} autoPlay loop muted />
+      </div>
+      <div className="lagu">
+        <Lagu query="Rambadia Lagu Sumatera Utara" />
+      </div>
+      <div className="body">
+        <motion.div className="ourteam" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={fadeIn}>
+          <ShuffleHero />
+        </motion.div>
+        <div className="trail"></div>
+        <div className="subTitle">
+          <p className="subJudul">Meet Our Team</p>
+        </div>
+        <motion.div className="img" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={fadeIn}>
+          <Team />
+        </motion.div>
+        <motion.div className="feedback">
+          <FeedBack />
+        </motion.div>
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
+      <div className="rigth-0 bottom-0">
+        <TopButton />
+      </div>
+    </div>
   );
 }
 
 export default About;
-
-

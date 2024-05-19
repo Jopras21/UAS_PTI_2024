@@ -147,6 +147,5 @@
 }
 
 .root {
-  perspective: 1px;
   overflow-x: hidden;
 }
