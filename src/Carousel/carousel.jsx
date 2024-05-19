@@ -139,10 +139,10 @@ const TextOverlay = ({ imgIndex }) => {
   const { title, description } = imgs[imgIndex];
   return (
     <div
-      className="absolute bottom-12 left-0 p-4 h-44 bg-gradient-to-t from-blue-900 to-blue-950 text-white w-full transition-transform "
+      className="absolute bottom-6 left-0 p-4 h-44 bg-gradient-to-t from-zinc-900 to-zinc-950 text-white w-full transition-transform "
       id="transisi"
     >
-      <h2 className="text-5xl font-bold my-3 inline-block align-middle mx-16 text-slate-50	">
+      <h2 className="text-4xl font-bold my-3 inline-block align-middle mx-16 text-slate-50	">
         {title}
       </h2>
       <p className="text-l mx-16">{description}</p>

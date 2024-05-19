@@ -72,14 +72,13 @@ function Culinary() {
 
     return categoryMatch && nameMatch;
   });
-
   return (
     <div className="my-16">
       <div className="title">
         <h1 className="">Kuliner Khas</h1>
       </div>
       <div className="filters">
-        <select value={selectedCategory} onChange={handleCategoryChange}>
+        <select value={selectedCategory} onChange={handleCategoryChange} className="filter-button">
           <option value="all">Semua</option>
           <option value="salty">Asin</option>
           <option value="sweet">Manis</option>

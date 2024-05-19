@@ -78,9 +78,9 @@ h1.icon {
   box-shadow: 13px 9px 46px -10px rgba(255, 255, 255, 0.899);
 }
 
-.filter {
+.filters {
   display: flex;
-  width: 2rem;
+  width: 100vw;
   height: auto;
   padding: 20px;
 }
@@ -94,5 +94,16 @@ h1.icon {
   border: none;
   border-radius: 50px;
   font-size: larger;
+  justify-content: right;
+}
+
+.filter-button {
+  width: 200px;
+  height: auto;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #3e4358b6;
 }
 

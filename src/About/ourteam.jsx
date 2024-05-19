@@ -7,8 +7,8 @@ const ShuffleHero = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          kelompok 3
+        <span className="block mb-4 text-lg md:text-sm text-indigo-500 font-medium">
+          kelompok 3 (The Most Skill Issue Group)
         </span>
         <h3 className="text-4xl md:text-6xl text-black font-semibold">
           About Our Team

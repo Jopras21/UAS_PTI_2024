@@ -112,7 +112,7 @@ const Navbar = () => {
                     <NavLink
                       to="/Destination/Wisata"
                       activeClassName="active"
-                      className="mx-4"
+                      className="text-center"
                     >
                       Wisata
                     </NavLink>
@@ -121,7 +121,7 @@ const Navbar = () => {
                     <NavLink
                       to="/Destination/Kuliner"
                       activeClassName="active"
-                      className="mx-4 px-4"
+                      className="text-center"
                     >
                       Kuliner
                     </NavLink>

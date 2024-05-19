@@ -149,8 +149,10 @@ function Destination() {
                 <div className="popup-img rounded-full">
                   <img src={selectedMarker.img} alt={selectedMarker.popup} />
                 </div>
-                <h2 className="text-3xl">{selectedMarker.popup}</h2>
-                <p className="w-full px-6">{selectedMarker.description}</p>
+                <div>
+                  <h2 className="text-3xl">{selectedMarker.popup}</h2>
+                  <p className="w-full px-6">{selectedMarker.description}</p>
+                </div>
               </div>
             )}
           </motion.div>
