@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Card from "./card";
 import { Foods } from "./food.js";
-import { TweenMax } from "gsap";
 import "./culinary.css";
 
 function Culinary() {
@@ -22,23 +22,6 @@ function Culinary() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      cardsRef.current.forEach((card, index) => {
-        const cardTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (cardTop < windowHeight) {
-          TweenMax.to(card, 0.5, { opacity: 1, y: 0, delay: index * 0.2 });
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [foodsData]);
-
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
@@ -47,7 +30,6 @@ function Culinary() {
     setSearchTerm(event.target.value);
   };
 
-  //filter by flavour
   const saltyIds = [7, 8, 9, 11, 14];
   const sweetIds = [2, 6, 10];
   const spicyIds = [1, 5, 12, 13, 15];
@@ -72,6 +54,7 @@ function Culinary() {
 
     return categoryMatch && nameMatch;
   });
+
   return (
     <div className="my-16">
       <div className="title">
@@ -104,13 +87,15 @@ function Culinary() {
       </div>
       <div className="container">
         {filteredFoods.map((food, index) => (
-          <Card
+          <motion.div
             key={food.id}
             ref={(el) => (cardsRef.current[index] = el)}
-            img={food.img}
-            name={food.name}
-            desc={food.desc}
-          />
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.06, duration: 0.5 }}
+          >
+            <Card img={food.img} name={food.name} desc={food.desc} />
+          </motion.div>
         ))}
       </div>
     </div>

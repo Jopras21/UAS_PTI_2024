@@ -76,6 +76,12 @@
   top: 0;
   bottom: 0;
   z-index: -1;
+  filter: brightness(30%);
+  transition: all .6s ease-in-out;
+}
+
+.vid:hover {
+  filter: brightness(60%);
 }
 
 .body {
@@ -137,4 +143,9 @@
 
 .ourteam {
   margin-top: 40px;
+}
+
+.root {
+  perspective: 1px;
+  overflow-x: hidden;
 }
