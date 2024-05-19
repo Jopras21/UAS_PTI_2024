@@ -13,6 +13,7 @@ import "./destination.css";
 import TopButton from "../Button/topButton.jsx";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Lagu from "../Lagu/lagu.jsx"
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -164,6 +165,9 @@ function Destination() {
         >
           <Culinary />
         </motion.div>
+      </div>
+      <div className="lagu">
+        <Lagu query="Rambadia Lagu Sumatera Utara" />
       </div>
       <div className="footer">
         <Footer />

@@ -80,6 +80,9 @@ function Home() {
         >
           <ExampleContent3 />
         </TextParallaxContent>
+        <div className="lagu">
+        <Lagu query="Alusi Au" />
+      </div>
         <Footer />
       </div>
     </>
