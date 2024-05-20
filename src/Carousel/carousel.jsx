@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import "./carousel.css";
 
-import Toba from "../src/assets/Landscape/Toba.png";
-import Sibayak from "../src/assets/Landscape/Sibayak.jpg";
-import Lawang from "../src/assets/Landscape/Lawang.jpg";
-import Sipiso from "../src/assets/Landscape/Sipiso.jpeg";
+import Toba from "../assets/Landscape/Toba.png";
+import Sibayak from "../assets/Landscape/Sibayak.jpg";
+import Lawang from "../assets/Landscape/Lawang.jpg";
+import Sipiso from "../assets/Landscape/Sipiso.jpeg";
 
 const imgs = [
   {
