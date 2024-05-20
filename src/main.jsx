@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import Home from "../src/Home/home.jsx";
 import Destination from "../src/Destination/destination.jsx";
@@ -10,7 +10,10 @@ import Feedback from "../src/Feedback/feedback.jsx";
 import { ThemeProvider } from "@material-tailwind/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <ThemeProvider>
       <BrowserRouter>
@@ -24,6 +27,5 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

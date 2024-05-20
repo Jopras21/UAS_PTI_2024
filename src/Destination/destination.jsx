@@ -15,6 +15,16 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Lagu from "../Lagu/lagu.jsx";
 
+// Import images
+import TobaImg from "../assets/Landscape/Toba.png";
+import SibayakImg from "../assets/Landscape/Sibayak.jpg";
+import LawangImg from "../assets/Landscape/Lawang.jpg";
+import SipisoImg from "../assets/Landscape/Sipiso.jpeg";
+import LumbiniImg from "../assets/Landscape/Lumbini.jpg";
+import BerhalaImg from "../assets/Landscape/Berhala.jpeg";
+import SinabungImg from "../assets/Landscape/Sinabung.jpg";
+import SiantarImg from "../assets/Landscape/Siantar.jpg";
+
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -39,56 +49,56 @@ function Destination() {
   const markers = [
     {
       geocode: [2.7861, 98.6161],
-      img: "../src/assets/Landscape/Toba.png",
+      img: TobaImg,
       popup: "🏞️ Danau Toba",
       description:
         "Danau Toba adalah sebuah keajaiban alam yang mempesona. Terletak di tengah-tengah pegunungan, danau vulkanik ini memikat ribuan mata setiap tahunnya. Airnya yang biru memukau, menyajikan pemandangan indah yang tak terlupakan. Selain keindahannya, Danau Toba juga menyimpan misteri sejarah yang menarik, menjadi rumah bagi berbagai cerita dan legenda. Menjelajahi Danau Toba adalah pengalaman yang akan memberi kesan mendalam bagi siapa pun yang berani menjelajahinya. Mari temukan keajaiban ini dan biarkan diri Anda terpesona oleh pesonanya yang tiada tara!",
     },
     {
       geocode: [3.2, 98.5167],
-      img: "../src/assets/Landscape/Sibayak.jpg",
+      img: SibayakImg,
       popup: "⛰️ Gunung Sibayak",
       description:
         "Gunung Sibayak adalah perwujudan keindahan alam yang mengagumkan. Berdiri megah sebagai saksi bisu kekuatan alam, gunung berapi aktif ini menyajikan panorama yang luar biasa indah. Dikelilingi oleh hamparan hijau dan udara segar yang menyejukkan, Sibayak menjadi tujuan favorit para pendaki dan petualang. Terlepas dari keangkerannya sebagai gunung berapi aktif, Sibayak menawarkan petualangan tak terlupakan dengan pemandangan yang memesona. Ayo jelajahi Gunung Sibayak dan saksikan keindahannya yang menakjubkan!",
     },
     {
       geocode: [3.5435, 98.1324],
-      img: "../src/assets/Landscape/Lawang.jpg",
+      img: LawangImg,
       popup: "🏔️ Bukit Lawang",
       description:
         "Bukit Lawang adalah surga bagi pecinta alam dan satwa liar. Terkenal dengan kekayaan alamnya yang melimpah dan keunikan konservasi orangutan, Bukit Lawang menawarkan pengalaman tak tertandingi bagi para petualang. Jelajahi hutan hujan tropis yang lebat, temui orangutan liar dalam habitat aslinya, dan nikmati keindahan alam yang memukau. Bukit Lawang bukan hanya destinasi wisata, tetapi juga pelajaran tentang pentingnya pelestarian alam dan satwa liar. Mari berpetualang di Bukit Lawang dan biarkan diri Anda terpesona oleh keajaiban alam yang tak terlupakan!",
     },
     {
       geocode: [2.9165, 98.516],
-      img: "../src/assets/Landscape/Sipiso.jpeg",
+      img: SipisoImg,
       popup: "💦 Air Terjun Sipiso Piso",
       description:
         "Air Terjun Sipiso Piso adalah anugerah alam yang menakjubkan. Merupakan salah satu air terjun tertinggi di Indonesia, Sipiso Piso menawarkan pemandangan yang menakjubkan bagi para pengunjungnya. Air yang jatuh dari ketinggian memukau, menciptakan suasana yang magis dan menyejukkan. Sipiso Piso bukan hanya destinasi wisata, tetapi juga sumber inspirasi bagi para pelukis, penulis, dan seniman. Mari nikmati keindahan Air Terjun Sipiso Piso dan biarkan diri Anda terpesona oleh pesonanya yang tiada tara!",
     },
     {
       geocode: [3.1973, 98.541],
-      img: "../src/assets/Landscape/Lumbini.jpg",
+      img: LumbiniImg,
       popup: "🌳 Taman Alam Lumbini",
       description:
         "Taman Alam Lumbini adalah tempat yang dihormati dan disucikan oleh umat Buddha di seluruh dunia. Dengan pagoda emas yang megah sebagai pusat perhatian, Taman Alam Lumbini menawarkan kedamaian dan ketenangan bagi setiap pengunjungnya. Berjalan-jalan di antara pohon-pohon suci, merenung di depan patung-patung Buddha, dan merasakan energi spiritual yang mengalir melalui tempat ini. Taman Alam Lumbini bukan hanya destinasi wisata, tetapi juga pelajaran tentang kehidupan dan kebijaksanaan. Mari kunjungi Taman Alam Lumbini dan biarkan diri Anda tersentuh oleh ketenangan yang disajikannya!",
     },
     {
       geocode: [0.8667, 104.4167],
-      img: "../src/assets/Landscape/Berhala.jpeg",
+      img: BerhalaImg,
       popup: "🏝️ Pulau Berhala",
       description:
         "Pulau Berhala adalah surga tersembunyi di tengah lautan yang luas. Dikelilingi oleh pasir putih dan air biru yang jernih, pulau ini menawarkan keindahan alam yang memikat bagi setiap pengunjungnya. Berenang di air yang tenang, berjemur di pantai yang indah, dan menjelajahi kehidupan bawah laut yang kaya akan kehidupan. Pulau Berhala adalah tempat yang sempurna untuk berlibur dan melarikan diri dari hiruk pikuk kota. Mari kunjungi Pulau Berhala dan biarkan diri Anda terpesona oleh keindahannya yang menakjubkan!",
     },
     {
       geocode: [3.1696, 98.393],
-      img: "../src/assets/Landscape/Sinabung.jpg",
+      img: SinabungImg,
       popup: "🏔️ Gunung Sinabung",
       description:
         "Gunung Sinabung adalah keindahan alam yang memiliki daya tarik yang unik. Sebagai gunung berapi aktif yang sering meletus, Sinabung menawarkan pemandangan yang spektakuler dan menegangkan bagi para pengunjungnya. Dikelilingi oleh hamparan tanah subur dan pepohonan hijau, Sinabung menjadi titik fokus bagi para petualang dan pecinta alam. Terlepas dari risikonya, Gunung Sinabung menarik para pendaki dan peneliti untuk menjelajahi keindahannya yang megah. Ayo jelajahi Gunung Sinabung dan biarkan diri Anda terpesona oleh pesonanya yang tak tertandingi!",
     },
     {
       geocode: [2.9526, 99.0594],
-      img: "../src/assets/Landscape/Siantar.jpg",
+      img: SiantarImg,
       popup: "🦚 Taman Hewan Pematang Siantar",
       description:
         "Taman Hewan Pematang Siantar adalah kebun binatang terkenal yang memukau pengunjung dengan keanekaragaman satwa liarnya. Sebagai rumah bagi berbagai jenis hewan eksotis, kebun binatang ini menawarkan pengalaman edukatif dan menghibur untuk semua usia. Jelajahi habitat berbagai spesies, pelajari tentang upaya konservasi, dan saksikan keindahan alam dari dekat. Taman Hewan Pematang Siantar bukan hanya sebuah kebun binatang; ini adalah tempat keajaiban dan penemuan.",

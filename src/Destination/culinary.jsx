@@ -14,6 +14,7 @@ function Culinary() {
     const fetchData = async () => {
       try {
         const data = await Foods();
+        console.log("Fetched data:", data);
         setFoodsData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,6 +22,10 @@ function Culinary() {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    console.log(foodsData);
+  },[foodsData]);
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
@@ -34,26 +39,38 @@ function Culinary() {
   const sweetIds = [2, 6, 10];
   const spicyIds = [1, 5, 12, 13, 15];
 
-  const filteredFoods = foodsData.filter((food) => {
-    const nameMatch = food.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-
-    if (selectedCategory === "salty") {
-      return saltyIds.includes(food.id) && nameMatch;
+  const fixImageUrlProtocol = (url) => {
+    if (url.startsWith("http://")) {
+      return url.replace("http://", "https://");
     }
-    if (selectedCategory === "sweet") {
-      return sweetIds.includes(food.id) && nameMatch;
-    }
-    if (selectedCategory === "spicy") {
-      return spicyIds.includes(food.id) && nameMatch;
-    }
+    return url;
+  };
 
-    const categoryMatch =
-      selectedCategory === "all" || food.category === selectedCategory;
+  const filteredFoods = foodsData
+    .filter((food) => {
+      const nameMatch = food.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
 
-    return categoryMatch && nameMatch;
-  });
+      if (selectedCategory === "salty") {
+        return saltyIds.includes(food.id) && nameMatch;
+      }
+      if (selectedCategory === "sweet") {
+        return sweetIds.includes(food.id) && nameMatch;
+      }
+      if (selectedCategory === "spicy") {
+        return spicyIds.includes(food.id) && nameMatch;
+      }
+
+      const categoryMatch =
+        selectedCategory === "all" || food.category === selectedCategory;
+
+      return categoryMatch && nameMatch;
+    })
+    .map((food) => ({
+      ...food,
+      img: fixImageUrlProtocol(food.img),
+    }));
 
   return (
     <div className="my-16">
@@ -71,14 +88,14 @@ function Culinary() {
           <option value="sweet">Manis</option>
           <option value="spicy">Pedas</option>
         </select>
-        <div class="container-search text-center right-0">
+        <div className="container-search text-center right-0">
           <input
             type="text"
             placeholder="Cari makanan..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="search"></div>
+          <div className="search"></div>
         </div>
       </div>
       <div className="container">
