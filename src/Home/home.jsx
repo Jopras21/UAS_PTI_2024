@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import {
   motion,
   useScroll,
@@ -170,78 +171,78 @@ const OverlayCopy = ({ subheading, heading, targetRef }) => {
 };
 
 const ExampleContent1 = () => (
-  <ContentSection
-    title="Sumatera Utara"
-    description1="Sumatera Utara adalah sebuah provinsi di Indonesia yang terletak di bagian utara Pulau Sumatera. Ibu kotanya adalah Kota Medan."
-    description2="Provinsi ini memiliki kekayaan alam dan budaya yang beragam, termasuk Danau Toba yang merupakan danau vulkanik terbesar di dunia. Sumatera Utara juga dikenal dengan keindahan alamnya, seperti pegunungan, pantai, dan hutan tropis."
-    link="/History"
-  />
-);
-
-const ExampleContent2 = () => (
-  <ContentSection
-    title="Destinasi Wisata"
-    description1="Sumatera Utara adalah sebuah provinsi yang kaya akan keindahan alam, warisan budaya, dan situs sejarah yang menarik. Dari danau vulkanik yang megah hingga hutan hujan tropis yang luas, Sumatera Utara menawarkan berbagai tempat wisata yang menakjubkan bagi para pengunjung."
-    description2="Berikut Ini adalah beberapa destinasi populer di Sumatera Utara"
-    link="/Destination"
-  />
-);
-
-const ExampleContent3 = () => (
-  <ContentSection
-    title="Makanan Khas"
-    description1="Sumatera Utara merupakan sebuah provinsi yang kaya akan keanekaragaman budaya, termasuk dalam hal kuliner. Makanan tradisional dari Sumatera Utara tidak hanya lezat, tetapi juga mencerminkan sejarah, kebudayaan, dan kekayaan alam daerah tersebut."
-    description2="Berikut ini adalah beberapa makanan khas Sumatera Utara"
-    link="/Destination"
-  />
-);
-
-const ContentSection = ({ title, description1, description2, link }) => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: false });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-      }}
-      className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12"
-    >
-      <motion.h2
-        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-        className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900"
-      >
-        {title}
-      </motion.h2>
-      <motion.div
-        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-        className="col-span-1 md:col-span-8"
-      >
-        <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-          {description1}
-        </p>
-        <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-          {description2}
-        </p>
-        <a href={link} className="w-full md:w-fit">
-          <Fancy />
-        </a>
-      </motion.div>
-    </motion.div>
+    <ContentSection
+      title="Sumatera Utara"
+      description1="Sumatera Utara adalah sebuah provinsi di Indonesia yang terletak di bagian utara Pulau Sumatera. Ibu kotanya adalah Kota Medan."
+      description2="Provinsi ini memiliki kekayaan alam dan budaya yang beragam, termasuk Danau Toba yang merupakan danau vulkanik terbesar di dunia. Sumatera Utara juga dikenal dengan keindahan alamnya, seperti pegunungan, pantai, dan hutan tropis."
+      link="/history"
+    />
   );
-};
+  
+  const ExampleContent2 = () => (
+    <ContentSection
+      title="Destinasi Wisata"
+      description1="Sumatera Utara adalah sebuah provinsi yang kaya akan keindahan alam, warisan budaya, dan situs sejarah yang menarik. Dari danau vulkanik yang megah hingga hutan hujan tropis yang luas, Sumatera Utara menawarkan berbagai tempat wisata yang menakjubkan bagi para pengunjung."
+      description2="Berikut Ini adalah beberapa destinasi populer di Sumatera Utara"
+      link="/destination"
+    />
+  );
+  
+  const ExampleContent3 = () => (
+    <ContentSection
+      title="Makanan Khas"
+      description1="Sumatera Utara merupakan sebuah provinsi yang kaya akan keanekaragaman budaya, termasuk dalam hal kuliner. Makanan tradisional dari Sumatera Utara tidak hanya lezat, tetapi juga mencerminkan sejarah, kebudayaan, dan kekayaan alam daerah tersebut."
+      description2="Berikut ini adalah beberapa makanan khas Sumatera Utara"
+      link="/destination"
+    />
+  );
+  
+  const ContentSection = ({ title, description1, description2, link }) => {
+    const controls = useAnimation();
+    const ref = useRef(null);
+    const inView = useInView(ref, { once: false });
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible");
+      } else {
+        controls.start("hidden");
+      }
+    }, [controls, inView]);
+  
+    return (
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+        }}
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-8 pb-24 pt-12 md:grid-cols-12"
+      >
+        <motion.h2
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          className="col-span-1 text-5xl font-bold md:col-span-4 text-center text-gray-900"
+        >
+          {title}
+        </motion.h2>
+        <motion.div
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          className="col-span-1 md:col-span-8"
+        >
+          <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+            {description1}
+          </p>
+          <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+            {description2}
+          </p>
+          <Link to={link} className="w-full md:w-fit">
+            <Fancy />
+          </Link>
+        </motion.div>
+      </motion.div>
+    );
+  };
 
 export default Home;

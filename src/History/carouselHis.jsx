@@ -1,35 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import "./carouselHis.css";
-
+import GedungLondon from "../assets/BgSejarah/gedunglondon.jpg";
+import IstanaMaimun from "../assets/BgSejarah/istanamaimun.jpg";
+import Makam from "../assets/BgSejarah/makam.jpg";
+import Arca from "../assets/BgSejarah/arca.jpeg";
+import Museum from "../assets/BgSejarah/museum.jpeg";
 
 const imgs = [
   {
-    src: "../src/assets/BgSejarah/gedunglondon.jpg",
+    src: GedungLondon,
     title: "Gedung London Sumatera",
     description:
       "Dibangun pada tahun 1909 oleh sebuah perusahaan perkebunan dan perdagangan berbasis di London. Gedung ini sempat berpindah tangan dan sekarang dimiliki oleh PT PP London Sumatera. Sampai sekarang gedung ini digunakan sebagai kantor untuk perusahaan agrikultur.",
   },
   {
-    src: "../src/assets/BgSejarah/istanamaimun.jpg",
+    src: IstanaMaimun,
     title: "Istana Maimun",
     description:
       "Peninggalan sejarah Kerajaan Deli yang sekarang telah diubah fungsinya menjadi sebuah Museum. Istana ini dibangun oleh Sultan Ma'amun Al-Rashid Perkasa Alamasyah yang memerintah Kerajaan ini antara 1873 - 1924. Pembangunan dimulai pada tahun 1888 dan selesai pada tahun 1891.",
   },
   {
-    src: "../src/assets/BgSejarah/makam.jpg",
+    src: Makam,
     title: "Makam Raja-raja Deli",
     description:
       "Terletak di daerah Sisingamangaraja, makam ini merupakan tempat peristirahatan terakhir para raja dan kerabat Kesultanan Deli. Makam-makam ini menjadi saksi sejarah penting tentang peradaban Melayu di Sumatra Utara.",
   },
   {
-    src: "../src/assets/BgSejarah/arca.jpeg",
+    src: Arca,
     title: "Situs Peninggalan Arca Batu Raja",
     description:
       "Terletak di Kabupaten Labuhanbatu, situs ini merupakan kompleks arca batu yang diperkirakan berasal dari abad ke-11 hingga abad ke-13 Masehi. Arca ini memberikan gambaran keberadaan kerajaan Hindu-Buddha di wilayah tersebut.",
   },
   {
-    src: "../src/assets/BgSejarah/museum.jpeg",
+    src: Museum,
     title: "Museum TB Silalahi Center",
     description:
       "Terletak di Tarutung, museum ini didedikasikan untuk mempertahankan dan mempromosikan kebudayaan Batak Toba. Museum ini menampilkan berbagai artefak sejarah, seni, dan budaya Batak.",
@@ -63,7 +67,7 @@ function CarouselHis() {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  }, []);
+  }, [dragX, imgIndex]);
 
   const onDragEnd = () => {
     const x = dragX.get();
@@ -73,6 +77,8 @@ function CarouselHis() {
     } else if (x >= DRAG_BUFFER && imgIndex > 0) {
       setImgIndex((pv) => pv - 1);
     }
+
+    dragX.set(0);
   };
 
   return (
@@ -95,7 +101,7 @@ function CarouselHis() {
 
       {isHovered && <TextOverlay imgIndex={imgIndex} />}
 
-        <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
       <GradientEdges />
     </div>
   );

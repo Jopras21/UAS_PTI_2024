@@ -14,6 +14,7 @@ function Culinary() {
     const fetchData = async () => {
       try {
         const data = await Foods();
+        console.log("Fetched data:", data);
         setFoodsData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -34,6 +35,13 @@ function Culinary() {
   const sweetIds = [2, 6, 10];
   const spicyIds = [1, 5, 12, 13, 15];
 
+  const fixImageUrlProtocol = (url) => {
+    if (url.startsWith('http://')) {
+      return url.replace('http://', 'https://');
+    }
+    return url;
+  };
+
   const filteredFoods = foodsData.filter((food) => {
     const nameMatch = food.name
       .toLowerCase()
@@ -53,7 +61,10 @@ function Culinary() {
       selectedCategory === "all" || food.category === selectedCategory;
 
     return categoryMatch && nameMatch;
-  });
+  }).map(food => ({
+    ...food,
+    img: fixImageUrlProtocol(food.img)
+  }));
 
   return (
     <div className="my-16">
@@ -71,14 +82,14 @@ function Culinary() {
           <option value="sweet">Manis</option>
           <option value="spicy">Pedas</option>
         </select>
-        <div class="container-search text-center right-0">
+        <div className="container-search text-center right-0">
           <input
             type="text"
             placeholder="Cari makanan..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="search"></div>
+          <div className="search"></div>
         </div>
       </div>
       <div className="container">

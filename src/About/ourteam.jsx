@@ -1,5 +1,21 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import domi1 from "../assets/Member/domi2.jpg"
+import domi2 from "../assets/Member/domi.jpg"
+import jopras1 from "../assets/Member/jopras-stress.jpg"
+import jopras2 from "../assets/Member/jopras-stress2.jpg"
+import jopras3 from "../assets/Member/jopras-stress3.jpg"
+import jopras4 from "../assets/Member/jopras-stress4.jpg"
+import hexsel1 from "../assets/Member/hexsel1.jpg"
+import hexsel2 from "../assets/Member/hexsel-di-cf.jpg"
+import hexsel3 from "../assets/Member/hexsel-di-cf2.jpg"
+import hexsel4 from "../assets/Member/hexsel-ama-cosplayer.jpg"
+import hexsel5 from "../assets/Member/hexsel-ama-cosplayer2.jpg"
+import bareng from "../assets/Member/jopras-dkk.jpg"
+import bareng2 from "../assets/Member/joe-tidur.jpeg"
+import joe1 from "../assets/Member/joe-dkk.jpeg"
+import joe2 from "../assets/Member/ngantuk.jpg"
+import joe3 from "../assets/Member/ugpl.jpg"
 
 
 
@@ -42,67 +58,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "../src/assets/Member/hexsel-di-cf.jpg",
+    src: domi1,
   },
   {
     id: 2,
-    src: "../src/assets/Member/jopras-stress.jpg",
+    src: domi2,
   },
   {
     id: 3,
-    src: "../src/assets/Member/joe-dkk.jpeg",
+    src: jopras1,
   },
   {
     id: 4,
-    src: "../src/assets/Member/domi.jpg",
+    src: jopras2,
   },
   {
     id: 5,
-    src: "../src/assets/Member/joe-tidur.jpg",
+    src: jopras3,
   },
   {
     id: 6,
-    src: "../src/assets/Member/jopras-stress2.jpg",
+    src: jopras4,
   },
   {
     id: 7,
-    src: "../src/assets/Member/domi2.jpg",
+    src: joe1,
   },
   {
     id: 8,
-    src: "../src/assets/Member/hexsel-di-cf2.jpg",
+    src: joe2,
   },
   {
     id: 9,
-    src: "../src/assets/Member/jopras-stress3.jpg",
+    src: joe3,
   },
   {
     id: 10,
-    src: "../src/assets/Member/ugpl.jpg",
+    src: hexsel1,
   },
   {
     id: 11,
-    src: "../src/assets/Member/jopras-stress4.jpg",
+    src: hexsel2,
   },
   {
     id: 12,
-    src: "../src/assets/Member/ngantuk.jpg",
+    src: hexsel3,
   },
   {
     id: 13,
-    src: "../src/assets/Member/jopras-dkk.jpg",
+    src: hexsel4,
   },
   {
     id: 14,
-    src: "../src/assets/Member/hexsel1.jpg",
+    src: hexsel5,
   },
   {
     id: 15,
-    src: "../src/assets/Member/hexsel-ama-cosplayer.jpg",
+    src: bareng,
   },
   {
     id: 16,
-    src: "../src/assets/Member/hexsel-ama-cosplayer2.jpg",
+    src: bareng2,
   },
 ];
 
