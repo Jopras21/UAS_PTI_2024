@@ -2,52 +2,33 @@ import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import "./carousel.css";
 
+import Toba from "../src/assets/Landscape/Toba.png";
+import Sibayak from "../src/assets/Landscape/Sibayak.jpg";
+import Lawang from "../src/assets/Landscape/Lawang.jpg";
+import Sipiso from "../src/assets/Landscape/Sipiso.jpeg";
+
 const imgs = [
   {
-    src: "../src/assets/Landscape/Toba.png",
+    src: Toba,
     title: "Danau Toba",
     description: "Berada di provinsi Sumatra Utara",
   },
   {
-    src: "../src/assets/Landscape/Sibayak.jpg",
+    src: Sibayak,
     title: "Gunung Sibayak",
     description: "Terletak di Kabupaten Karo",
   },
   {
-    src: "../src/assets/Landscape/Lawang.jpg",
+    src: Lawang,
     title: "Lawang Park",
     description: "Destinasi wisata di Bukittinggi",
   },
   {
-    src: "../src/assets/Landscape/Sipiso.jpeg",
+    src: Sipiso,
     title: "Air Terjun Sipiso-piso",
     description: "Di dekat Danau Toba",
   },
-  {
-    src: "../src/assets/Landscape/Lumbini.jpg",
-    title: "Taman Alam Lumbini",
-    description: "Pagoda emas di Berastagi",
-  },
-  {
-    src: "../src/assets/Landscape/Berhala.jpeg",
-    title: "Pulau Berhala",
-    description: "Pulau kecil di Selat Malaka",
-  },
-  {
-    src: "../src/assets/Landscape/Pematang.jpg",
-    title: "Pematang Siantar",
-    description: "Kota di Sumatra Utara",
-  },
-  {
-    src: "../src/assets/Landscape/samosir.jpg",
-    title: "Pulau Samosir",
-    description: "Kota di Sumatra Utara",
-  },
-  {
-    src: "../src/assets/Landscape/patungYesus.jpg",
-    title: "Patung Yesus Sibea-bea",
-    description: "Kota di Sumatra Utara",
-  },
+  // Tambahkan gambar-gambar lain di sini
 ];
 
 const ONE_SECOND = 1000;
