@@ -36,35 +36,37 @@ function Culinary() {
   const spicyIds = [1, 5, 12, 13, 15];
 
   const fixImageUrlProtocol = (url) => {
-    if (url.startsWith('http://')) {
-      return url.replace('http://', 'https://');
+    if (url.startsWith("http://")) {
+      return url.replace("http://", "https://");
     }
     return url;
   };
 
-  const filteredFoods = foodsData.filter((food) => {
-    const nameMatch = food.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+  const filteredFoods = foodsData
+    .filter((food) => {
+      const nameMatch = food.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
 
-    if (selectedCategory === "salty") {
-      return saltyIds.includes(food.id) && nameMatch;
-    }
-    if (selectedCategory === "sweet") {
-      return sweetIds.includes(food.id) && nameMatch;
-    }
-    if (selectedCategory === "spicy") {
-      return spicyIds.includes(food.id) && nameMatch;
-    }
+      if (selectedCategory === "salty") {
+        return saltyIds.includes(food.id) && nameMatch;
+      }
+      if (selectedCategory === "sweet") {
+        return sweetIds.includes(food.id) && nameMatch;
+      }
+      if (selectedCategory === "spicy") {
+        return spicyIds.includes(food.id) && nameMatch;
+      }
 
-    const categoryMatch =
-      selectedCategory === "all" || food.category === selectedCategory;
+      const categoryMatch =
+        selectedCategory === "all" || food.category === selectedCategory;
 
-    return categoryMatch && nameMatch;
-  }).map(food => ({
-    ...food,
-    img: fixImageUrlProtocol(food.img)
-  }));
+      return categoryMatch && nameMatch;
+    })
+    .map((food) => ({
+      ...food,
+      img: fixImageUrlProtocol(food.img),
+    }));
 
   return (
     <div className="my-16">
