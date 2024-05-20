@@ -5,7 +5,7 @@ async function Foods() {
   try {
     // Make a GET request to fetch data
     const response = await axios.get(
-      "https://joerscl.github.io/destination/destination.json"
+      "https://joerscl.github.io/4fetching/foods.json"
     );
 
     // Access the data from the response

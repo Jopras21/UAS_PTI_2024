@@ -23,6 +23,10 @@ function Culinary() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log(foodsData);
+  },[foodsData]);
+
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
