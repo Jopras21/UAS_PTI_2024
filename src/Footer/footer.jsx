@@ -2,13 +2,15 @@ import React from "react";
 import "./footer.css";
 import logo from "../assets/logo.png"; // Not used in the current component but imported
 import FeedBack from "../Feedback/feedback.jsx"; // Not used in the current component but imported
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
-
     <footer className="container-footer flex flex-col w-full items-center bg-gray-700 text-center text-surface dark:bg-neutral-700 dark:text-white">
-      <div className="btn-ghost logo w-full h-32">
-        <img src= {logo} className="w-32 h-32 mx-4 object-cover rounded-full" />
+      <div className="btn-ghost logo w-32 h-32 rounded-full">
+        <NavLink to="/">
+          <img src={logo} className="w-32 h-32 object-cover rounded-full" />
+        </NavLink>
       </div>
       <div className="container pt-9 bg-white-50">
         {/* Social media icons container */}
@@ -34,7 +36,7 @@ function Footer() {
             href="https://www.instagram.com/hexselav"
             target="_blank"
             type="button"
-            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-290 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-950"
           >
             <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
               <svg
@@ -48,25 +50,25 @@ function Footer() {
           </a>
 
           <a
-          href="https://github.com"
-          target="_blank"
-          type="button"
-          className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-        >
-          <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.865 8.17 6.839 9.488.5.09.682-.22.682-.49 0-.24-.009-.878-.013-1.725-2.782.604-3.37-1.333-3.37-1.333-.455-1.153-1.112-1.46-1.112-1.46-.908-.622.069-.609.069-.609 1.004.07 1.53 1.03 1.53 1.03.89 1.528 2.34 1.087 2.91.832.092-.648.35-1.087.636-1.338-2.22-.25-4.555-1.11-4.555-4.94 0-1.09.39-1.984 1.028-2.682-.103-.25-.447-1.267.097-2.64 0 0 .84-.268 2.75 1.022a9.69 9.69 0 0 1 2.53-.338c.86.006 1.72.116 2.53.338 1.91-1.29 2.75-1.022 2.75-1.022.545 1.373.2 2.39.097 2.64.64.698 1.027 1.592 1.027 2.682 0 3.84-2.34 4.688-4.57 4.932.36.31.678.919.678 1.85 0 1.338-.013 2.417-.013 2.75 0 .27.18.59.688.49C19.139 20.168 22 16.418 22 12c0-5.52-4.48-10-10-10z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </span>
-        </a>
+            href="https://github.com"
+            target="_blank"
+            type="button"
+            className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-gray-500 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+          >
+            <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.865 8.17 6.839 9.488.5.09.682-.22.682-.49 0-.24-.009-.878-.013-1.725-2.782.604-3.37-1.333-3.37-1.333-.455-1.153-1.112-1.46-1.112-1.46-.908-.622.069-.609.069-.609 1.004.07 1.53 1.03 1.53 1.03.89 1.528 2.34 1.087 2.91.832.092-.648.35-1.087.636-1.338-2.22-.25-4.555-1.11-4.555-4.94 0-1.09.39-1.984 1.028-2.682-.103-.25-.447-1.267.097-2.64 0 0 .84-.268 2.75 1.022a9.69 9.69 0 0 1 2.53-.338c.86.006 1.72.116 2.53.338 1.91-1.29 2.75-1.022 2.75-1.022.545 1.373.2 2.39.097 2.64.64.698 1.027 1.592 1.027 2.682 0 3.84-2.34 4.688-4.57 4.932.36.31.678.919.678 1.85 0 1.338-.013 2.417-.013 2.75 0 .27.18.59.688.49C19.139 20.168 22 16.418 22 12c0-5.52-4.48-10-10-10z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+          </a>
 
           <a
             href="https://www.instagram.com/jonathansutandar"
@@ -111,7 +113,7 @@ function Footer() {
           href="#"
           target="_blank"
         >
-         Kelompok 3 all right reserved 
+          Kelompok 3 all right reserved
         </a>
       </div>
     </footer>
